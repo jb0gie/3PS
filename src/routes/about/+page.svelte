@@ -1,29 +1,33 @@
-<script lang="ts">
-	// HTTP response data provided by +page.ts
-	import type { PageData } from '../$types';
-	export let data: PageData;
-	$: ({ contributors } = data);
-
-	// Components
-	// import HomeFeatures from './HomeFeatures.svelte';
-	// Page Partials
+<script>
 	import AboutHero from './AboutHero.svelte';
-	import AboutFounders from './AboutFounders.svelte'
+	import AboutFounders from './AboutFounders.svelte';
 	import AboutFooter from './AboutFooter.svelte';
+	import OrbGlow from '../../lib/components/OrbGlow.svelte';
+	import third_planet from '$lib/images/logo-s.png';
 
-	// import third_planet from '$lib/images/3PSFINALLOGO2.png';
-
+	const gradientHeading =
+		'bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
 </script>
 
-<div>
-	<!-- hero -->
-	<header id="hero" class="bg-surface-100-800-token hero-gradient"><AboutHero/></header>
-	<!-- founder -->
-	<section id="founders" class="bg-surface-100-800-token founders-gradient">
-		<div class="section-container"><AboutFounders/></div>
-	</section>
-	<!-- why 3ps -->
-	<section id="why" class="bg-surface-100-800-token why-gradient"><AboutFooter/></section>
+<div class="sm:flex items-center max-w-screen-xl">
+	<div class="sm:w-1/2 p-10">
+		<div class="image object-center text-center">
+			<OrbGlow />
+			<img src={third_planet} alt="logo" />
+		</div>
+	</div>
+	<AboutHero />
+</div>
+
+<div class="text-center mb-16">
+	<h1 class="h1 text-4xl sm:text-6xl leading-normal mt-16 font-extrabold tracking-tight">
+		3PS <span class={gradientHeading}>FOUNDERS</span>
+	</h1>
+	<AboutFounders />
+</div>
+
+<div class="mb-16">
+	<AboutFooter />
 </div>
 
 <style lang="postcss">

@@ -5,9 +5,14 @@
 	}
 </script>
 
-<div class="section-container mx-auto px-12">
-	<h2 class="text-6xl font-bold mb-8">{title}</h2>
-	<p class="h3 mx-auto">{@html p1.paragraph}</p>
-</div>
 
-<br />
+<div class="mx-auto px-12">
+	<div>
+		<h2 class="my-4 font-bold text-3xl sm:text-4xl">
+			Why <span class="text-indigo-600">{title}</span>
+		</h2>
+		<p class="mx-auto text-2xl">
+			{@html p1.paragraph}
+		</p>
+	</div>
+</div>

@@ -4,10 +4,9 @@
 	import OrbGlow from '../lib/components/OrbGlow.svelte';
 </script>
 
+<OrbGlow />
 <div class="h-screen w-auto">
-	<OrbGlow />
 	<Canvas>
 		<Scene />
-		
 	</Canvas>
 </div>

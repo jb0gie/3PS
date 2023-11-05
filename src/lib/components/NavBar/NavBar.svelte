@@ -28,6 +28,12 @@
 						<Button variant="link" class={navItem} builders={[builder]}>Explore</Button>
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content class="w-auto">
+						<a href="/home" class={navItem}>
+							<DropdownMenu.Item>
+								<DropdownMenu.Label>Home</DropdownMenu.Label>
+							</DropdownMenu.Item>
+						</a>
+						<DropdownMenu.Separator />
 						<a href="/about" class={navItem}>
 							<DropdownMenu.Item>
 								<DropdownMenu.Label>About</DropdownMenu.Label>

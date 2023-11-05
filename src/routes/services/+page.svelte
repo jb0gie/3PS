@@ -1,4 +1,5 @@
 <script>
+    import OrbGlow from "../../lib/components/OrbGlow.svelte";
     const cBase = 'flex-shrink-0 m-6 relative variant-glass-secondary rounded-xl overflow-hidden max-w-sm shadow-lg gradient-end';
     const services = {
         srvcTitle : `SERVICES`,
@@ -16,12 +17,16 @@
         srvcBody6 : `<p>Want to have some fun and take things to a more creative level?</p><br><p>The 3PS design team can design you a custom avatar and provide a virtual live or recorded session for an AR/VR video. Studio is located in New York.</p>`,
     }
 </script>
-
-<div class="bg-surface-100-800-token gradient-start">
+<OrbGlow />
+<div class="gradient-start">
     <div class="section-container mx-auto px-12">
         <h2 class="text-6xl font-bold mb-8">{@html services.srvcTitle}</h2>
-        <p class="h3 mx-auto">
-            3PS understands that this is a new step for the industry and many artists will be at different levels of understanding and proficiency when it comes to managing cryptocurrency (digital currency that can be used to buy goods and services) and blockchains (cumulative records that are used to record transactions across many computers so that no transaction cannot be altered retroactively, allowing participants to verify and audit transactions). 3PS is prepared to help with any custom service requested by our clients.
+        <p class="text-xl sm:text-4xl mx-auto">
+            3PS understands that this is a new step for the industry and many artists will be at different levels of understanding and proficiency when it comes to managing cryptocurrency (digital currency that can be used to buy goods and services) and blockchains (cumulative records that are used to record transactions across many computers so that no transaction cannot be altered retroactively, allowing participants to verify and audit transactions).
+        </p>
+        <br />
+        <p class="text-xl sm:text-4xl mx-auto">
+            3PS is prepared to help with any custom service requested by our clients.
         </p>
         <div class="section-container mx-auto px-4">
             <div class="p-1 flex flex-wrap items-center justify-center">
@@ -110,11 +115,5 @@
     .section-container {
 		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
         
-	}
-
-    .gradient-start {
-		background-image:
-			radial-gradient(at 0% 0%, rgba(var(bg-green-500) / 0.33) 0px, transparent 50%),
-			radial-gradient(at 98% 1%, rgba(var(bg-pink-500) / 0.33) 0px, transparent 50%);
 	}
 </style>
