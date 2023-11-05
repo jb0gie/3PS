@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/three": "^0.158.1",
 		"autoprefixer": "^10.4.14",
 		"postcss": "^8.4.24",
 		"postcss-load-config": "^4.0.1",
@@ -24,6 +25,7 @@
 	"type": "module",
 	"dependencies": {
 		"@dimforge/rapier3d-compat": "^0.11.2",
+		"@fortawesome/fontawesome-free": "^6.4.2",
 		"@threlte/core": "^6.1.0",
 		"@threlte/extras": "^7.5.0",
 		"@threlte/flex": "^0.1.0",
@@ -34,7 +36,6 @@
 		"lucide-svelte": "^0.288.0",
 		"mode-watcher": "^0.0.5",
 		"pocketbase": "^0.19.0",
-		"@fortawesome/fontawesome-free": "^6.4.2",
 		"radix-icons-svelte": "^1.2.1",
 		"sveltekit-superforms": "^1.8.0",
 		"tailwind-merge": "^1.14.0",

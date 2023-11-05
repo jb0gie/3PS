@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ArtRoster from './ArtRoster.svelte';
-	import TalentPlaceholder from '$lib/components/LoadingProfile.svelte';
 	let loaded: any;
 	
 </script>

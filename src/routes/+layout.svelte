@@ -23,7 +23,6 @@
 			image: metaDefaults.image
 		}
 	};
-	
 </script>
 
 <svelte:head>
@@ -41,8 +40,10 @@
 	<meta property="og:image" content={meta.image} />
 	<meta property="og:image:secure_url" content={meta.image} />
 	<meta property="og:image:type" content="image/jpg" />
-	<meta property="og:image:width" content="" /> <!--FIX-->
-	<meta property="og:image:height" content="" /> <!--ALSO FIX-->
+	<meta property="og:image:width" content="" />
+	<!--FIX-->
+	<meta property="og:image:height" content="" />
+	<!--ALSO FIX-->
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@3PlanetStudio" />
 	<meta name="twitter:creator" content="@3PlanetStudio" />
@@ -53,8 +54,8 @@
 <!-- DarkMode -->
 <ModeWatcher />
 
-<NavBar/>
+<NavBar />
 
 <slot />
 
-<!-- <FootBar /> -->
+<FootBar />

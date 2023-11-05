@@ -1,166 +1,158 @@
 <script>
 	import World from './(components)/World.svelte';
-	import Hero from './(components)/Hero.svelte';
 	import { PlusCircled } from 'radix-icons-svelte';
-	import { Button } from '$lib/components/ui/button';
 	import { Separator } from '$lib/components/ui/separator';
 	import * as Tabs from '$lib/components/ui/tabs';
 	import { AlbumArtwork, Sidebar, Menu, PodcastEmptyPlaceholder } from './(components)';
 	import { playlists } from './(data)/playlists';
 	import { listenNowAlbums, madeForYouAlbums } from './(data)/albums';
+	import { Canvas } from '@threlte/core';
+	import HeroCard from './(components)/HeroCard.svelte';
+	import Mints from './(components)/Mints.svelte';
+	import OrbGlow from '../../lib/components/OrbGlow.svelte';
+	import FootCard from './(components)/FootCard.svelte';
 	// import Partners from './(components)/Partners.svelte';
 	// import Showcase from './(components)/Showcase.svelte';
 	// import CallToAction from './(components)/CallToAction.svelte';
 	// import Mints from './(components)/Mints.svelte';
+
+	const grad1 =
+		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
+	const grad2 =
+		'bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone';
 </script>
 
-<!-- <div class="md:hidden">
-	<img
-		src=""
-		width={1280}
-		height={1114}
-		alt="Music"
-		class="block dark:hidden"
-	/>
-	<img
-		src=""
-		width={1280}
-		height={1114}
-		alt="Music"
-		class="hidden dark:block"
-	/>
-</div> -->
-<div class="hidden md:block">
-	<Menu />
-	<!-- top- -->
-	<div class="flex flex-auto gap-6 w-auto mx-auto p-4">
-		<World>
-			<svelte:fragment slot="title">Heads up!</svelte:fragment>
-			<svelte:fragment slot="description">
-				<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
-			</svelte:fragment>
-		</World>
-		<!-- <World>
-			<svelte:fragment slot="title">Heads up!</svelte:fragment>
-			<svelte:fragment slot="description">
-				<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
-			</svelte:fragment>
-		</World> -->
-	</div>
-	<div class="border-t">
-		<div class="bg-background">
-			<div class="grid lg:grid-cols-5">
-				<Sidebar {playlists} class="hidden lg:block" />
-				<div class="col-span-3 lg:col-span-4 lg:border-l">
-					<div class="h-full px-4 py-6 lg:px-8">
-						<Tabs.Root value="music" class="h-full space-y-6">
-							<div class="space-between flex items-center">
-								<Tabs.List>
-									<Tabs.Trigger value="music" class="relative">Music</Tabs.Trigger>
-									<Tabs.Trigger value="podcasts">Podcasts</Tabs.Trigger>
-									<Tabs.Trigger value="live" disabled>Live</Tabs.Trigger>
-								</Tabs.List>
-								<div class="ml-auto mr-4">
-									<Button>
-										<PlusCircled class="mr-2 h-4 w-4" />
-										Add music
-									</Button>
-								</div>
-							</div>
-							<Tabs.Content value="music" class="border-none p-0 outline-none">
-								<div class="flex items-center justify-between">
-									<div class="space-y-1">
-										<h2 class="text-2xl font-semibold tracking-tight">Listen Now</h2>
-										<p class="text-sm text-muted-foreground">Top picks for you. Updated daily.</p>
-									</div>
-								</div>
-								<Separator class="my-4" />
-								<div class="relative">
-									<div class="overflow-x-auto">
-										<div class="flex space-x-4 pb-4">
-											{#each listenNowAlbums as album}
-												<AlbumArtwork
-													{album}
-													class="w-[250px]"
-													aspectRatio="portrait"
-													width={250}
-													height={330}
-												/>
-											{/each}
-										</div>
-									</div>
-								</div>
-								<div class="mt-6 space-y-1">
-									<h2 class="text-2xl font-semibold tracking-tight">Made for You</h2>
-									<p class="text-sm text-muted-foreground">
-										Your personal playlists. Updated daily.
-									</p>
-								</div>
-								<Separator class="my-4" />
-								<div class="relative">
-									<div class="overflow-x-auto">
-										<div class="flex space-x-4 pb-4">
-											{#each madeForYouAlbums as album}
-												<AlbumArtwork
-													{album}
-													class="w-[150px]"
-													aspectRatio="square"
-													width={150}
-													height={150}
-												/>
-											{/each}
-										</div>
-									</div>
-								</div>
-							</Tabs.Content>
-							<Tabs.Content
-								value="podcasts"
-								class="h-full flex-col border-none p-0 data-[state=active]:flex"
-							>
-								<div class="flex items-center justify-between">
-									<div class="space-y-1">
-										<h2 class="text-2xl font-semibold tracking-tight">New Episodes</h2>
-										<p class="text-sm text-muted-foreground">
-											Your favorite podcasts. Updated daily.
-										</p>
-									</div>
-								</div>
-								<Separator class="my-4" />
-								<PodcastEmptyPlaceholder />
-							</Tabs.Content>
-						</Tabs.Root>
+<div>
+	<!-- <Menu /> -->
+	<OrbGlow />
+	<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+		<div class="flex justify-between">
+			<World>
+				<svelte:fragment slot="title">Heads up!</svelte:fragment>
+				<svelte:fragment slot="description">
+					<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
+				</svelte:fragment>
+			</World>
+			<!-- <World>
+				<svelte:fragment slot="title">Heads up!</svelte:fragment>
+				<svelte:fragment slot="description">
+					<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
+				</svelte:fragment>
+			</World> -->
+		</div>
+
+		<div class="h-24 md:h-20" />
+
+		<p class="text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
+			Where <span class={grad1}>Art</span> &amp; <span class={grad2}>Music</span>
+			Unite in the Boundless Realm of Web3
+		</p>
+
+		<div class="h-10" />
+
+		<p class="max-w-2xl text-xl md:text-2xl">Welcome to Third Planet Studio</p>
+
+		<div class="h-24 md:h-20" />
+
+		<div class="grid gap-8 md:grid-cols-2">
+			<div class="flex flex-col justify-center">
+				<h2 class="self-start inline text-4xl font-bold">What we are</h2>
+				<div class="h-6" />
+				<p class="text-xl md:pr-10">
+					Third Planet Studio is your portal to a new dimension of creativity. We're not your
+					typical virtual music and art group. We believe in empowering artists with 100% ownership
+					of their work and absolute creative freedom.
+				</p>
+			</div>
+			<div>
+				<HeroCard />
+			</div>
+		</div>
+
+		<div class="h-64 md:h-20" />
+		<br />
+		<p class="text-4xl">
+			<span class="text-gray-400">
+				In the boundless realm of Web3, where technology and creativity converge,
+			</span>
+			<span class="text-gray-600">
+				Third Planet Studio stands as the epicenter where art and music find their harmonious union.
+			</span>
+		</p>
+
+		<div class="h-24 md:h-20" />
+
+		<Mints />
+
+		<div class="h-20" />
+
+		<div class="grid gap-8 md:grid-cols-2">
+			<div>
+				<FootCard />
+			</div>
+			<div class="flex flex-col justify-center">
+				<h2 class="self-start inline text-4xl font-bold">What We Do</h2>
+				<div class="h-6" />
+				<p class="text-xl md:pr-10">
+					At 3PS, we're all about rewriting the rules. We specialize in crafting NFT smart contracts
+					tailored to your unique vision. No more worrying about the industry's "<span
+						style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url('https://i.giphy.com/media/jtvB77L0afuXGlO5Uh/giphy-downsized-large.gif');"
+						>old ways.</span
+					>"
+				</p>
+				<div class="h-8" />
+				<div class="grid grid-cols-2 gap-4 pt-8 border-t border-gray-800">
+					<div>
+						<p class="font-semibold">Made with love</p>
+						<div class="h-4" />
+						<p class="">
+							We're not a record label or gallery; we're your advocates for full ownership and
+							dignity in your art.
+						</p>
+					</div>
+					<div>
+						<p class="font-semibold">It's easy to build</p>
+						<div class="h-4" />
+						<p class="">
+							Join us on this journey to redefine the artistic landscape in the digital age. Let's
+							make Web3 work for you.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="h-10 md:h-40" />
+
 	</div>
-</div>
-
-<div>
-	
-
-	<!-- <header>
-		<div class="section-container"><Hero /></div>
-	</header>
-
-	<section>
-		<div class="section-container"><Showcase /></div>
-	</section>
-
-	<section>
-		<div class="section-container"><Mints /></div>
-	</section>
-
-	<section>
-	</section>
-
-	<section>
-		<div class="section-container"><CallToAction /></div>
-	</section> -->
 </div>
 
 <style lang="postcss">
 	.section-container {
 		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
+	}
+	.img-bg {
+		@apply w-64 h-64 md:w-80 md:h-80;
+		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
+		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite, glow 5s linear infinite;
+	}
+	@keyframes glow {
+		0% {
+			@apply bg-red-500/50;
+		}
+		33% {
+			@apply bg-lime-500/50;
+		}
+		66% {
+			@apply bg-pink-500/50;
+		}
+		100% {
+			@apply bg-yellow-500/50;
+		}
+	}
+	@keyframes pulse {
+		50% {
+			transform: scale(1.5);
+		}
 	}
 </style>

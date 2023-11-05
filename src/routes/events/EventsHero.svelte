@@ -1,5 +1,5 @@
-<script lang="ts">
-    import third_planet from '$lib/images/3PSFINALLOGO.png'
+<script>
+    import third_planet from '$lib/images/logo-s.png'
     const events = {
         title : `EVENTS`,
         metaJax : "https://pbs.twimg.com/profile_images/1487582176359026689/mSewObvs_400x400.jpg",
