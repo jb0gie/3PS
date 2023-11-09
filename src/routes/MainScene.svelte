@@ -4,8 +4,8 @@
 	import { Project, Sheet, SheetObject } from '@threlte/theatre';
 	import { getProject } from '@theatre/core';
 	import projectState from '../lib/splash.json';
-	const project = getProject('My Project', { state: projectState })
-	
+	const project = getProject('Splash', { state: projectState })
+	project.ready.then(() => console.log('Project loaded!'))
 	import { spring } from 'svelte/motion';
 	import Planets from '../lib/components/planets-hi.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -41,7 +41,7 @@
 	}
 </script>
 
-<Project name="SplashScreen">
+<Project name={"SplashScreen"}>
 	<Sheet name="Lights & Cam">
 		<SheetObject key="Directional Light" let:Sync let:Transform>
 			<Transform>
