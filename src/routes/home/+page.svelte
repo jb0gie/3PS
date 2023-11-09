@@ -43,14 +43,20 @@
 
 		<div class="h-24 md:h-20" />
 
-		<div class="grid gap-8 md:grid-cols-2">
+		<div class=" gap-8 md:grid-cols-2">
 			<div class="flex flex-col justify-center">
 				<h2 class="self-start inline text-4xl font-bold">What we are</h2>
 				<div class="h-6" />
-				<p class="text-xl md:pr-10">
-					Third Planet Studio is your portal to a new dimension of creativity. We're not your
-					typical virtual music and art group. We believe in empowering artists with 100% ownership
+				
+				<p class="text-xl md:pr-10 lg:pr-20">
+					<span>
+						Third Planet Studio is your portal to a new dimension of creativity.We're not your
+					typical virtual music and art group.
+					</span>
+					<span>
+						We believe in empowering artists with 100% ownership
 					of their work and absolute creative freedom.
+					</span>
 				</p>
 			</div>
 			<div>

@@ -21,7 +21,7 @@
 <div class="gradient-start">
     <div class="section-container mx-auto px-12">
         <h2 class="text-6xl font-bold mb-8">{@html services.srvcTitle}</h2>
-        <p class="text-xl sm:text-4xl mx-auto">
+        <p class="text-xl sm:text-2xl mx-auto">
             3PS understands that this is a new step for the industry and many artists will be at different levels of understanding and proficiency when it comes to managing cryptocurrency (digital currency that can be used to buy goods and services) and blockchains (cumulative records that are used to record transactions across many computers so that no transaction cannot be altered retroactively, allowing participants to verify and audit transactions).
         </p>
         <br />

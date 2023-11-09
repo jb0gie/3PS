@@ -11,12 +11,10 @@
 		'bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
 </script>
 
-
 <div class="sm:flex items-center max-w-screen-xl">
 	<div class="sm:w-1/2 p-10">
 		<div class="image object-center text-center">
 			<div class="absolute top-[22%] left-[10%]">
-
 				<OrbGlow />
 			</div>
 			<img src={third_planet} alt="logo" />

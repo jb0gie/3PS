@@ -8,7 +8,7 @@
 </script>
 
 <div class="relative">
-	<div class="anim-float-avatar relative z-[1] top-[15%] left-[10%]">
+	<div class="anim-float-avatar relative z-[1] top-[15%] left-[5%]">
 		<a class="p-2" href="https://twitter.com/3PlanetStudio" target="_blank" rel="noreferrer">
 			<Card.Root
 				class="supports-[backdrop-filter]:bg-background/60 border-b bg-background/95 shadow-sm backdrop-blur w-[500px]"
@@ -35,12 +35,12 @@
 			</Card.Root>
 		</a>
 	</div>
-	<div class="anim-float-search anim-delay-200 absolute z-[1] top-[100%] left-[80%]">
+	<div class="anim-float-search anim-delay-200 absolute z-[1] top-[100%] left-[50%]">
 		<Button class=" p-4" href="/roster/music">
 			<span>Music</span>
 		</Button>
 	</div>
-	<div class="anim-float-radio absolute z-[1] top-[100%] left-[45%]">
+	<div class="anim-float-radio absolute z-[1] top-[100%] left-[30%]">
 		<Button class="p-4" href="/roster/art">
 			<span>Art</span>
 		</Button>
@@ -50,7 +50,7 @@
 			<span>Events</span>
 		</Button>
 	</div>
-	<div class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0">
+	<div class="absolute top-[30%] left-[30%] -translate-x-[50%] -translate-y-[50%] z-0">
 		<OrbGlow />
 		<div class="w-96 aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center">
 			<div class="w-[240px] aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center" />
