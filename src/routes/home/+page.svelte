@@ -1,21 +1,10 @@
 <script>
 	import World from './(components)/World.svelte';
-	import { PlusCircled } from 'radix-icons-svelte';
-	import { Separator } from '$lib/components/ui/separator';
-	import * as Tabs from '$lib/components/ui/tabs';
-	import { AlbumArtwork, Sidebar, Menu, PodcastEmptyPlaceholder } from './(components)';
-	import { playlists } from './(data)/playlists';
-	import { listenNowAlbums, madeForYouAlbums } from './(data)/albums';
-	import { Canvas } from '@threlte/core';
 	import HeroCard from './(components)/HeroCard.svelte';
 	import Mints from './(components)/Mints.svelte';
 	import OrbGlow from '../../lib/components/OrbGlow.svelte';
 	import FootCard from './(components)/FootCard.svelte';
-	// import Partners from './(components)/Partners.svelte';
-	// import Showcase from './(components)/Showcase.svelte';
-	// import CallToAction from './(components)/CallToAction.svelte';
-	// import Mints from './(components)/Mints.svelte';
-
+	import Partners from './(components)/Partners.svelte';
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
 	const grad2 =
@@ -33,12 +22,12 @@
 					<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
 				</svelte:fragment>
 			</World>
-			<!-- <World>
+			<World>
 				<svelte:fragment slot="title">Heads up!</svelte:fragment>
 				<svelte:fragment slot="description">
-					<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
+					<a class="btn" href="https://www.spatial.io/s/Third-Planet-Studio-Artist-Showcase-62a490b9a214750001dc4957?share=7798857155842536753" target="_blank">Visit 3PS on spatial.io</a>
 				</svelte:fragment>
-			</World> -->
+			</World>
 		</div>
 
 		<div class="h-24 md:h-20" />
@@ -122,8 +111,8 @@
 			</div>
 		</div>
 
-		<div class="h-10 md:h-40" />
-
+		<div class="h-5 md:h-40" />
+		<Partners />
 	</div>
 </div>
 

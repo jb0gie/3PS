@@ -11,15 +11,15 @@
 
 		<div class="flex justify-center space-x-2">
 			<section
-				class="w-auto lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow- mx-6 lg:mx-0"
+				class="w-auto rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow- mx-6 lg:mx-0"
 			>
 				<iframe
-					class=" rounded-lg w-96 h-screen overflow-hidden"
+					class="hide-scrollbar rounded-lg h-screen overflow-hidden "
 					title="3rdPlanetEvents"
 					src="https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true"
-					style="border-width:0"
-					width="1000"
-					height="1000"
+					style="border-width:0 scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3); "
+					width="2000"
+					height="2000"
 					frameborder="0"
 					scrolling="yes"
 				/>

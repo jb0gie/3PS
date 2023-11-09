@@ -1,24 +1,25 @@
-<script lang="ts">
-	import { artRoster } from '$lib/roster'; // Import your array of artists
-	import LoadingProfile from '$lib/components/LoadingProfile.svelte';
-	import ArtistProfile from './ArtistProfile.svelte';
-
-	export let data;
-
-	const filterFunc = (a: { route: any; id: string }) => {
-		return a.route.replace('/roster/art/', '') == data.slug;
-	};
-	let artist: any;
-	(async () => {
-		const res = await artRoster();
-		artist = res.filter(filterFunc)[0];
-		// console.log(res);
-	})();
+<script>
+	import { page } from '$app/stores';
+	import db from '$lib/db';
+	import OrbGlow from '../../../../lib/components/OrbGlow.svelte';
+	import ArtistHero from './ArtistHero.svelte';
+	import ArtistBio from './ArtistBio.svelte';
+	import ArtistGallery from './ArtistGallery.svelte';
+	let artist;
+	let { slug } = $page.params;
+	// console.log(slug);
+	db.artist.subscribe((a) => {
+		// console.log('Received artist data:', a);
+		const filterfunc = (item) => item.route.includes(`/roster/art/${slug}`);
+		artist = a.filter(filterfunc)[0];
+		// console.log('Filtered artist:', artist);
+	});
+	
 </script>
 
-{#if !artist}
-	<LoadingProfile />
-{/if}
 {#if artist}
-	<ArtistProfile {artist} />
+	<ArtistHero {artist} />
+	<OrbGlow />
+	<ArtistBio {artist} />
+	<ArtistGallery {artist} />
 {/if}

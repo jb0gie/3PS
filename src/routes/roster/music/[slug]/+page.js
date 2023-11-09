@@ -1,4 +1,4 @@
 export function load({ params }) {
-	console.log(params.slug);
+	// console.log(params.slug);
 	return params
 }

@@ -1,29 +1,50 @@
-<script lang="ts">
-	import ArtRoster from './ArtRoster.svelte';
-	let loaded: any;
-	
+<script>
+	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
+	import db from '$lib/db';
+	let artist;
+	db.artist.subscribe((a) => (artist = a));
+
+	const glassMorphism =
+		'supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur rounded-xl transform transition duration-500 hover:scale-105 relative border';
 </script>
-
-<header class="bg-surface-100-800-token hero-gradient">
+<!-- Display artist profile here -->
+<!-- <pre>{JSON.stringify(artist, null, 2)}</pre> -->
+<div>
+	<OrbGlow />
 	<div class="section-container">
-		<h1 class="text-6xl font-bold mb-8">ARTISTs 🖌️🎨🖼️</h1>
+		<p class="text-center text-base font-semibold leading-7 text-primary-500">Third Planet</p>
+		<br />
+		<h2 class="text-center text-4xl font-bold mb-8 tracking-tight md:text-6xl">🖌️ARTISTS 🎨</h2>
+		<br />
+		<div
+			class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5">
+			{#each artist as roster}
+				<div class={glassMorphism}>
+					<div class="p-2 flex justify-center">
+						<a href={roster?.route}>
+							<img class="rounded-md" src={roster?.pic[0]} alt={roster?.desc} loading="lazy" />
+						</a>
+					</div>
+					<div class="px-4 pb-3">
+						<div>
+							<a href={roster?.route}>
+								<h5
+									class="text-xl font-semibold tracking-tight hover:text-violet-800 dark:hover:text-violet-300 text-gray-900 dark:text-white"
+								>
+									{roster?.title}
+								</h5>
+							</a>
+							<p class="antialiased text-gray-600 dark:text-gray-400 text-sm">{roster?.desc}</p>
+						</div>
+					</div>
+				</div>
+			{/each}
+		</div>
 	</div>
-</header>
-
-<section class="bg-surface-100-800-token">
-	<div class="section-container">
-		<ArtRoster />
-	</div>
-</section>
+</div>
 
 <style lang="postcss">
 	.section-container {
-		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
-	}
-	/* prettier-ignore */
-	.hero-gradient {
-		background-image:
-			radial-gradient(at 0% 0%, rgba(var(--color-secondary-500) / 0.33) 0px, transparent 50%),
-			radial-gradient(at 98% 1%, rgba(var(--color-error-500) / 0.33) 0px, transparent 50%);
+		@apply w-full max-w-5xl mx-auto p-4 py-16 md:py-24;
 	}
 </style>

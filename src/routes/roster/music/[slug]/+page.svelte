@@ -1,25 +1,24 @@
-<script lang="ts">
-    import { musicRoster } from '$lib/roster'; // Import your array of artists
-	import LoadingProfile from '$lib/components/LoadingProfile.svelte';
-	import MusicianProfile from './MusicianProfile.svelte';
-
-    export let data 
-    const filterFunc = (m: { route: any; id: string }) => {
-		return m.route.replace('/roster/music/', '') == data.slug;
-	};
-    let musician: any;
-    (async () => {
-		const res = await musicRoster();
-		musician = res.filter(filterFunc)[0];
-		// console.log(res);
-	})();
+<script>
+	import { page } from '$app/stores';
+	import db from '$lib/db';
+	import OrbGlow from '../../../../lib/components/OrbGlow.svelte';
+	import MusicianHero from './MusicianHero.svelte';
+	import MusicianBio from './MusicianBio.svelte';
+	import MusicianGallery from './MusicianGallery.svelte';
+	let musician;
+	let { slug } = $page.params;
+	console.log(slug);
+	db.musician.subscribe((m) => {
+		console.log('Received Musician data:', m);
+		const filterfunc = (item) => item.route.includes(`/roster/music/${slug}`);
+		musician = m.filter(filterfunc)[0];
+		console.log('Filtered Musician:', musician);
+	});
 </script>
 
-<!-- Display artist information here -->
-<br />
-{#if !musician}
-	<LoadingProfile />
-{/if}
 {#if musician}
-	<MusicianProfile {musician} />
+	<MusicianHero {musician} />
+	<OrbGlow />
+	<MusicianBio {musician} />
+	<MusicianGallery {musician} />
 {/if}

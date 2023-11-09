@@ -1,5 +1,5 @@
 <script>
-	import { TwitterLogo, GithubLogo } from 'radix-icons-svelte';
+	import { TwitterLogo, GithubLogo, DiscordLogo } from 'radix-icons-svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { Button } from '$lib/components/ui/button';
 	import LightSwitch from './LightSwitch.svelte';
@@ -41,7 +41,7 @@
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/services" class={navItem}>
-						<DropdownMenu.Item>
+							<DropdownMenu.Item>
 								<DropdownMenu.Label>Services</DropdownMenu.Label>
 							</DropdownMenu.Item>
 						</a>
@@ -53,7 +53,7 @@
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/events" class={navItem}>
-						<DropdownMenu.Item>
+							<DropdownMenu.Item>
 								<DropdownMenu.Label>Events</DropdownMenu.Label>
 							</DropdownMenu.Item>
 						</a>
@@ -64,17 +64,17 @@
 						<Button variant="link" class={navItem} builders={[builder]}>Roster</Button>
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content class="w-auto">
-						<DropdownMenu.Item>
-							<a href="roster/art" class={navItem}>
+						<a href="/roster/art" class={navItem}>
+							<DropdownMenu.Item>
 								<DropdownMenu.Label>3PS : ART</DropdownMenu.Label>
-							</a>
-						</DropdownMenu.Item>
+							</DropdownMenu.Item>
+						</a>
 						<DropdownMenu.Separator />
-						<DropdownMenu.Item>
-							<a href="roster/music" class={navItem}>
+						<a href="/roster/music" class={navItem}>
+							<DropdownMenu.Item>
 								<DropdownMenu.Label>3PS : MUSIC</DropdownMenu.Label>
-							</a>
-						</DropdownMenu.Item>
+							</DropdownMenu.Item>
+						</a>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
 			</nav>
@@ -91,13 +91,19 @@
 						<span class="sr-only" data-svelte-h="svelte-11yow7k">GitHub</span>
 					</div>
 				</a>
+				<a href="https://discord.com/invite/xp3VwS5ySF" target="_blank" rel="noreferrer">
+					<div class={navIcon}>
+						<DiscordLogo class="h-4 w-4" />
+						<span class="sr-only" data-svelte-h="svelte-11yow7k">Discord</span>
+					</div>
+				</a>
 				<a href="https://x.com/3planetstudio" target="_blank" rel="noreferrer">
 					<div class={navIcon}>
 						<TwitterLogo class="h-4 w-4" />
 						<span class="sr-only" data-svelte-h="svelte-ym26he">Twitter</span>
 					</div>
 				</a>
-				<LightSwitch class="h-4 w-4" />
+				<LightSwitch />
 			</nav>
 		</div>
 	</div>

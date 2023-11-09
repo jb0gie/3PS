@@ -4,10 +4,13 @@
 	import AboutFooter from './AboutFooter.svelte';
 	import OrbGlow from '../../lib/components/OrbGlow.svelte';
 	import third_planet from '$lib/images/logo-s.png';
+	import { Canvas } from '@threlte/core';
+	import TestScene from './TestScene.svelte';
 
 	const gradientHeading =
 		'bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
 </script>
+
 
 <div class="sm:flex items-center max-w-screen-xl">
 	<div class="sm:w-1/2 p-10">
@@ -28,6 +31,12 @@
 
 <div class="mb-16">
 	<AboutFooter />
+</div>
+
+<div class="h-screen w-auto">
+	<Canvas>
+		<TestScene/>
+	</Canvas>
 </div>
 
 <style lang="postcss">
