@@ -4,8 +4,8 @@
 	import { Project, Sheet, SheetObject } from '@threlte/theatre';
 	import { getProject } from '@theatre/core';
 	import projectState from '../lib/splash.json';
-	const project = getProject('Splash', { state: projectState })
-	project.ready.then(() => console.log('Project loaded!'))
+	const project = getProject('Splash', { state: projectState });
+	project.ready.then(() => console.log('Project loaded!'));
 	import { spring } from 'svelte/motion';
 	import Planets from '../lib/components/planets-hi.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -41,62 +41,11 @@
 	}
 </script>
 
-<Project name={"SplashScreen"}>
-	<Sheet name="Lights & Cam">
-		<SheetObject key="Directional Light" let:Sync let:Transform>
-			<Transform>
-				<T.DirectionalLight>
-					<Sync intensity color />
-				</T.DirectionalLight>
-			</Transform>
-		</SheetObject>
-		<SheetObject key="Ambient Light" let:Sync>
-			<T.AmbientLight>
-				<Sync intensity color />
-			</T.AmbientLight>
-		</SheetObject>
-	</Sheet>
-	<Sheet name="Objects">
-		<SheetObject key="WelcomeButton" let:Transform>
-			<Transform>
-				<HTML
-					position.y={2.6}
-					position.z={$htmlPosZ}
-					rotation.y={0.75}
-					occlude
-					on:visibilitychange={onVisibilityChange}
-				>
-					<a href="/home">
-						<Button
-							variant="ghost"
-							on:pointerenter={() => (isHovering = true)}
-							on:pointerleave={() => {
-								isPointerDown = false;
-								isHovering = false;
-							}}
-							on:pointerdown={() => (isPointerDown = true)}
-							on:pointerup={() => (isPointerDown = false)}
-							on:pointercancel={() => {
-								isPointerDown = false;
-								isHovering = false;
-							}}
-							class="text-5xl py-12 hover:opacity-90 active:opacity-70 text-white"
-						>
-							Blast Off
-						</Button>
-					</a>
-				</HTML>
-			</Transform>
-		</SheetObject>
-		<SheetObject key="SolarSystem" let:Transform>
-			<Transform>
-				<Planets />
-			</Transform>
-		</SheetObject>
-	</Sheet>
-</Project>
+<T.DirectionalLight position={[-20, -2, -1400]} />
+<T.AmbientLight />
 
-<T.FogExp2 color={'0xcccccc'} density={0.002} />,
+
+<T.FogExp2 color={'#dddddd'} density={0.002} />,
 <Environment path="hdr/" files="Studio_01.hdr" />
 
 <Float rotationIntensity={0.15} rotationSpeed={2}>
@@ -112,6 +61,34 @@
 		<!-- <OrbitControls maxPolarAngle={1.56} autoRotate autoRotateSpeed={0.1} enableZoom={false} /> -->
 	</T.PerspectiveCamera>
 </Float>
+
+<HTML
+	position.x={-2.5}
+	position.y={-11}
+	occlude
+	on:visibilitychange={onVisibilityChange}
+>
+	<a href="/home">
+		<Button
+			variant="ghost"
+			on:pointerenter={() => (isHovering = true)}
+			on:pointerleave={() => {
+				isPointerDown = false;
+				isHovering = false;
+			}}
+			on:pointerdown={() => (isPointerDown = true)}
+			on:pointerup={() => (isPointerDown = false)}
+			on:pointercancel={() => {
+				isPointerDown = false;
+				isHovering = false;
+			}}
+			class="text-5xl py-12 hover:opacity-90 active:opacity-70 text-white"
+		>
+			Blast Off
+		</Button>
+	</a>
+</HTML>
+<Planets position={[0, -15, -28]} />
 
 <Align>
 	<T.Points>

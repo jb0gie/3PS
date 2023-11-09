@@ -12,7 +12,7 @@
 
 <OrbGlow />
 <div class="h-screen w-auto">
-	<Studio enabled={false} />
+	<!-- <Studio enabled={false} /> -->
 	<Canvas>
 		<Sky
 			setEnvironment={false}
