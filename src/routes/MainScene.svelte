@@ -80,7 +80,7 @@
 								isPointerDown = false;
 								isHovering = false;
 							}}
-							class="text-5xl py-12 hover:opacity-90 active:opacity-70"
+							class="text-5xl py-12 hover:opacity-90 active:opacity-70 text-white"
 						>
 							Blast Off
 						</Button>
@@ -109,7 +109,7 @@
 			ref.lookAt(0, 0, 0);
 		}}
 	>
-		<OrbitControls maxPolarAngle={1.56} autoRotate autoRotateSpeed={0.1} enableZoom={false} />
+		<!-- <OrbitControls maxPolarAngle={1.56} autoRotate autoRotateSpeed={0.1} enableZoom={false} /> -->
 	</T.PerspectiveCamera>
 </Float>
 

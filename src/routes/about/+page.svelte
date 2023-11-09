@@ -15,7 +15,10 @@
 <div class="sm:flex items-center max-w-screen-xl">
 	<div class="sm:w-1/2 p-10">
 		<div class="image object-center text-center">
-			<OrbGlow />
+			<div class="absolute top-[22%] left-[10%]">
+
+				<OrbGlow />
+			</div>
 			<img src={third_planet} alt="logo" />
 		</div>
 	</div>

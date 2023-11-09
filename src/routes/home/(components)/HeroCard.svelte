@@ -9,13 +9,7 @@
 
 <div class="relative">
 	<div class="anim-float-avatar relative z-[1] top-[15%] left-[10%]">
-		<a
-		class="p-2"
-		href="https://twitter.com/3PlanetStudio"
-		target="_blank"
-		rel="noreferrer"
-		>
-		
+		<a class="p-2" href="https://twitter.com/3PlanetStudio" target="_blank" rel="noreferrer">
 			<Card.Root
 				class="supports-[backdrop-filter]:bg-background/60 border-b bg-background/95 shadow-sm backdrop-blur w-[500px]"
 			>
@@ -57,13 +51,9 @@
 		</Button>
 	</div>
 	<div class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0">
-		<OrbGlow/>
-		<div
-			class="w-96 aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center"
-		>
-			<div
-				class="w-[240px] aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center"
-			/>
+		<OrbGlow />
+		<div class="w-96 aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center">
+			<div class="w-[240px] aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center" />
 		</div>
 	</div>
 </div>
@@ -72,7 +62,7 @@
 	.anim-float-avatar {
 		animation: float-up 13s ease-in-out infinite;
 	}
-	
+
 	.anim-float-search {
 		animation: float-up 14s ease-in-out infinite;
 		animation-delay: 3s;
