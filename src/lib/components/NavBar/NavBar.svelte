@@ -66,13 +66,13 @@
 					<DropdownMenu.Content class="w-auto">
 						<a href="/roster/art" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>3PS : ART</DropdownMenu.Label>
+								<DropdownMenu.Label>🖼️ Art </DropdownMenu.Label>
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/roster/music" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>3PS : MUSIC</DropdownMenu.Label>
+								<DropdownMenu.Label>🎶 Music </DropdownMenu.Label>
 							</DropdownMenu.Item>
 						</a>
 					</DropdownMenu.Content>

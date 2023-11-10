@@ -1,4 +1,6 @@
 <script>
+	import { Button } from '$lib/components/ui/button';
+
 	import World from './(components)/World.svelte';
 	import HeroCard from './(components)/HeroCard.svelte';
 	import Mints from './(components)/Mints.svelte';
@@ -19,15 +21,19 @@
 			<World>
 				<svelte:fragment slot="title">Heads up!</svelte:fragment>
 				<svelte:fragment slot="description">
-					<a class="btn" href="https://hyperfy.io/3ps" target="_blank">Visit 3PS on hyperfy.io</a>
+					<a class="btn" href="https://hyperfy.io/3ps" target="_blank"> Visit us in hyperfy.io</a>
 				</svelte:fragment>
 			</World>
-			<World>
+			<!-- <World>
 				<svelte:fragment slot="title">Heads up!</svelte:fragment>
 				<svelte:fragment slot="description">
-					<a class="btn" href="https://www.spatial.io/s/Third-Planet-Studio-Artist-Showcase-62a490b9a214750001dc4957?share=7798857155842536753" target="_blank">Visit 3PS on spatial.io</a>
+					<a
+						class="btn"
+						href="https://www.spatial.io/s/Third-Planet-Studio-Artist-Showcase-62a490b9a214750001dc4957?share=7798857155842536753"
+						target="_blank">Visit 3PS on spatial.io</a
+					>
 				</svelte:fragment>
-			</World>
+			</World> -->
 		</div>
 
 		<div class="h-24 md:h-20" />
@@ -41,42 +47,75 @@
 
 		<p class="max-w-2xl text-xl md:text-2xl">Welcome to Third Planet Studio</p>
 
-		<div class="h-24 md:h-20" />
+		<div class="h-24 md:h-10" />
 
-		<div class="grid gap-8 md:grid-cols-2">
+		<div class="mx-auto max-w-7xl sm:pt-24 grid gap-8 md:grid-cols-2">
 			<div class="flex flex-col justify-center">
 				<h2 class="self-start inline text-4xl font-bold">What we are</h2>
 				<div class="h-6" />
-				<p class="text-xl md:pr-30 lg:pr-20">
-					Third Planet Studio is your portal to a new dimension of creativity.
-					We're not your typical virtual music and art group.
-					We believe in empowering artists with 100% ownership
-					of their work and absolute creative freedom.
-				</p>
+				<div class="max-w-md xl:max-w-xl sm:max-w-lg lg:max-w-sm md:max-w-md">
+					<p class="text-2xl md:pr-30 lg:pr-20">
+						Third Planet Studio is your portal to a new dimension of creativity.
+					</p>
+					<br />
+					<p class="text-2xl md:pr-30 lg:pr-20">
+						We're not your typical virtual music and art group.
+					</p>
+					<br />
+					<p class="text-2xl md:pr-30 lg:pr-20">
+						We believe in empowering artists with 100% ownership of their work and absolute creative
+						freedom.
+					</p>
+				</div>
 			</div>
 			<div>
-				<HeroCard />
+				<div class="relative">
+					<div class="anim-float-avatar relative z-[1]">
+						<a
+							class="p-2"
+							href="https://twitter.com/3PlanetStudio"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<HeroCard />
+						</a>
+					</div>
+					<div class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-0">
+						<div
+							class="w-96 aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center"
+						>
+							<OrbGlow />
+							<div
+								class="w-[240px] aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center"
+							/>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-
-		<div class="h-64 md:h-20" />
+		<div class="h-32 md:h-64" />
 		<br />
 		<p class="text-4xl">
 			<span class="text-gray-400">
 				In the boundless realm of Web3, where technology and creativity converge,
 			</span>
+			<br />
 			<span class="text-gray-600">
-				Third Planet Studio stands as the epicenter where art and music find their harmonious union.
+				<span
+					class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
+				>
+					Third Planet Studio
+				</span> stands as the epicenter where art and music find their harmonious union.
 			</span>
 		</p>
 
 		<div class="h-24 md:h-20" />
 
-		<Mints />
+		<!-- <Mints />
 
-		<div class="h-20" />
+		<div class="h-20" /> -->
 
-		<div class="grid gap-8 md:grid-cols-2">
+		<div class="mx-auto max-w-7xl sm:pt-24 grid gap-8 md:grid-cols-2">
 			<div>
 				<FootCard />
 			</div>
@@ -121,28 +160,31 @@
 	.section-container {
 		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
 	}
-	.img-bg {
-		@apply w-64 h-64 md:w-80 md:h-80;
-		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
-		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite, glow 5s linear infinite;
+	.anim-float-avatar {
+		animation: float-up 13s ease-in-out infinite;
 	}
-	@keyframes glow {
-		0% {
-			@apply bg-red-500/50;
-		}
-		33% {
-			@apply bg-lime-500/50;
-		}
-		66% {
-			@apply bg-pink-500/50;
-		}
-		100% {
-			@apply bg-yellow-500/50;
-		}
+
+	.anim-float-search {
+		animation: float-up 14s ease-in-out infinite;
+		animation-delay: 3s;
 	}
-	@keyframes pulse {
-		50% {
-			transform: scale(1.5);
-		}
+	.anim-float-radio {
+		animation: float-down 17s ease-in-out infinite;
+	}
+
+	.anim-float-button {
+		animation: float-up 15s ease-in-out infinite;
+	}
+	/* prettier-ignore */
+	@keyframes float-up {
+		0% { transform: translateY(0px); }
+		50% { transform: translateY(-20px); }
+		100% { transform: translateY(0px); }
+	}
+	/* prettier-ignore */
+	@keyframes float-down {
+		0% { transform: translateY(0px); }
+		50% { transform: translateY(20px); }
+		100% { transform: translateY(0px); }
 	}
 </style>
