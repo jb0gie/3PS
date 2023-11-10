@@ -5,6 +5,7 @@
 	import MusicianHero from './MusicianHero.svelte';
 	import MusicianBio from './MusicianBio.svelte';
 	import MusicianGallery from './MusicianGallery.svelte';
+	import MusicianSocial from './MusicianSocial.svelte';
 	let musician;
 	let { slug } = $page.params;
 	console.log(slug);
@@ -19,6 +20,8 @@
 {#if musician}
 	<MusicianHero {musician} />
 	<OrbGlow />
+	<br />
+	<MusicianSocial {musician} />
 	<MusicianBio {musician} />
 	<MusicianGallery {musician} />
 {/if}

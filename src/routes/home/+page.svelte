@@ -1,6 +1,5 @@
 <script>
 	import { Button } from '$lib/components/ui/button';
-
 	import World from './(components)/World.svelte';
 	import HeroCard from './(components)/HeroCard.svelte';
 	import Mints from './(components)/Mints.svelte';
@@ -14,10 +13,9 @@
 </script>
 
 <div>
-	<!-- <Menu /> -->
-	<OrbGlow />
 	<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
 		<div class="flex justify-between">
+			<OrbGlow />
 			<World>
 				<svelte:fragment slot="title">Heads up!</svelte:fragment>
 				<svelte:fragment slot="description">
@@ -36,20 +34,20 @@
 			</World> -->
 		</div>
 
-		<div class="h-24 md:h-20" />
+		<div class="h-5 md:h-16" />
 
 		<p class="text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
 			Where <span class={grad1}>Art</span> &amp; <span class={grad2}>Music</span>
 			Unite in the Boundless Realm of Web3
 		</p>
 
-		<div class="h-10" />
+		<div class="h-5" />
 
-		<p class="max-w-2xl text-xl md:text-2xl">Welcome to Third Planet Studio</p>
+		<p class="max-w-2xl text-xl md:text-3xl">Welcome to Third Planet Studio</p>
 
-		<div class="h-24 md:h-10" />
+		<div class="h-6 md:h-2" />
 
-		<div class="mx-auto max-w-7xl sm:pt-24 grid gap-8 md:grid-cols-2">
+		<div class="mx-auto max-w-7xl sm:pt-3 grid gap-8 md:grid-cols-2">
 			<div class="flex flex-col justify-center">
 				<h2 class="self-start inline text-4xl font-bold">What we are</h2>
 				<div class="h-6" />
@@ -93,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="h-32 md:h-64" />
+		<div class="h-12 md:h-24" />
 		<br />
 		<p class="text-4xl">
 			<span class="text-gray-400">
@@ -109,9 +107,9 @@
 			</span>
 		</p>
 
-		<div class="h-24 md:h-20" />
+		<div class="h-12 md:h-10" />
 
-		<!-- <Mints />
+		<!-- <Mints /> UNHIDE ME 
 
 		<div class="h-20" /> -->
 
@@ -158,7 +156,7 @@
 
 <style lang="postcss">
 	.section-container {
-		@apply w-full max-w-7xl mx-auto p-4 py-16 md:py-24;
+		@apply w-full max-w-7xl mx-auto p-4 py-16; md:py-24;
 	}
 	.anim-float-avatar {
 		animation: float-up 13s ease-in-out infinite;
