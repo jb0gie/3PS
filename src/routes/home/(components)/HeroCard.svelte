@@ -17,7 +17,7 @@
 					<div style="width: 100%; height: 100%;">
 						<iframe
 							title="3PS LIVE"
-							src="https://player.twitch.tv/?channel=thirdplanetstudio&parent=test.thirdplanetstudios.247420.xyz"
+							src="https://player.twitch.tv/?channel=thirdplanetstudiolive&parent=test.thirdplanetstudios.247420.xyz"
 							frameborder="0"
 							allowfullscreen="1"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -39,7 +39,7 @@
 				<p class="font-bold">Third Planet Studio LLC .ETH .X <BlueCheck /></p>
 			</div>
 		</Card.Title>
-		<Card.Description><h3 class="text-lg opacity-50">@3PlanetStudio</h3></Card.Description>
+		<Card.Description><h3 class="text-lg">@3PlanetStudio</h3></Card.Description>
 	</Card.Header>
 	<Card.Content>
 		<p class="whitespace-nowrap text-lg">Web3 Concierge/DAO</p>

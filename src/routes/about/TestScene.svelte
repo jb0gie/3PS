@@ -33,7 +33,7 @@
 			minPolarAngle={20 * DEG2RAD}
 			maxAzimuthAngle={45 * DEG2RAD}
 			minAzimuthAngle={-45 * DEG2RAD}
-			enableZoom={false}
+			enableZoom={true}
 		/>
 	</T.PerspectiveCamera>
 

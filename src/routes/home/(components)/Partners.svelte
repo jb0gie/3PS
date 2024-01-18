@@ -6,7 +6,7 @@
 	db.partner.subscribe((p) => (partner = p));
     const box = 'max-w-7xl mx-auto flex flex-wrap justify-around gap-8 py-12 px-4'
 	const title =
-		'w-full mb-4 -mt-4 text-center text-base font-semibold uppercase text-gray-400 tracking-wider';
+		'w-full mb-4 -mt-4 text-center text-base font-semibold uppercase tracking-wider';
 	const link = 'flex items-center justify-center text-gray-400 hover:text-gray-200';
 </script>
 

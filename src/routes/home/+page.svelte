@@ -43,7 +43,7 @@
 
 		<div class="h-5" />
 
-		<p class="max-w-2xl text-xl md:text-3xl">Welcome to Third Planet Studio</p>
+		<p class="max-w-2xl text-xl md:text-3xl">Welcome to ThirdPlanet Studio</p>
 
 		<div class="h-6 md:h-2" />
 
@@ -94,15 +94,14 @@
 		<div class="h-12 md:h-24" />
 		<br />
 		<p class="text-4xl">
-			<span class="text-gray-400">
+			<span class="">
 				In the boundless realm of Web3, where technology and creativity converge,
 			</span>
-			<br />
-			<span class="text-gray-600">
+			<span class="">
 				<span
 					class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
 				>
-					Third Planet Studio
+					ThirdPlanet Studio
 				</span> stands as the epicenter where art and music find their harmonious union.
 			</span>
 		</p>
@@ -148,7 +147,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="h-5 md:h-40" />
 		<Partners />
 	</div>

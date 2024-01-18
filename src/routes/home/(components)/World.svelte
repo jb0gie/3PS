@@ -5,7 +5,7 @@
 
 <div class="w-64 anim-float-avatar">
 	<Alert.Root class="supports-[backdrop-filter]:bg-background/60 border-b bg-background/95 shadow-sm backdrop-blur w-auto">
-		<Rocket class="h-4 w-4" />
+		<Rocket class="h-6 w-4" />
 		<Alert.Title><slot name="title" /></Alert.Title>
 		<Alert.Description><slot name="description" /></Alert.Description>
 	</Alert.Root>

@@ -1,11 +1,6 @@
 <script>
 	import { T, useThrelte } from '@threlte/core';
 	import { interactivity, OrbitControls, Environment, HTML, Float, Align } from '@threlte/extras';
-	import { Project, Sheet, SheetObject } from '@threlte/theatre';
-	import { getProject } from '@theatre/core';
-	import projectState from '../lib/splash.json';
-	const project = getProject('Splash', { state: projectState });
-	project.ready.then(() => console.log('Project loaded!'));
 	import { spring } from 'svelte/motion';
 	import Planets from '../lib/components/planets-hi.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -41,11 +36,10 @@
 	}
 </script>
 
+<T.FogExp2 color={'#dddddd'} density={0.002} />,
 <T.DirectionalLight position={[-20, -2, -1400]} />
 <T.AmbientLight />
 
-
-<T.FogExp2 color={'#dddddd'} density={0.002} />,
 <Environment path="hdr/" files="Studio_01.hdr" />
 
 <Float rotationIntensity={0.15} rotationSpeed={2}>
@@ -63,7 +57,7 @@
 </Float>
 
 <HTML
-	position.x={-2.5}
+	position.x={-3}
 	position.y={-11}
 	occlude
 	on:visibilitychange={onVisibilityChange}

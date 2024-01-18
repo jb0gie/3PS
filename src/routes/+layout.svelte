@@ -7,7 +7,7 @@
 	// SEO
 	const metaDefaults = {
 		title: '3PS',
-		description: 'Concierge/DAO',
+		description: 'Creative Concierge | DAO',
 		image: '../static/favicon.png'
 	};
 	const meta = {

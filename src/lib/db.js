@@ -6,6 +6,20 @@ const pb = new PocketBase('https://pb.thirdplanetstudios.247420.xyz');
 const partner = writable([]);
 const artist = writable([]);
 const musician = writable([]);
+const metaverse = writable([]);
+
+pb.collection('metaverse')
+	.getList()
+	.then(async (w) => {
+		// console.log(w.items);
+		const out = w.items.map((item) => {
+			// const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+			// item.pic = picUrls;
+			// console.log(item.pic);
+			return item;
+		});
+		metaverse.set(out);
+	});
 
 pb.collection('partner')
 	.getList()
@@ -46,5 +60,4 @@ pb.collection('musician')
 		musician.set(out);
 	});
 
-
-export default { partner, artist, musician };
+export default { partner, artist, musician, metaverse };

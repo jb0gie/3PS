@@ -10,7 +10,7 @@
 	</Sheet.Trigger>
 	<Sheet.Content {side}>
 		<div class="p-4">
-			<h1 class="text-2xl font-semibold">3rd Planet Studio</h1>
+			<h1 class="text-2xl font-semibold">ThirdPlanet Studio</h1>
 			<ul class="mt-4">
 				<li class="mb-2"><a href="/home" class="block hover:text-indigo-400">Home</a></li>
 				<li class="mb-2"><a href="/about" class="block hover:text-indigo-400">About</a></li>
