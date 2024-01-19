@@ -73,11 +73,11 @@
 			<span class={grad2}>Third<span class={grad1}>Planet</span></span>
 		</div>
 
-		<div class="h-5 md:h-16" />
-
 		<p class="text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
 			{services.srvcTitle}
 		</p>
+		<div class="h-5 md:h-16" />
+
 
 		<div class="h-5" />
 

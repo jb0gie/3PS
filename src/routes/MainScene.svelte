@@ -1,6 +1,17 @@
 <script>
 	import { T, useThrelte } from '@threlte/core';
-	import { interactivity, OrbitControls, Environment, HTML, Float, Align } from '@threlte/extras';
+	import {
+		interactivity,
+		OrbitControls,
+		Environment,
+		Text,
+		HTML,
+		Float,
+		Align,
+
+		Suspense
+
+	} from '@threlte/extras';
 	import { spring } from 'svelte/motion';
 	import PlanetLogo from '../lib/components/planetlogo.svelte';
 	import { Button } from '$lib/components/ui/button';
@@ -36,15 +47,16 @@
 		positions[i * 3 + 2] = (Math.random() - 0.5) * 2000; // z
 	}
 
-	const scale = spring(4);
-
+	const planetScale = spring(4);
+	const textPos = spring(0);
+	const fontSize = spring(-1);
 	function navigationToPage(route) {
 		goto(route);
 	}
 </script>
 
 <T.FogExp2 color={'#dddddd'} density={0.002} />,
-<T.DirectionalLight position={[-20, -2, -1400]} />
+<T.DirectionalLight intensity={1} position={[-20, -2, -1400]} />
 <T.AmbientLight />
 
 <Environment path="hdr/" files="Studio_01.hdr" />
@@ -62,35 +74,37 @@
 		<!-- <OrbitControls maxPolarAngle={1.56} autoRotate autoRotateSpeed={0.1} enableZoom={false} /> -->
 	</T.PerspectiveCamera>
 </Float>
-<T.DirectionalLight intensity={5} color position={[1,0,0]} />
-<PlanetLogo
-	scale={$scale}
-	on:click={() => navigationToPage('/home')}
-	on:pointerenter={() => scale.set(4.5)}
-	on:pointerleave={() => scale.set(4)}
-/>
 
-<!-- <HTML position.x={-3} position.y={-1} occlude on:visibilitychange={onVisibilityChange}>
-	<a href="/home">
-		<Button
-			variant="ghost"
-			on:pointerenter={() => (isHovering = true)}
-			on:pointerleave={() => {
-				isPointerDown = false;
-				isHovering = false;
-			}}
-			on:pointerdown={() => (isPointerDown = true)}
-			on:pointerup={() => (isPointerDown = false)}
-			on:pointercancel={() => {
-				isPointerDown = false;
-				isHovering = false;
-			}}
-			class="text-5xl py-12 hover:opacity-90 active:opacity-70 text-white"
-		>
-			Blast Off
-		</Button>
-	</a>
-</HTML> -->
+<T.DirectionalLight intensity={10} position={[1, 0, 0]} />
+
+<Suspense final>
+	<T.Group>
+	<PlanetLogo
+		on:click={() => navigationToPage('/home')}
+		scale={$planetScale}
+		on:pointerenter={() => {
+			planetScale.set(4.5);
+			textPos.set(-6);
+			fontSize.set(2);
+		}}
+		on:pointerleave={() => {
+			planetScale.set(4);
+			textPos.set(0);
+			fontSize.set(-1);
+		}}
+	/>
+	<T.Group position.y={$textPos}>
+		<Text
+			text="Click to go home"
+			color=""
+			fontSize={$fontSize}
+			anchorX="center"
+			anchorY="middle"
+			castShadow
+			receiveShadow
+		/>
+	</T.Group>
+</T.Group>
 
 <Align>
 	<T.Points>
@@ -109,3 +123,8 @@
 		<T.PointsMaterial color={0x888888} />
 	</T.Points>
 </Align>
+
+	<svelte:fragment slot="fallback">
+		Loading...
+	</svelte:fragment>
+</Suspense>

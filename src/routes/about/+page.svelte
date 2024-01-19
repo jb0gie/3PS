@@ -1,49 +1,30 @@
 <script>
+	import { Canvas } from '@threlte/core';
+	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
 	import AboutHero from './AboutHero.svelte';
 	import AboutFounders from './AboutFounders.svelte';
 	import AboutFooter from './AboutFooter.svelte';
-	import OrbGlow from '../../lib/components/OrbGlow.svelte';
-	import third_planet from '$lib/images/logo-s.png';
-	import { Canvas } from '@threlte/core';
-	import TestScene from './TestScene.svelte';
-	import LogoPlanet from './LogoPlanet.svelte'
 
 	const gradientHeading =
-		'bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
+		'bg-gradient-to-br frm-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
+	const grad1 =
+		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
+	const grad2 =
+		'bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone';
+	const glassMorphism =
+		'supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur rounded-xl py-12 relative border';
 </script>
 
-<div class="sm:flex items-center max-w-screen-xl">
-	<div class="sm:w-1/2 p-10">
-		<div class="image object-center text-center">
-			<div class="absolute top-[22%] left-[10%]">
-				<OrbGlow />
-			</div>
-			<div class="h-screen w-auto">
-				<Canvas>
-					<LogoPlanet/>
-				</Canvas>
-			</div>
-			<!-- <img src={third_planet} alt="logo" /> -->
-		</div>
+<div>
+	<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+		<PageTitle>
+			<svelte:fragment slot="pageName">About</svelte:fragment>
+		</PageTitle>
+		<div class="h-5 md:h-12" />
+		<AboutHero />
+		<AboutFounders />
+		<AboutFooter />
 	</div>
-	<AboutHero />
-</div>
-
-<div class="text-center mb-16">
-	<h1 class="h1 text-4xl sm:text-6xl leading-normal mt-16 font-extrabold tracking-tight">
-		3PS <span class={gradientHeading}>FOUNDERS</span>
-	</h1>
-	<AboutFounders />
-</div>
-
-<div class="mb-16">
-	<AboutFooter />
-</div>
-
-<div class="h-screen w-auto">
-	<Canvas>
-		<TestScene/>
-	</Canvas>
 </div>
 
 <style lang="postcss">

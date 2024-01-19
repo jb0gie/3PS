@@ -1,17 +1,18 @@
 	<script>
 		import { T } from '@threlte/core';
-		import { OrbitControls } from '@threlte/extras';
+		import { Suspense, OrbitControls } from '@threlte/extras';
 		import { DEG2RAD } from 'three/src/math/MathUtils.js';
 		import Pass from '../../lib/components/pass.svelte';
 	</script>
 
-	<T.PerspectiveCamera position={[0, 3, 5]} makeDefault fov={30}>
+	<T.PerspectiveCamera position={[0, 1, 10]} makeDefault fov={40}>
 		<OrbitControls
 			maxPolarAngle={85 * DEG2RAD}
 			minPolarAngle={20 * DEG2RAD}
 			maxAzimuthAngle={45 * DEG2RAD}
 			minAzimuthAngle={-45 * DEG2RAD}
 			enableZoom={false}
+			autoRotate
 		/>
 	</T.PerspectiveCamera>
 
@@ -19,4 +20,13 @@
 
 	<T.AmbientLight intensity={0.5} />
 
-	<Pass scale={0.8}/>
+
+	<Suspense final>
+		<Pass 
+		position.y={-1}
+			scale={2}/>
+
+		<svelte:fragment slot="fallback">
+			Loading...
+		</svelte:fragment>
+	</Suspense>
