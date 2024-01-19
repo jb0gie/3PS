@@ -6,6 +6,7 @@
 	import third_planet from '$lib/images/logo-s.png';
 	import { Canvas } from '@threlte/core';
 	import TestScene from './TestScene.svelte';
+	import LogoPlanet from './LogoPlanet.svelte'
 
 	const gradientHeading =
 		'bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';
@@ -17,7 +18,12 @@
 			<div class="absolute top-[22%] left-[10%]">
 				<OrbGlow />
 			</div>
-			<img src={third_planet} alt="logo" />
+			<div class="h-screen w-auto">
+				<Canvas>
+					<LogoPlanet/>
+				</Canvas>
+			</div>
+			<!-- <img src={third_planet} alt="logo" /> -->
 		</div>
 	</div>
 	<AboutHero />

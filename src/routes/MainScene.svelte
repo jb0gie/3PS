@@ -2,13 +2,14 @@
 	import { T, useThrelte } from '@threlte/core';
 	import { interactivity, OrbitControls, Environment, HTML, Float, Align } from '@threlte/extras';
 	import { spring } from 'svelte/motion';
-	import Planets from '../lib/components/planets-hi.svelte';
+	import PlanetLogo from '../lib/components/planetlogo.svelte';
 	import { Button } from '$lib/components/ui/button';
+	import { goto } from '$app/navigation';
 
 	interactivity();
 
 	const onVisibilityChange = (isVisible) => {
-		// console.log(isVisible);
+		console.log(isVisible);
 	};
 
 	let exposure = 0.1618;
@@ -34,6 +35,12 @@
 		positions[i * 3 + 1] = (Math.random() - 0.5) * 2000; // y
 		positions[i * 3 + 2] = (Math.random() - 0.5) * 2000; // z
 	}
+
+	const scale = spring(4);
+
+	function navigationToPage(route) {
+		goto(route);
+	}
 </script>
 
 <T.FogExp2 color={'#dddddd'} density={0.002} />,
@@ -44,7 +51,7 @@
 
 <Float rotationIntensity={0.15} rotationSpeed={2}>
 	<T.PerspectiveCamera
-		position={[0, 7, 18]}
+		position={[0, 0, 18]}
 		rotation.y="Math.PI"
 		makeDefault
 		fov={60}
@@ -55,13 +62,15 @@
 		<!-- <OrbitControls maxPolarAngle={1.56} autoRotate autoRotateSpeed={0.1} enableZoom={false} /> -->
 	</T.PerspectiveCamera>
 </Float>
+<T.DirectionalLight intensity={5} color position={[1,0,0]} />
+<PlanetLogo
+	scale={$scale}
+	on:click={() => navigationToPage('/home')}
+	on:pointerenter={() => scale.set(4.5)}
+	on:pointerleave={() => scale.set(4)}
+/>
 
-<HTML
-	position.x={-3}
-	position.y={-11}
-	occlude
-	on:visibilitychange={onVisibilityChange}
->
+<!-- <HTML position.x={-3} position.y={-1} occlude on:visibilitychange={onVisibilityChange}>
 	<a href="/home">
 		<Button
 			variant="ghost"
@@ -81,14 +90,13 @@
 			Blast Off
 		</Button>
 	</a>
-</HTML>
-<Planets position={[0, -15, -28]} />
+</HTML> -->
 
 <Align>
 	<T.Points>
 		<T.BufferGeometry>
 			<T.BufferAttribute
-				args={[positions, 3]}
+				args={[positions, 4]}
 				attach={(parent, self) => {
 					parent.setAttribute('position', self);
 					return () => {

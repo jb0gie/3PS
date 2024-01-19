@@ -10,7 +10,7 @@ Command: npx @threlte/gltf@2.0.0 pass.glb -T
 
   export const ref = new Group()
 
-  const gltf = useGltf('/src/lib/components/pass.glb', { useDraco: true })
+  const gltf = useGltf('/models/pass.glb', { useDraco: true })
 
   const component = forwardEventHandlers()
 </script>
