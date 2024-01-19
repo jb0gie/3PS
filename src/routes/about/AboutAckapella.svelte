@@ -8,8 +8,16 @@
 
 <div class="relative rounded-xl overflow-hidden mt-16">
 	<div class="max-w-7xl mx-auto">
+		<div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+		<img
+			class="h-56 w-full object-cover rounded-lg object-top sm:h-72 md:h-96 lg:w-full lg:h-full"
+			src="https://pbs.twimg.com/profile_images/1518727186294976514/o5YsjZ0W.jpg"
+			alt=""
+		/>
+	</div>
 		<div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 			<div class="pt-1" />
+			<OrbGlow/>
 			<main
 				class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
 			>
@@ -26,12 +34,4 @@
 			</main>
 		</div>
 	</div>
-	<div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-		<img
-			class="h-56 w-full object-cover rounded-lg object-top sm:h-72 md:h-96 lg:w-full lg:h-full"
-			src="https://pbs.twimg.com/profile_images/1518727186294976514/o5YsjZ0W.jpg"
-			alt=""
-		/>
-	</div>
-	<OrbGlow />
 </div>

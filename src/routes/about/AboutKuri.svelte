@@ -3,12 +3,12 @@
 
 	const kuri = {
 		title: `"<i>KURI</i>"a.k.a"<b>THE VTUBER </b>"`,
-		paragraph: `<p>Visual Artist / Designer / VTuber! Gulian specializes in 3D and VFX. His styles include "Y2K" or Depthcore.</p><br /><p>He is proficient in Photoshop, Blender, Cinema4D, After Effects, and more. He strives for perfection in his work.</p>`
+		paragraph: `<p>Visual Artist / Designer / VTuber! Gulian specializes in 3D and VFX. His styles include “Y2K” or Depthcore. He is deeply influenced by postmodernism, often incorporating its principles into his work. His art often challenges traditional boundaries, reflecting the abstract and unconventional nature of postmodern art.</p><br /><p>He is proficient in Photoshop, Blender, Cinema4D, After Effects, and more. He strives for perfection in his work. His passion for abstract art is evident in his designs, where he plays with form, color, and space to create unique visuals. This abstract influence, combined with his technical skills, results in a distinctive style that sets his work apart.</p>`
 	};
 </script>
 
 <div class="relative rounded-xl overflow-hidden mt-16">
-	<OrbGlow />
+	
 	<div class="max-w-7xl mx-auto">
 		<div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
 			<img
@@ -19,6 +19,7 @@
 		</div>
 		<div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 			<div class="pt-1" />
+			<OrbGlow />
 			<main
 				class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
 			>
