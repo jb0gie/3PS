@@ -1,5 +1,5 @@
 <script>
-	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
+	import PageTitle from '../../../lib/components/PageTitle/PageTitle.svelte';
 	import db from '$lib/db';
 	let artist;
 	db.artist.subscribe((a) => (artist = a));
@@ -7,17 +7,16 @@
 	const glassMorphism =
 		'supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur rounded-xl transform transition duration-500 hover:scale-105 relative border';
 </script>
+
 <!-- Display artist profile here -->
 <!-- <pre>{JSON.stringify(artist, null, 2)}</pre> -->
-<div>
-	<OrbGlow />
-	<div class="section-container">
-		<p class="text-center text-base font-semibold leading-7 text-primary-500">Third Planet</p>
-		<br />
-		<h2 class="text-center text-4xl font-bold mb-8 tracking-tight md:text-6xl">🖌️ARTISTS 🎨</h2>
-		<br />
-		<div
-			class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5">
+<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+	<PageTitle>
+		<svelte:fragment slot="pageName">Artists</svelte:fragment>
+	</PageTitle>
+	<div
+			class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5"
+		>
 			{#each artist as roster}
 				<div class={glassMorphism}>
 					<div class="p-2 flex justify-center">
@@ -40,11 +39,4 @@
 				</div>
 			{/each}
 		</div>
-	</div>
 </div>
-
-<style lang="postcss">
-	.section-container {
-		@apply w-full max-w-5xl mx-auto p-4 py-16 md:py-24;
-	}
-</style>

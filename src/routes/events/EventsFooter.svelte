@@ -1,4 +1,7 @@
-<script lang="ts">
+<script>
+    import * as Carousel from '$lib/components/ui/carousel';
+	import Autoplay from 'embla-carousel-autoplay';
+
     const thirdPlanetEvents = [
         'https://media.discordapp.net/attachments/1094571932088807547/1163458326965780560/image.png?ex=653fa601&is=652d3101&hm=8b054eed75580f8c47599fc1102e22c59f46733eb7267de11ccee8e08e9cfffb&=&width=272&height=404',
         'https://media.discordapp.net/attachments/1094571932088807547/1163458327326511255/image.png?ex=653fa601&is=652d3101&hm=20cfcc1cf24981d59484f48924747883af48ef17b01621d15404daa048817bc9&=&width=269&height=404',
@@ -17,249 +20,37 @@
         'https://cdn.discordapp.com/attachments/1094571932088807547/1163458791677898803/image.png?ex=653fa66f&is=652d316f&hm=7acc376dfef4e1abd0499abe04a816a0d5c68ba8f0075bd309061f695f9fb663&',
         'https://cdn.discordapp.com/attachments/1094571932088807547/1163458792005046322/image.png?ex=653fa670&is=652d3170&hm=7ef45c379866dabf7a9ea912f7842474831cf6c9840be55d1a05561abf40be41&',
     ]
+    const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
 </script>
-<h2 class="h2 mx-auto font-bold">Flyers and Promos</h2>
-<h3 class="h3 mx-auto">from previous 3PS hosted events</h3>
-<div class="p-4">
-    <div class="flex flex-col grid-cols-9 p-2 mx-auto md:grid">
-        <div class="flex md:contents flex-row-reverse">
-            <div class="relative p-4 my-6 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-auto rounded-container-token"
-                src={thirdPlanetEvents[0]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300" />
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[1]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[2]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[4]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[5]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[6]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[7]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[8]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[9]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[10]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[11]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[12]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[13]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-        <div class="flex md:contents">
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300"></div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2" />
-            </div>
-            <div class="relative p-4 my-6 rounded-xl col-start-6 col-end-10 mr-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[14]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-        </div>
-        <div class="flex md:contents flex-row-reverse">
-            <div
-                class="relative p-4 my-6 text-gray-800 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto">
-                <img
-                class="snap-center w-64 rounded-container-token"
-                src={thirdPlanetEvents[15]}
-                alt="Previous NFT Music Hall Events"
-                loading="lazy"/>
-            </div>
-            <div class="relative col-start-5 col-end-6 mr-7 md:mx-auto">
-                <div class="flex items-center justify-center w-6 h-full">
-                    <div class="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300">
-                    </div>
-                </div>
-                <div class="absolute w-6 h-6 -mt-3 bg-white border-4 border-indigo-400 rounded-full top-1/2"></div>
-            </div>
-        </div>
-    </div>
+<h2 class="text-2xl mx-auto">Flyers and Promos from previous ThirdPlanet hosted events</h2>
+<div class="max-w-screen-xl mx-auto p-3 sm:p-10 md:p-16">
+	<Carousel.Root
+        orientation="vertical"
+		plugins={[plugin]}
+		opts={{
+			align: 'start',
+			loop: true
+		}}
+		class="w-full"
+		on:mousenter={plugin.stop}
+		on:mouseleave={plugin.play}
+	>
+		<Carousel.Content class="-mt-1 h-[720px]">
+			{#each thirdPlanetEvents as pics}
+				<Carousel.Item>
+                    <div class="h-90 w-full object-cover object-top lg:w-full lg:h-full">
+					<article
+						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl max-w-sm mx-auto mt-6"
+					>
+						<img
+							class="w-full object-cover object-center"
+							src={pics}
+							alt="Previous NFT Music Hall Events"
+						/>
+					</article>
+				</div>
+                </Carousel.Item>
+			{/each}
+		</Carousel.Content>
+	</Carousel.Root>
 </div>

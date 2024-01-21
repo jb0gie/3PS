@@ -1,8 +1,7 @@
 <script>
-	import { Button, buttonVariants } from '$lib/components/ui/button';
+	import { buttonVariants } from '$lib/components/ui/button';
 	import * as Dialog from '$lib/components/ui/dialog';
 	import MusicianGallery from './MusicianGallery.svelte';
-	import MusicianSocial from './MusicianSocial.svelte';
 	export let musician;
 
 	const headStyle =
@@ -38,10 +37,6 @@
 								<h4 class="text-lg">{@html musician?.bio}</h4>
 							</Dialog.Description>
 						</Dialog.Header>
-						<div class="grid gap-4 py-4">
-							<div class="grid grid-cols-4 items-center gap-4" />
-							<div class="grid grid-cols-4 items-center gap-4" />
-						</div>
 					</Dialog.Content>
 				</Dialog.Root>
 			</div>
