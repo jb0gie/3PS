@@ -85,12 +85,12 @@
 		<div class="flex flex-1 items-center justify-between space-x-2 sm:space-x-4 md:justify-end">
 			<div class="w-full flex-1 md:w-auto md:flex-none" data-svelte-h="svelte-1eg3ung" />
 			<nav class="flex items-center space-x-1">
-				<a href="https://github.com/anentrypoint" target="_blank" rel="noreferrer">
+				<!-- <a href="https://github.com/anentrypoint" target="_blank" rel="noreferrer">
 					<div class={navIcon}>
 						<GithubLogo class="h-4 w-4" />
 						<span class="sr-only" data-svelte-h="svelte-11yow7k">GitHub</span>
 					</div>
-				</a>
+				</a> -->
 				<a href="https://discord.com/invite/xp3VwS5ySF" target="_blank" rel="noreferrer">
 					<div class={navIcon}>
 						<DiscordLogo class="h-4 w-4" />

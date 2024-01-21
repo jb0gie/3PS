@@ -7,6 +7,9 @@
 	import AboutAckapella from './AboutAckapella.svelte';
 	const cHead = 'h2 hover:text-indigo-500 font-extrabold transition duration-500 ease-in-out';
 	const founder = `<p>Third Planet Studio was founded by Binx, Ackapella and Kuri.</p>`;
+
+	const headStyle =
+		'supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 shadow-sm backdrop-blur';
 </script>
 
 <div class="text-center items-center mb-16">
@@ -19,7 +22,7 @@
 			<Carousel.Content>
 				<Carousel.Item>
 					<div class="p-1">
-						<Card.Root>
+						<Card.Root class={headStyle}>
 							<Card.Content class="flex aspect-square items-center justify-center p-6">
 								<AboutAckapella />
 							</Card.Content>

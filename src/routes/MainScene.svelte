@@ -78,14 +78,19 @@
 <T.DirectionalLight intensity={10} position={[1, 0, 0]} />
 
 <Suspense final>
-	<T.Group>
+	
+	<svelte:fragment slot="fallback">
+		Loading...
+	</svelte:fragment>
+</Suspense>
+<T.Group>
 	<PlanetLogo
 		on:click={() => navigationToPage('/home')}
 		scale={$planetScale}
 		on:pointerenter={() => {
-			planetScale.set(4.5);
+			planetScale.set(4.2);
 			textPos.set(-6);
-			fontSize.set(2);
+			fontSize.set(1);
 		}}
 		on:pointerleave={() => {
 			planetScale.set(4);
@@ -123,8 +128,3 @@
 		<T.PointsMaterial color={0x888888} />
 	</T.Points>
 </Align>
-
-	<svelte:fragment slot="fallback">
-		Loading...
-	</svelte:fragment>
-</Suspense>
