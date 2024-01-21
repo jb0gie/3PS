@@ -41,7 +41,7 @@
 			Unite in the Boundless Realm of Web3
 		</p>
 
-		<div class="h-5" />
+		<div class="h-5 md:h-2" />
 
 		<p class="max-w-2xl text-xl md:text-3xl">Welcome to ThirdPlanet Studio</p>
 

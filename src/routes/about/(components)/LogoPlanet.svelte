@@ -5,7 +5,7 @@
 		import { spring } from 'svelte/motion';
 		import { Color, MeshStandardMaterial } from 'three';
 		import { DEG2RAD } from 'three/src/math/MathUtils.js';
-		import Planetlogo from '../../lib/components/planetlogo.svelte';
+		import Planetlogo from '../../../lib/components/planetlogo.svelte';
 
 		interactivity()
 		const planetScale = spring(3);

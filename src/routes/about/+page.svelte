@@ -1,9 +1,8 @@
 <script>
-	import { Canvas } from '@threlte/core';
 	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
-	import AboutHero from './AboutHero.svelte';
-	import AboutFounders from './AboutFounders.svelte';
-	import AboutFooter from './AboutFooter.svelte';
+	import AboutHero from './(components)/AboutHero.svelte';
+	import AboutFounders from './(components)/AboutFounders.svelte';
+	import AboutFooter from './(components)/AboutFooter.svelte';
 
 	const gradientHeading =
 		'bg-gradient-to-br frm-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone';

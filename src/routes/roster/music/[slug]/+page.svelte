@@ -10,18 +10,18 @@
 	let { slug } = $page.params;
 	console.log(slug);
 	db.musician.subscribe((m) => {
-		console.log('Received Musician data:', m);
+		// console.log('Received Musician data:', m);
 		const filterfunc = (item) => item.route.includes(`/roster/music/${slug}`);
 		musician = m.filter(filterfunc)[0];
-		console.log('Filtered Musician:', musician);
+		// console.log('Filtered Musician:', musician);
 	});
 </script>
 
-{#if musician}
-	<MusicianHero {musician} />
-	<OrbGlow />
-	<br />
-	<MusicianSocial {musician} />
-	<MusicianBio {musician} />
-	<MusicianGallery {musician} />
-{/if}
+<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+	{#if musician}
+		<MusicianHero {musician} />
+		<OrbGlow />
+		<MusicianSocial {musician} />
+		<MusicianBio {musician} />
+	{/if}
+</div>

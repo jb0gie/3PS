@@ -1,5 +1,5 @@
 <script>
-	import OrbGlow from '../../lib/components/OrbGlow.svelte';
+	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
 
 	const kuri = {
 		title: `<b>KURI</b><br /><i>a.k.a</i><br />"<b>THE VTUBER</b>"`,

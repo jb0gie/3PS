@@ -46,9 +46,9 @@
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />
-						<a href="/submit" class={navItem}>
+						<a href="/contact" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>Submissions</DropdownMenu.Label>
+								<DropdownMenu.Label>Contact</DropdownMenu.Label>
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />

@@ -2,7 +2,7 @@
 		import { T } from '@threlte/core';
 		import { Suspense, OrbitControls } from '@threlte/extras';
 		import { DEG2RAD } from 'three/src/math/MathUtils.js';
-		import Pass from '../../lib/components/pass.svelte';
+		import Pass from '../../../lib/components/pass.svelte';
 	</script>
 
 	<T.PerspectiveCamera position={[0, 1, 10]} makeDefault fov={40}>

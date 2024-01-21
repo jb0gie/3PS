@@ -1,5 +1,5 @@
 <script>
-	import OrbGlow from '../../lib/components/OrbGlow.svelte';
+	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
 	export const binx = {
 		title: `<b>BINX</b><br /><i>a.k.a</i><br />"<b>THE BAND MOM</b>"`,
 		paragraph: `<p>Born into a family of artists and musicians, she started her career in NYC night clubs in the late 90s, and moved to the Rock, Hardcore, Punk scene. She then transitioned to a world music record label, catering to various music genres.</p><br /><p>After a break from the industry and a stint in event design, she kept up with new technology. Her current goal is to help artists carry on their legacy through a decentralized network, fostering a community of mutual support and passion for their craft.</p>`

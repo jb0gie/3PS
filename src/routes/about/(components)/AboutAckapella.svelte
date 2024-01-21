@@ -1,5 +1,5 @@
 <script>
-	import OrbGlow from '../../lib/components/OrbGlow.svelte';
+	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
 	const ackapella = {
 		title: `<b>ACKAPELLA</b><br /><i>a.k.a</i><br />"<b>CRYPT MASTER</b>"`,
 		paragraph: `<p>Ackapella has 5 years experience as a Financial Analyst, 5 years experience in crypto currency and Forex trading.</p><br /><p> He was also a videographer for multiple shows on the Outdoor Channel/Sportman Channel and enjoys 3D visual effects.</p><br /><p>Kev is also a professional archer and certified instructor. He is a believer that everyone should control their own financial security!</p>`
