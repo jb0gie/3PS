@@ -11,11 +11,11 @@
 <div class="max-w-4xl flex items-center lg:h-[500px] flex-wrap mx-auto my-32 lg:my-2">
 	<!--Main Col-->
 	<div class={headStyle}>
-		<div class="p-4 md:p-6 text-center lg:text-left">
+		<div class="md:p-4 text-center lg:text-left">
 			<!-- Image for mobile view-->
 			<div
 				class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-				style="background-image: url({artist?.pic[1]})"
+				style="background-image: url({artist?.pic[0]})"
 			/>
 			<h1 class="text-3xl font-bold pt-8 lg:pt-0">About {artist?.title}</h1>
 			<p class="pt-4 text-base items-center">

@@ -1,6 +1,5 @@
 <script>
 	import PageTitle from '../../../lib/components/PageTitle/PageTitle.svelte';
-	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
 	import db from '$lib/db';
 	let musician;
 	db.musician.subscribe((m) => (musician = m));
