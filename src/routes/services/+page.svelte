@@ -1,4 +1,6 @@
 <script>
+	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
+
 	import db from '$lib/db';
 	import OrbGlow from '../../lib/components/OrbGlow.svelte';
 
@@ -68,34 +70,35 @@
 
 <div>
 	<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
-		<div class="flex justify-between text-2xl font-bold max-w-3xl lg:text-5xl lg:pr-24 md:text-6xl">
-			<OrbGlow />
-			<span class={grad2}>Third<span class={grad1}>Planet</span></span>
-		</div>
-
-		<p class="text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
-			{services.srvcTitle}
-		</p>
+		<PageTitle>
+			<svelte:fragment slot="pageName">Services</svelte:fragment>
+		</PageTitle>
+		
 		<div class="h-5 md:h-16" />
-
-
-		<div class="h-5" />
 
 		<div class={glassMorphism}>
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="lg:text-center">
+				<div class="lg:text-left">
 					<h2 class="text-base font-semibold tracking-wide uppercase">Why Choose</h2>
-					<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tightsm:text-4xl">
+					<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
 						Our Web3 Services
 					</p>
-					<p class="mt-4 max-w-2xl text-xl lg:mx-auto">
+					<p class="mt-4 max-w-2xl text-xl">
 						We're not just adapting to the future; we're shaping it. Our team of visionaries is
 						dedicated to pushing the boundaries of what's possible in the Web3 space.
 					</p>
-					<p class="mt-4 max-w-2xl text-xl lg:mx-auto">
+					<p class="mt-4 max-w-2xl text-xl">
 						Join us on the forefront of the revolution, where music, art, and entertainment converge
 						with blockchain to create an unparalleled digital experience.
 					</p>
+					<p class="mt-4 max-w-2xl text-xl">
+						Third Planet Studio is a collective of founders, creators, technical co-founders, developers, designers, strategists, and project managers who thrive on creating transformative digital experiences. 
+					</p>
+					<p class="mt-4 max-w-2xl text-xl">
+						More importantly, we prioritize crafting the perfect digital solutions for our trusted partners. Whether it's apps, websites, or other digital products, we adapt to your strategic requirements.
+					</p>
+
+					
 				</div>
 
 				<div class="mt-10">
@@ -237,12 +240,6 @@
 		</div>
 
 		<div class="h-12 md:h-24" />
-
-		<!-- <Mints /> UNHIDE ME 
-
-		<div class="h-20" /> -->
-
-		<div class="h-5 md:h-40" />
 	</div>
 </div>
 
@@ -279,7 +276,6 @@
             </div>
         </div>
 
-
         <div class="flex gap-4 items-start">
             <span class="text-violet-600 bg-violet-500/10 p-3 rounded-full">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
@@ -289,7 +285,6 @@
                     Sponsors will get email support on weekdays.</p>
             </div>
         </div>
-
 
         <div class="flex gap-4 items-start">
             <span class="text-violet-600 bg-violet-500/10 p-3 rounded-full">
@@ -301,7 +296,6 @@
             </div>
         </div>
 
-
         <div class="flex gap-4 items-start">
             <span class="text-violet-600 bg-violet-500/10 p-3 rounded-full">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5"><path d="M9.96424 2.68571C10.0668 2.42931 9.94209 2.13833 9.6857 2.03577C9.4293 1.93322 9.13832 2.05792 9.03576 2.31432L5.03576 12.3143C4.9332 12.5707 5.05791 12.8617 5.3143 12.9642C5.5707 13.0668 5.86168 12.9421 5.96424 12.6857L9.96424 2.68571ZM3.85355 5.14646C4.04882 5.34172 4.04882 5.6583 3.85355 5.85356L2.20711 7.50001L3.85355 9.14646C4.04882 9.34172 4.04882 9.6583 3.85355 9.85356C3.65829 10.0488 3.34171 10.0488 3.14645 9.85356L1.14645 7.85356C0.951184 7.6583 0.951184 7.34172 1.14645 7.14646L3.14645 5.14646C3.34171 4.9512 3.65829 4.9512 3.85355 5.14646ZM11.1464 5.14646C11.3417 4.9512 11.6583 4.9512 11.8536 5.14646L13.8536 7.14646C14.0488 7.34172 14.0488 7.6583 13.8536 7.85356L11.8536 9.85356C11.6583 10.0488 11.3417 10.0488 11.1464 9.85356C10.9512 9.6583 10.9512 9.34172 11.1464 9.14646L12.7929 7.50001L11.1464 5.85356C10.9512 5.6583 10.9512 5.34172 11.1464 5.14646Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></span>
@@ -311,7 +305,6 @@
                     your implementation as easy as possible. </p>
             </div>
         </div>
-
 
         <div class="flex gap-4 items-start">
             <span class="text-violet-600 bg-violet-500/10 p-3 rounded-full">
@@ -336,7 +329,7 @@
 	</p>
     <br />
     <p class="text-x; sm:text-2xl mx-auto">
-        We're not just adapting to the future; we're shaping it. Our team of visionaries is dedicated to pushing the boundaries of what's possible in the Web3 space. Join us on the forefront of the revolution, where music, art, and entertainment converge with blockchain to create an unparalleled digital experience.
+        We are shaping the future of Web3, not adapting to it! Pushing boundaries with blockchain in music, art, and entertainment resulting in an unsurpassed digital experience, that's what our team is all about.
     </p>
 	<div class="section-container mx-auto px-4">
 		<div class="p-1 flex flex-wrap items-center justify-center">

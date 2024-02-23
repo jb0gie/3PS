@@ -1,5 +1,9 @@
 <script>
-	import PageTitle from '../../../lib/components/PageTitle/PageTitle.svelte';
+	// import { PlusCircled } from "radix-icons-svelte";
+	import { Button } from "$lib/components/ui/button";
+	import { Separator } from "$lib/components/ui/separator";
+	import * as Tabs from "$lib/components/ui/tabs";
+	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
 	import db from '$lib/db';
 	let musician;
 	db.musician.subscribe((m) => (musician = m));
@@ -15,9 +19,7 @@
 		<svelte:fragment slot="pageName">Musicians</svelte:fragment>
 	</PageTitle>
 
-	<div
-		class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5"
-	>
+	<div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4 md:p-2 xl:p-5">
 		{#each musician as roster}
 			<div class={glassMorphism}>
 				<div class="p-2 flex justify-center">

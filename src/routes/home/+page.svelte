@@ -38,10 +38,10 @@
 
 		<p class="text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
 			Where <span class={grad1}>Art</span> &amp; <span class={grad2}>Music</span>
-			Unite in the Boundless Realm of Web3
+			Unite in the Boundless Realm of creativity
 		</p>
 
-		<div class="h-5 md:h-2" />
+		<div class="h-5 md:h-12" />
 
 		<p class="max-w-2xl text-xl md:text-3xl">Welcome to ThirdPlanet Studio</p>
 

@@ -22,13 +22,14 @@
 				{@html musician?.exp}
 			</p>
 			<div class="pt-6 pb-4">
+				<!-- BIO -->
 				<Dialog.Root>
 					<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
 						<h1 class="text-xl pt-8 lg:pt-0">
 							Read more about {musician?.name}
 						</h1>
 					</Dialog.Trigger>
-					<Dialog.Content class="sm:max-w-[425px]">
+					<Dialog.Content class="sm:max-w-[720px]">
 						<Dialog.Header>
 							<Dialog.Title>
 								<h1 class="text-4xl">{musician?.name}</h1>
@@ -39,6 +40,26 @@
 						</Dialog.Header>
 					</Dialog.Content>
 				</Dialog.Root>
+				<!-- PREV WORK -->
+				{#if musician?.works !== ''}
+					<Dialog.Root>
+						<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
+							<h1 class="text-xl pt-8 lg:pt-0">
+								See previous work from {musician?.name}
+							</h1>
+						</Dialog.Trigger>
+						<Dialog.Content class="sm:max-w-[720px]">
+							<Dialog.Header>
+								<Dialog.Title>
+									<h1 class="text-4xl">{musician?.name}</h1>
+								</Dialog.Title>
+								<Dialog.Description>
+									<div class="text-lg items-center">{@html musician?.works}</div>
+								</Dialog.Description>
+							</Dialog.Header>
+						</Dialog.Content>
+					</Dialog.Root>
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -47,3 +68,5 @@
 		<MusicianGallery {musician} />
 	</div>
 </div>
+
+

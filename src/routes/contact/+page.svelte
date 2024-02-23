@@ -19,10 +19,10 @@
 			<iframe
 				class="hide-scrollbar rounded-lg h-[420px] overflow-hidden"
 				title="3rdPlanetEvents"
-				src="https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true"
+				src="https://docs.google.com/forms/d/e/1FAIpQLSe4bJpmLCWR3sQSFDAn5Ky9Hy7TlObfJOM2hApNODFwS5HBZA/viewform?embedded=true"
 				style="border-width:0 scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3); "
-				width="100%"
-				height="100"
+				width="420px"
+				height="100%"
 				frameborder="0"
 				scrolling="yes"
 			/>

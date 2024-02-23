@@ -17,9 +17,9 @@
 </script>
 
 <header class={headStyle}>
-	<div class="container flex h-14 items-center">
+	<div class="container flex h-12 items-center">
 		<div class="mr-4 hidden md:flex">
-			<nav class="relative py-2 flex items-center space-x-6 text-sm font-medium">
+			<nav class="relative py-2 flex items-center text-sm font-medium">
 				<a href="/" class="mr-6 flex items-center space-x-2">
 					<img src={third_planet} alt="" class="w-10" />
 				</a>
@@ -59,7 +59,7 @@
 						</a>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
-				<DropdownMenu.Root>
+				<!-- <DropdownMenu.Root>
 					<DropdownMenu.Trigger asChild let:builder>
 						<Button variant="link" class={navItem} builders={[builder]}>Roster</Button>
 					</DropdownMenu.Trigger>
@@ -76,7 +76,13 @@
 							</DropdownMenu.Item>
 						</a>
 					</DropdownMenu.Content>
-				</DropdownMenu.Root>
+				</DropdownMenu.Root> -->
+				<Button variant="link" href="/roster" class={navItem}>
+					Roster
+				</Button>
+				<Button variant="link" href="/blog" class={navItem}>
+					Publications
+				</Button>
 			</nav>
 		</div>
 

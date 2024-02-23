@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Menubar as MenubarPrimitive } from "bits-ui";
-	import { cn } from "$lib/utils";
+	import { cn } from "../../../utils";
 	import { Check } from "radix-icons-svelte";
 
 	type $$Props = MenubarPrimitive.CheckboxItemProps;

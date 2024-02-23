@@ -45,6 +45,8 @@ pb.collection('artist')
 			return item;
 		});
 		artist.set(out);
+	}).catch((error) => {
+		console.error('Error fetching data:', error);
 	});
 
 pb.collection('musician')
@@ -52,9 +54,12 @@ pb.collection('musician')
 	.then(async (m) => {
 		// console.log(m.items);
 		const out = m.items.map((item) => {
-			const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
-			item.pic = picUrls;
-			// console.log(item.pic);
+			if (item.pic) {
+				const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+				item.pic = picUrls;
+			} else {
+				console.warn('Item does not have a pic property:', item);
+			}
 			return item;
 		});
 		musician.set(out);

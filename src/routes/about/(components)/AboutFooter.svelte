@@ -23,7 +23,7 @@
 	<div class="sm:w-1/2 p-5">
 		<div class="text">
 			<h2 class="my-4 font-bold text-3xl sm:text-4xl">
-				What is <span class={grad2}>Third<span class={grad1}>Planet</span></span>?
+				Create with <span class={grad2}>Third<span class={grad1}>Planet</span></span>?
 			</h2>
 			<p class="mx-auto text-2xl">
 				{@html text.p1}
