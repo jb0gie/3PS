@@ -11,37 +11,32 @@
 	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
 	import Menu from './(components)/menu.svelte';
 	import Sidebar from './(components)/sidebar.svelte';
-	import db from '$lib/db';
 
-	let musicians;
-	let genres = [];
+	
+	export let data 
 	let open = false;
 	let value = '';
 
-	onMount(async () => {
-		db.musician.subscribe((m) => (musicians = m));
-		genres = [...new Set(musicians.map((musician) => musician.genre))];
-		activeGenresTab.set(genres[0]);
-	});
+	// onMount(async () => {
+	// 	activeGenresTab.set(data.genres[0]);
+	// });
 
-	$: selectedValue = genres.find((f) => f.value === value)?.label ?? 'Select a genre...';
+	// $: selectedValue = genres.find((f) => f.value === value)?.label ?? 'Select a genre...';
 	// We want to refocus the trigger button when the user selects
 	// an item from the list so users can continue navigating the
 	// rest of the form with the keyboard.
-	function closeAndFocusTrigger(triggerId) {
-		if (ids && ids.trigger) {
-			open = false;
-			tick().then(() => {
-				document.getElementById(triggerId)?.focus();
-			});
-		}
-	}
+	// function closeAndFocusTrigger(triggerId) {
+	// 	if (ids && ids.trigger) {
+	// 		open = false;
+	// 		tick().then(() => {
+	// 			document.getElementById(triggerId)?.focus();
+	// 		});
+	// 	}
+	// }
+
 </script>
 
 <div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
-	<PageTitle>
-		<svelte:fragment slot="pageName">Roster</svelte:fragment>
-	</PageTitle>
 
 	<div class="h-5 md:h-16" />
 
@@ -60,16 +55,16 @@
 						<Tabs.Root value="music" class="h-full space-y-6">
 							<div class="flex">
 								<Tabs.List>
-									{#each genres as genre (genre)}
+									{#each data.genres as genre (genre)}
 										<Tabs.Trigger value={genre} class="relative text-xl">
 											{genre}
 										</Tabs.Trigger>
 									{/each}
 								</Tabs.List>
 							</div>
-							{#each genres as genre (genre)}
+							{#each data.genres as genre (genre)}
 								<Tabs.Content value={genre} class="border-none p-0 outline-none">
-									{#each musicians as musician (musician.id)}
+									{#each data.musicians as musician (musician.id)}
 										<!-- {#if musician && musician.genre === genre}
 											
 										{/if} -->
