@@ -1,9 +1,9 @@
 {
-	"name": "3PS",
+	"name": "3rdplanetstudio",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev --port 10000",
+		"dev": "vite dev  --port 10000",
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check .",
@@ -49,5 +49,6 @@
 		"tailwind-variants": "^0.1.16",
 		"three": "^0.158.0",
 		"zod": "^3.22.4"
-	}
+	},
+	"prepare": "svelte-kit sync"
 }

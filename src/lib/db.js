@@ -1,12 +1,60 @@
 import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('https://pb.thirdplanetstudios.247420.xyz');
 
-const partner = writable([]);
+if (browser) {
+	window.pb = pb
+}
 
-const metaverse = writable([]);
+let musicians = writable([]);
+let musiciansDone = false;
+const getMusicians = () => {
+	if (!musiciansDone) {
+		musiciansDone = true;
+		pb.collection('musician')
+			.getList()
+			.then((a) => {
+				const out = a.items.map((item) => {
+					if (item.pic) {
+						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+						item.pic = picUrls;
+					} else {
+						console.warn('Item does not have a pic property:', item);
+					}
+					return item;
+				});
+				musicians.set(out);
+			});
+	}
+	return musicians;
+};
 
+let artists = writable([]);
+let artistsDone = false;
+const getArtists = () => {
+	if (!artistsDone) {
+		artistsDone = true;
+		pb.collection('artist')
+			.getList()
+			.then((a) => {
+				const out = a.items.map((item) => {
+					if (item.pic) {
+						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+						item.pic = picUrls;
+					} else {
+						console.warn('Item does not have a pic property:', item);
+					}
+					return item;
+				});
+				artists.set(out);
+			});
+	}
+	return artists;
+};
+
+let metaverse = writable([]);
 pb.collection('metaverse')
 	.getList()
 	.then(async (w) => {
@@ -19,7 +67,8 @@ pb.collection('metaverse')
 		});
 		metaverse.set(out);
 	});
-
+	
+const partner = writable([]);
 pb.collection('partner')
 	.getList()
 	.then(async (p) => {
@@ -33,54 +82,6 @@ pb.collection('partner')
 		partner.set(out);
 	});
 
-	let musicians = writable();
-	let musiciansDone = false;
-	const getMusicians = () => {
-		if (!musiciansDone) {
-			musiciansDone = true;
-			pb.collection('musician').getList(1, 50,
-				{
-					sort: '-createdAt'
-				}
-			).then(a => {
-				const out = a.items.map((item) => {
-					if (item.pic) {
-						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
-						item.pic = picUrls;
-					} else {
-						console.warn('Item does not have a pic property:', item);
-					}
-					return item;
-				});
-				musicians.set(out);
 
-			});
-		}
-		return musicians
-	}
 
-	let artists = writable();
-	let artistsDone = false;
-	const getArtists = () => {
-		if (!artistsDone) {
-			artistsDone = true;
-			pb.collection('artist').getList(1, 50,
-
-			).then(a => {
-				const out = a.items.map((item) => {
-					if (item.pic) {
-						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
-						item.pic = picUrls;
-					} else {
-						console.warn('Item does not have a pic property:', item);
-					}
-					return item;
-				});
-				artists.set(out);
-
-			});
-		}
-		return artists
-	}
-
-export default { partner, getArtists, getMusicians, metaverse };
+export default { getArtists, getMusicians, partner, metaverse };

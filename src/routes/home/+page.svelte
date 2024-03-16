@@ -6,6 +6,13 @@
 	import OrbGlow from '../../lib/components/OrbGlow.svelte';
 	import FootCard from './(components)/FootCard.svelte';
 	import Partners from './(components)/Partners.svelte';
+
+
+	export let data
+	$: ({partners}= data)
+
+
+
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
 	const grad2 =
@@ -148,7 +155,7 @@
 			</div>
 		</div>
 		<div class="h-5 md:h-40" />
-		<Partners />
+		<Partners {data}/>
 	</div>
 </div>
 

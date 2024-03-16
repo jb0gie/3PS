@@ -12,32 +12,29 @@
 	import Menu from './(components)/menu.svelte';
 	import Sidebar from './(components)/sidebar.svelte';
 
-	
-	export let data 
+	export let data;
 	let open = false;
 	let value = '';
 
-	// onMount(async () => {
-	// 	activeGenresTab.set(data.genres[0]);
-	// });
+	onMount(async () => {
+		activeGenresTab.set(data.genres[0]);
+	});
 
-	// $: selectedValue = genres.find((f) => f.value === value)?.label ?? 'Select a genre...';
+	$: selectedValue = data.genres.find((f) => f.value === value)?.label ?? 'Select a genre...';
 	// We want to refocus the trigger button when the user selects
 	// an item from the list so users can continue navigating the
 	// rest of the form with the keyboard.
-	// function closeAndFocusTrigger(triggerId) {
-	// 	if (ids && ids.trigger) {
-	// 		open = false;
-	// 		tick().then(() => {
-	// 			document.getElementById(triggerId)?.focus();
-	// 		});
-	// 	}
-	// }
-
+	function closeAndFocusTrigger(triggerId) {
+		if (ids && ids.trigger) {
+			open = false;
+			tick().then(() => {
+				document.getElementById(triggerId)?.focus();
+			});
+		}
+	}
 </script>
 
 <div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
-
 	<div class="h-5 md:h-16" />
 
 	<div
@@ -49,7 +46,40 @@
 				<div class="h-full px-4 py-6 lg:px-8">
 					{#if $activeTab === 'browse'}
 						<!-- SEARCH -->
-						<h1>add search here</h1>
+						<Popover.Root bind:open let:ids>
+							<Popover.Trigger asChild let:builder>
+								<Button
+									builders={[builder]}
+									variant="outline"
+									role="combobox"
+									aria-expanded={open}
+									class="w-[200px] justify-between"
+								>
+									{selectedValue}
+									<CaretSort class="ml-2 h-4 w-4 shrink-0 opacity-50" />
+								</Button>
+							</Popover.Trigger>
+							<Popover.Content class="w-[200px] p-0">
+								<Command.Root>
+									<Command.Input placeholder="Search genre..." class="h-9" />
+									<Command.Empty>No genre found.</Command.Empty>
+									<Command.Group>
+										{#each data.genres as genre (genre)}
+											<Command.Item
+												value={genre}
+												onSelect={(currentValue) => {
+													value = currentValue;
+													closeAndFocusTrigger(ids.trigger);
+												}}
+											>
+												<Check class={cn('mr-2 h-4 w-4', value !== genre && 'text-transparent')} />
+												{genre}
+											</Command.Item>
+										{/each}
+									</Command.Group>
+								</Command.Root>
+							</Popover.Content>
+						</Popover.Root>
 					{:else if $activeTab === 'music'}
 						<!-- MUSIC -->
 						<Tabs.Root value="music" class="h-full space-y-6">
