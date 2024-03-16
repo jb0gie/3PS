@@ -7,14 +7,17 @@
 	import * as Popover from '$lib/components/ui/popover';
 	import { Button } from '../../lib/components/ui/button';
 	import { cn } from '../../lib/utils';
-	import Separator from '../../lib/components/ui/separator/separator.svelte';
-	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
 	import Menu from './(components)/menu.svelte';
 	import Sidebar from './(components)/sidebar.svelte';
+	import MusicGallery from './(components)/musicgallery.svelte';
+	import Separator from '../../lib/components/ui/separator/separator.svelte';
+	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
 
 	export let data;
 	let open = false;
 	let value = '';
+
+	console.log({data});
 
 	onMount(async () => {
 		activeGenresTab.set(data.genres[0]);
@@ -35,6 +38,10 @@
 </script>
 
 <div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+	<PageTitle>
+		<svelte:fragment slot="pageName">Roster</svelte:fragment>
+	</PageTitle>
+	
 	<div class="h-5 md:h-16" />
 
 	<div
@@ -95,16 +102,16 @@
 							{#each data.genres as genre (genre)}
 								<Tabs.Content value={genre} class="border-none p-0 outline-none">
 									{#each data.musicians as musician (musician.id)}
-										<!-- {#if musician && musician.genre === genre}
-											
-										{/if} -->
+										{#if musician && musician.genre === genre}
+											<MusicGallery {musician} />
+										{/if}
 									{/each}
 								</Tabs.Content>
 							{/each}
 						</Tabs.Root>
 					{:else if $activeTab === 'art'}
 						<!-- ART -->
-						<h1>it's working br0gie</h1>
+						<h1>3rd Planet Ar</h1>
 					{/if}
 				</div>
 			</div>

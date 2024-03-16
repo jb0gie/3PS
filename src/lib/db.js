@@ -8,7 +8,7 @@ if (browser) {
 	window.pb = pb
 }
 
-let musicians = writable([]);
+let musicians = writable();
 let musiciansDone = false;
 const getMusicians = () => {
 	if (!musiciansDone) {
@@ -31,7 +31,7 @@ const getMusicians = () => {
 	return musicians;
 };
 
-let artists = writable([]);
+let artists = writable();
 let artistsDone = false;
 const getArtists = () => {
 	if (!artistsDone) {
@@ -58,7 +58,6 @@ let metaverse = writable([]);
 pb.collection('metaverse')
 	.getList()
 	.then(async (w) => {
-		// console.log(w.items);
 		const out = w.items.map((item) => {
 			// const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
 			// item.pic = picUrls;
@@ -67,7 +66,7 @@ pb.collection('metaverse')
 		});
 		metaverse.set(out);
 	});
-	
+
 const partner = writable([]);
 pb.collection('partner')
 	.getList()

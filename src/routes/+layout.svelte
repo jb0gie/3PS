@@ -8,7 +8,7 @@
 	const metaDefaults = {
 		title: '3PS',
 		description: 'Creative Concierge | DAO',
-		image: '../static/favicon.png'
+		image: '/favicon.png'
 	};
 	const meta = {
 		title: metaDefaults.title,

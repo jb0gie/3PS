@@ -10,6 +10,6 @@
 
 <div class={style}>
 	<OrbGlow />
-	<span class={grad2}>Third<span class={grad1}>Planet</span></span>
+	<span class={grad2}>3rd<span class={grad1}>Planet</span></span>
 </div>
 <p class={stlye2}><slot name="pageName"/></p>
