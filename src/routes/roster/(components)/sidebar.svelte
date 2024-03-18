@@ -3,8 +3,9 @@
 	import { Button } from '../../../lib/components/ui/button';
 
 	import { activeTab } from '../store';
-	let className;
 	export { className as class };
+	
+    let className;
 
 	function switchTab(tab) {
 		activeTab.set(tab); 
@@ -15,14 +16,9 @@
 <div class={cn('pb-12', className)}>
 	<div class="space-y-4 p-4">
 		<div class="py-2">
-			<h2 class="mb-2 px-4 text-xl font-semibold tracking-tight text-center">Discover 🔍</h2>
+			<h2 class="mb-2 px-4 text-3xl font-semibold tracking-tight text-center">Discover 🔍</h2>
 			<div class="space-y-10">
-                <div class="flex flex-col">
-                    <!-- <Button variant="ghost" class="p-8 justify-start" on:click={() => switchTab('browse')}>
-                        <div class="text-xl">
-                            <span class="mr-2"></span>Browse
-                        </div>
-                    </Button> -->
+                <div class="flex flex-auto">
                     <Button variant="link" class="justify-start" on:click={() => switchTab('music')}>
                         <div class="text-3xl">
                             <span class="mr-2">🎸 Music</span>

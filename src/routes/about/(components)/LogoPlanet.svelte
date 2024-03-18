@@ -1,11 +1,11 @@
 	<script>
 		import { onDestroy } from 'svelte';
 		import { T } from '@threlte/core';
-		import { HTML, OrbitControls, interactivity } from '@threlte/extras';
+		import { Suspense, HTML, OrbitControls, interactivity } from '@threlte/extras';
 		import { spring } from 'svelte/motion';
 		import { Color, MeshStandardMaterial } from 'three';
 		import { DEG2RAD } from 'three/src/math/MathUtils.js';
-		import Planetlogo from '../../../lib/components/planetlogo.svelte';
+		import Planetlogo from '$lib/components/planetlogo.svelte';
 
 		interactivity()
 		const planetScale = spring(3);
@@ -26,9 +26,14 @@
 
 	<T.AmbientLight intensity={0.5} />
 
-	<Planetlogo 
-		position={[0,1,0]}
-		scale={$planetScale}
-		on:pointerenter={() => planetScale.set(3.5)}
-		on:pointerleave={() => planetScale.set(3)}
-	/>
+	<Suspense final>
+		<Planetlogo 
+			position={[0,1,0]}
+			scale={$planetScale}
+			on:pointerenter={() => planetScale.set(3.5)}
+			on:pointerleave={() => planetScale.set(3)}
+		/>
+		<svelte:fragment slot="fallback">
+			Loading...
+		</svelte:fragment>
+	</Suspense>

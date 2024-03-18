@@ -24,15 +24,6 @@
 					<div class="p-1">
 						<Card.Root class={headStyle}>
 							<Card.Content class="flex aspect-square items-center justify-center p-6">
-								<AboutAckapella />
-							</Card.Content>
-						</Card.Root>
-					</div>
-				</Carousel.Item>
-				<Carousel.Item>
-					<div class="p-1">
-						<Card.Root>
-							<Card.Content class="flex aspect-square items-center justify-center p-6">
 								<AboutBinx />
 							</Card.Content>
 						</Card.Root>
@@ -40,9 +31,18 @@
 				</Carousel.Item>
 				<Carousel.Item>
 					<div class="p-1">
-						<Card.Root>
+						<Card.Root class={headStyle}>
 							<Card.Content class="flex aspect-square items-center justify-center p-6">
 								<AboutKuri />
+							</Card.Content>
+						</Card.Root>
+					</div>
+				</Carousel.Item>
+				<Carousel.Item>
+					<div class="p-1">
+						<Card.Root class={headStyle}>
+							<Card.Content class="flex aspect-square items-center justify-center p-6">
+								<AboutAckapella />
 							</Card.Content>
 						</Card.Root>
 					</div>
@@ -52,15 +52,6 @@
 			<Carousel.Next />
 		</Carousel.Root>
 		<div class="grid grid-cols-3 col-gap-10">
-			<div class="text-center">
-				<div class="p-4">
-					<img
-						class="rounded-xl"
-						src="https://pbs.twimg.com/profile_images/1518727186294976514/o5YsjZ0W.jpg"
-						alt="a"
-					/>
-				</div>
-			</div>
 			<div class="text-center">
 				<div class="p-4">
 					<img
@@ -75,6 +66,15 @@
 					<img
 						class="w-100 rounded-xl"
 						src="https://pbs.twimg.com/profile_images/1712861383597912065/T59n0VJE.jpg"
+						alt="a"
+					/>
+				</div>
+			</div>
+			<div class="text-center">
+				<div class="p-4">
+					<img
+						class="rounded-xl"
+						src="https://pbs.twimg.com/profile_images/1518727186294976514/o5YsjZ0W.jpg"
 						alt="a"
 					/>
 				</div>
