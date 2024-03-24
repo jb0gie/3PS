@@ -18,14 +18,14 @@
 				style="background-image: url({musician?.pic[0]})"
 			/>
 			<h1 class="text-3xl font-bold pt-8 lg:pt-0">About {musician.name}</h1>
-			<p class="pt-4 text-base items-center">
+			<p class="pt-4 items-center">
 				{@html musician?.exp}
 			</p>
 			<div class="pt-6 pb-4">
 				<!-- BIO -->
 				<Dialog.Root>
 					<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
-						<h1 class="text-xl pt-8 lg:pt-0">
+						<h1 class="text-2xl pt-8 lg:pt-0">
 							Read more about {musician?.name}
 						</h1>
 					</Dialog.Trigger>
@@ -68,5 +68,3 @@
 		<MusicianGallery {musician} />
 	</div>
 </div>
-
-

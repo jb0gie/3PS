@@ -3,11 +3,9 @@ import { browser } from '$app/environment';
 import PocketBase from 'pocketbase';
 
 const pb = new PocketBase('https://pb.thirdplanetstudios.247420.xyz');
-
 if (browser) {
 	window.pb = pb
 }
-
 let musicians = writable();
 let musiciansDone = false;
 const getMusicians = () => {

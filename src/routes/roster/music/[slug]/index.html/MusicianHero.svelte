@@ -5,7 +5,7 @@
 
 <div class="relative flex h-screen">
 	<img
-		src={musician?.pic[0]}
+		src={musician?.pic[1]}
 		alt={musician?.name}
 		class="h-full w-full object-cover object-center rounded-2xl"
 	/>
