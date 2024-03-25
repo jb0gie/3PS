@@ -83,6 +83,9 @@
 				<Button variant="link" href="/blog" class={navItem}>
 					Publications
 				</Button>
+				<Button variant="link" href="/claim" class={navItem}>
+					Claim
+				</Button>
 			</nav>
 		</div>
 
