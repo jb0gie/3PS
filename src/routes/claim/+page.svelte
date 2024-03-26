@@ -1,161 +1,149 @@
 <script>
-	import { Button, buttonVariants } from '$lib/components/ui/button';
-	import * as Dialog from '$lib/components/ui/dialog';
+	import * as Tooltip from '$lib/components/ui/tooltip';
+	import WebBg from './(components)/WebBg.svelte';
+	import ClaimHero from './(components)/ClaimHero.svelte';
+	import ClaimInfo from './(components)/ClaimInfo.svelte';
+	const name = 'Migtrix';
 	const pic1 = 'https://i.imgur.com/F90cAmF.jpeg';
-	const headStyle =
-		'supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl opacity-75 mx-6 lg:mx-0 border-b bg-background/95 shadow-sm backdrop-blur';
+	const glass =
+		'container supports-[backdrop-filter]:bg-background/60 space-y-2 z-10 rounded-lg shadow-2xl opacity-75 mx-6 lg:mx-0 border-b bg-background/95 shadow-sm backdrop-blur';
+	const cImg = 'w-24';
+	export let data;
 </script>
 
-<section class="container mx-auto p-4 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
-	<div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-		<iframe
-			src="https://rezmason.github.io/matrix/?version=resurrections"
-			frameborder="0"
-			style="overflow:hidden;height:100%;width:100%"
-			height="100%"
-			width="100%"
-		/>
-	</div>
-
-	<div class="max-w-4xl flex items-center lg:h-[500px] flex-wrap mx-auto my-32 lg:my-2">
-		<!--Main Col-->
-		<div class={headStyle}>
-			<div class="md:p-4 text-center lg:text-left">
-				<!-- Image for mobile view-->
-				<div
-					class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-					style="background-image: url({pic1})"
-				/>
-				<h1 class="text-2xl"><code>Enter the Migtrix</code>❗</h1>
-				<p class="pt-4 text-xl items-center">
-					<code class="justify-center">
-						Dive deep into the exclusive pre-release of "What Do I Know" by Migs718.<br /><br />
-						Available only through this unique NFT or at select live performances.<br /><br
-						/>Experience this special edition of the song in a way that's reserved for the true fans
-						before anyone else.
+<section
+	class="relative min-h-screen flex flex-col sm:flex-col items-center justify-center text-center text-white p-8"
+>
+	<!-- WebBg.svelte -->
+	<WebBg />
+	<div class={glass}>
+		<div class="flex flex-wrap">
+			<div class="sm:w-full md:w-8/12 mb-10">
+				<div class="mx-auto sm:p-4">
+					<nav class="items-center">
+						<img src={data.migs.pic} alt="" class="w-64" />
+						<br />
+					</nav>
+					<ClaimHero />
+				</div>
+			</div>
+			<img src={pic1} alt={name} class="p-8 w-96 sm:w-1/3 md:w-1/3 object-cover" />
+		</div>
+		<ClaimInfo />
+		<div class="h-4" />
+		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+			<div class="w-full">
+				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
+					<span class="text-green-700">Mastered</span> Version
+				</h1>
+				<p class="text-sm sm:text-base md:text-lg mb-10">
+					<code>
+						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
+						Don't miss your chance to be part of this groundbreaking experience.<br />
+						Secure your NFT now and join us in the Migtrix, where digital exclusivity meets live concert
+						vibes.
 					</code>
 				</p>
-				<div class="pt-6 pb-4">
-					<Dialog.Root>
-						<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
-							<h1 class="text-lg pt-8 lg:pt-0"><code>Why should I mint</code> ❓</h1>
-						</Dialog.Trigger>
-						<Dialog.Content class="sm:max-w-[425px]">
-							<Dialog.Header>
-								<Dialog.Title>
-									<h1 class="text-2xl">Minting gets you 🎁</h1>
-								</Dialog.Title>
-								<div class="h-3" />
-								<Dialog.Description>
-									<h4 class="text-xl">
-										Exclusive Access : This version is accessible ONLY with this NFT and at
-										exclusive live events.<br /><br />Unlock the Music : Be part of a select
-										audience that gets to witness this rare musical fusion.<br /><br /> Special Airdrop
-										: The special version will be airdropped to NFT holders, distinct from the version
-										released on Digital Service Providers (DSPs).
-									</h4>
-								</Dialog.Description>
-							</Dialog.Header>
-						</Dialog.Content>
-					</Dialog.Root>
-					<Dialog.Root>
-						<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
-							<h1 class="text-lg pt-8 lg:pt-0"><code>Coming soon</code> ❓</h1>
-						</Dialog.Trigger>
-						<Dialog.Content class="sm:max-w-[425px]">
-							<Dialog.Header>
-								<Dialog.Title>
-									<h1 class="text-2xl"><code>Mastered Version</code> 👀</h1>
-								</Dialog.Title>
-								<div class="h-3" />
-								<Dialog.Description>
-									<h4 class="text-xl">
-										Launch Set for 2025, with an airdrop to all NFT holders upon release.<br /><br
-										/>Don't miss your chance to be part of this groundbreaking experience.<br /><br
-										/>Secure your NFT now and join us in the Migtrix, where digital exclusivity
-										meets live concert vibes.
-									</h4>
-								</Dialog.Description>
-							</Dialog.Header>
-						</Dialog.Content>
-					</Dialog.Root>
-					<Dialog.Root>
-						<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
-							<h1 class="text-lg pt-8 lg:pt-0"><code>More Links</code> 🔗</h1>
-						</Dialog.Trigger>
-						<Dialog.Content class="sm:max-w-[425px]">
-							<Dialog.Header>
-								<Dialog.Title>
-									<h1 class="text-2xl">
-										<code>Enter a realm where you're not just listening to music</code>
-									</h1>
-									<h2 class="text-base"><code>you're part of the music's journey.</code></h2>
-								</Dialog.Title>
-								<Dialog.Description>
-									<div class="">
-										<div>
-											<a href="https://www.migs718.com/">
-												<Button>migs718.com</Button>
-											</a>
-											<a href="https://www.instagram.com/mikeloco">
-												<Button>@mikeloco on Instagram</Button>
-											</a>
-											<a href="https://thirdplanet.studio/">
-												<Button>3rdPlanetStudio</Button>
-											</a>
-										</div>
-
-										<h4 class="text-lg">To access the unlockable content:</h4>
-										<br />
-
-										<ul class="text-lg">
-											<li>1. Go to <a href="https://app.darkblock.io">darkblock</a></li>
-											<br />
-											<li>2. Click `Connect Wallet` make sure your on `Polygon` network</li>
-											<br />
-											<li>3. Select "What DoI Know" NFT</li>
-											<br />
-											<li>
-												4. Click `Authenticate to access` Pop Up and Sign Transaction to view
-												unlockable content.
-											</li>
-										</ul>
-										<br />
-										<h1 class="text-base">
-											#EnterTheMigtrix #ExclusiveTrack #NFTAccess #LiveMusicExperience #Migs718
-										</h1>
-									</div></Dialog.Description
-								>
-							</Dialog.Header>
-						</Dialog.Content>
-					</Dialog.Root>
-				</div>
-				<div />
 			</div>
-		</div>
-		<!--Img Col-->
-		<div class="lg:relative w-full lg:w-2/5">
-			<img class="rounded-lg" src={pic1} alt="CLAIM NOW" />
-		</div>
-	</div>
-</section>
-<div class="h-8" />
-<section class="container mx-auto p-8 md:py-20 px-0 md:p-10 md:px-0">
-	<div class="max-w-3xl flex items-center lg:h-[500px] flex-wrap mx-auto my-12 lg:my-2">
-		<iframe
-			src="https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x450a0Ca9d299a77a61EA6BBa90A60DcD73AFEbE6&amp;chain=%7B%22name%22%3A%22Polygon+Mainnet%22%2C%22chain%22%3A%22Polygon%22%2C%22rpc%22%3A%5B%22https%3A%2F%2Fpolygon.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D%22%5D%2C%22nativeCurrency%22%3A%7B%22name%22%3A%22MATIC%22%2C%22symbol%22%3A%22MATIC%22%2C%22decimals%22%3A18%7D%2C%22shortName%22%3A%22matic%22%2C%22chainId%22%3A137%2C%22testnet%22%3Afalse%2C%22slug%22%3A%22polygon%22%2C%22icon%22%3A%7B%22url%22%3A%22ipfs%3A%2F%2FQmcxZHpyJa8T4i63xqjPYrZ6tKrt55tZJpbXcjSDKuKaf9%2Fpolygon%2F512.png%22%2C%22width%22%3A512%2C%22height%22%3A512%2C%22format%22%3A%22png%22%7D%7D&amp;clientId=f0befac3890d5157677c9e54c7713da5&amp;tokenId=4&amp;theme=light&amp;primaryColor=purple"
-			width="1200px"
-			height="600px"
-			style="max-width:100%;"
-			frameborder="0"
-		/>
+		</header>
+		<div class="h-4" />
+		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+			<div class="w-full">
+				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
+					Access <span class="text-green-700">Unlockable Content</span>
+				</h1>
+				<p class="text-sm sm:text-base md:text-lg mb-10">
+					<code>
+						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
+						Don't miss your chance to be part of this groundbreaking experience.<br />
+						Secure your NFT now and join us in the Migtrix, where digital exclusivity meets live concert
+						vibes.
+					</code>
+				</p>
+			</div>
+		</header>
+		<div class="h-4" />
+		<ul class="flex justify-center mt-5 space-x-6 mx-auto items-center p-8">
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<li>
+						<a href={data.migs.site}>
+							<img class={cImg} src={data.migs.pic} alt={data.migs.name} />
+						</a>
+					</li>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>{data.migs.name}'s website</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<li>
+						<a href={data.loco.site}>
+							<img class={cImg} src={data.loco.pic} alt={data.loco.name} />
+						</a>
+					</li>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>{data.loco.name} on Instagram</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<li>
+						<a href={data.tp.site}>
+							<img class={cImg} src={data.tp.pic} alt={data.tp.name} />
+						</a>
+					</li>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>{data.tp.name}</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+
+			<Tooltip.Root>
+				<Tooltip.Trigger>
+					<li>
+						<a href={data.darkblck.site}>
+							<img class={cImg} src={data.darkblck.pic} alt={data.darkblck.name} />
+						</a>
+					</li>
+				</Tooltip.Trigger>
+				<Tooltip.Content>
+					<p>{data.darkblck.name}</p>
+				</Tooltip.Content>
+			</Tooltip.Root>
+		</ul>
 	</div>
 </section>
 
-<style>
-	.video-docker {
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-</style>
+<!-- <div class="relative flex h-screen items-center">
+	<img
+		src={pic1}
+		alt={name}
+		class="w-auto h-[512px] object-contain object-center rounded-2xl"
+	/>
+	<div class={headStyle + '  ' + 'max-w-full md:left-20'}>
+		<code class="text-white text-center text-5xl p-8">{@html name}</code>
+		<div
+			class="mix-blend-screen px-10 py-5 rounded-xl sm:text-xl sm:rounded-l-xl xl:text-2xl xl:rounded-l-2xl"
+		>
+			<code
+				>Dive deep into the exclusive pre-release of "What Do I Know" by Migs718.<br /><br />
+				Available only through this unique NFT or at select live performances.<br /><br
+				/>Experience this special edition of the song in a way that's reserved for the true fans
+				before anyone else.</code
+			>
+		</div>
+		<br />
+		<Button variant="link" class="text-4xl" href="">MINT ME</Button> 
+		<ClaimLink />
+	</div>
+	<img
+		src={pic1}
+		alt={name}
+		class="w-auto h-[512px] object-contain object-center rounded-2xl"
+	/>
+</div> -->
