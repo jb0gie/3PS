@@ -17,11 +17,11 @@
 		</div>
 		<div class="space-y-10 text-center flex flex-col items-center">
 			<iframe
-				class="hide-scrollbar rounded-lg h-[420px] overflow-hidden"
+				class="hide-scrollbar rounded-lg h-[520px] overflow-hidden"
 				title="3rdPlanetEvents"
 				src="https://docs.google.com/forms/d/e/1FAIpQLSe4bJpmLCWR3sQSFDAn5Ky9Hy7TlObfJOM2hApNODFwS5HBZA/viewform?embedded=true"
 				style="border-width:0 scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3); "
-				width="420px"
+				width="620px"
 				height="100%"
 				frameborder="0"
 				scrolling="yes"

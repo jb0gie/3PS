@@ -2,12 +2,11 @@
 	import '../app.postcss';
 	import { ModeWatcher } from 'mode-watcher';
 	import NavBar from '../lib/components/NavBar/NavBar.svelte';
-	// 3D STUFF
 	import FootBar from '../lib/components/FootBar/FootBar.svelte';
 	// SEO
 	const metaDefaults = {
-		title: '3PS',
-		description: 'Creative Concierge | DAO',
+		title: '3rdPlanetStudio',
+		description: 'Creative Concierge',
 		image: '/favicon.png'
 	};
 	const meta = {
@@ -30,7 +29,7 @@
 	<meta name="title" content={meta.title} />
 	<meta name="description" content={meta.description} />
 	<meta name="keywords" content={meta.description} />
-	<meta name="author" content="b0gieman" />
+	<meta name="author" content="b0gie.lens" />
 	<meta property="og:site_name" content="3PS" />
 	<meta property="og:type" content="website" />
 	<!-- <meta property="og:url" content="https://thirdplanet.studio{$page.url.pathname}" /> -->
@@ -39,7 +38,7 @@
 	<meta property="og:description" content={meta.description} />
 	<meta property="og:image" content={meta.image} />
 	<meta property="og:image:secure_url" content={meta.image} />
-	<meta property="og:image:type" content="image/jpg" />
+	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="" />
 	<!--FIX-->
 	<meta property="og:image:height" content="" />

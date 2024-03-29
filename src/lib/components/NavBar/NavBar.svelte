@@ -9,7 +9,8 @@
 		'supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 shadow-sm backdrop-blur';
 	const navIcon =
 		'inline-flex items-center justify-center font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md text-xs w-9 px-0';
-	const navItem = 'transition-colors hover:text-foreground/80 text-foreground/60';
+	const navItem =
+		'text-xl font-semibold transition-colors hover:text-foreground/80 text-foreground/60';
 
 	let showStatusBar = true;
 	let showActivityBar = false;
@@ -25,67 +26,59 @@
 				</a>
 				<DropdownMenu.Root>
 					<DropdownMenu.Trigger asChild let:builder>
-						<Button variant="link" class={navItem} builders={[builder]}>Explore</Button>
+						<Button
+							variant="link"
+							class={navItem + ' ' + 'hover:text-indigo-400'}
+							builders={[builder]}>Explore</Button
+						>
 					</DropdownMenu.Trigger>
 					<DropdownMenu.Content class="w-auto">
-						<a href="/home" class={navItem}>
+						<a href="/home">
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>Home</DropdownMenu.Label>
+								<DropdownMenu.Label class={navItem + ' ' + 'hover:text-pink-400'}
+									>Home</DropdownMenu.Label
+								>
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/about" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>About</DropdownMenu.Label>
+								<DropdownMenu.Label class={navItem + ' ' + 'hover:text-red-400'}
+									>About</DropdownMenu.Label
+								>
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/services" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>Services</DropdownMenu.Label>
+								<DropdownMenu.Label class={navItem + ' ' + 'hover:text-yellow-400'}
+									>Services</DropdownMenu.Label
+								>
 							</DropdownMenu.Item>
 						</a>
 						<DropdownMenu.Separator />
 						<a href="/contact" class={navItem}>
 							<DropdownMenu.Item>
-								<DropdownMenu.Label>Contact</DropdownMenu.Label>
-							</DropdownMenu.Item>
-						</a>
-						<DropdownMenu.Separator />
-						<a href="/events" class={navItem}>
-							<DropdownMenu.Item>
-								<DropdownMenu.Label>Events</DropdownMenu.Label>
+								<DropdownMenu.Label class={navItem + ' ' + 'hover:text-green-400'}
+									>Contact</DropdownMenu.Label
+								>
 							</DropdownMenu.Item>
 						</a>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
-				<!-- <DropdownMenu.Root>
-					<DropdownMenu.Trigger asChild let:builder>
-						<Button variant="link" class={navItem} builders={[builder]}>Roster</Button>
-					</DropdownMenu.Trigger>
-					<DropdownMenu.Content class="w-auto">
-						<a href="/roster/art" class={navItem}>
-							<DropdownMenu.Item>
-								<DropdownMenu.Label>🖼️ Art </DropdownMenu.Label>
-							</DropdownMenu.Item>
-						</a>
-						<DropdownMenu.Separator />
-						<a href="/roster/music" class={navItem}>
-							<DropdownMenu.Item>
-								<DropdownMenu.Label>🎶 Music </DropdownMenu.Label>
-							</DropdownMenu.Item>
-						</a>
-					</DropdownMenu.Content>
-				</DropdownMenu.Root> -->
-				<Button variant="link" href="/roster" class={navItem}>
-					Roster
-				</Button>
-				<Button variant="link" href="/blog" class={navItem}>
-					Publications
-				</Button>
-				<Button variant="link" href="/claim" class={navItem}>
-					Claim
-				</Button>
+
+				<Button variant="link" href="/roster" class={navItem + ' ' + 'hover:text-pink-400'}
+					>Roster</Button
+				>
+				<Button variant="link" href="/events" class={navItem + ' ' + 'hover:text-red-400'}
+					>Events</Button
+				>
+				<Button variant="link" href="/blog" class={navItem + ' ' + 'hover:text-yellow-400'}
+					>Publications</Button
+				>
+				<Button variant="ghost" href="/claim" class={navItem + ' ' + 'hover:text-green-400'}
+					>Claim</Button
+				>
 			</nav>
 		</div>
 

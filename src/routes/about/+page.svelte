@@ -12,6 +12,7 @@
 		</PageTitle>
 		<div class="h-5 md:h-12" />
 		<AboutHero />
+		<div class="h-[1200px] sm:h-[840px]" />
 		<AboutFounders />
 		<AboutFooter />
 	</div>

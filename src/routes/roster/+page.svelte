@@ -30,9 +30,9 @@
 	<div
 		class="supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur rounded-xl"
 	>
-		<div class="text-center p-10">
-			<div class="flex flex-auto">
-				<Sidebar/>
+		<div class="text-center p-4">
+			<div class="space-y-10 text-center flex flex-col items-center">
+				<Sidebar />
 			</div>
 		</div>
 

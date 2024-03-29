@@ -1,15 +1,11 @@
 <script>
 	import * as Tabs from '$lib/components/ui/tabs';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
 	import Musician from './Musician.svelte';
 
 	let selectedGenre;
 	$: selectedGenre = data.genres[0];
 
 	export let data;
-
-	const desktopText = 'hold SHIFT and mouse scroll';
-
 	const container =
 		'flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center text-center items-center';
 	const section =
@@ -19,21 +15,16 @@
 
 <Tabs.Root {selectedGenre}>
 	<div class={container}>
-		<code class="text-xs font-bold">click to select a genre</code>
-		<div class="overflow-x-auto">
-			<Tabs.List class="flex flex-wrap md:flex-nowrap">
+		<code class="text-xs w-32">Select a genre</code>
+		<div class="overflow-x-auto w-full">
+			<Tabs.List class="flex flex-col h-auto xl:h-10 md:flex-wrap md:h-10 sm:flex-nowrap ">
 				{#each data.genres as genre}
-					<Tabs.Trigger value={genre} class="text-sm w-full md:text-md md:w-auto">
+					<Tabs.Trigger value={genre} class="text-sm w-full md:text-md md:w-auto ">
 						{genre}
 					</Tabs.Trigger>
 				{/each}
 			</Tabs.List>
 		</div>
-		<MediaQuery query="(min-width: 1281px)" let:matches>
-			{#if matches}
-				<code class="text-xs font-bold">{desktopText}</code>
-			{/if}
-		</MediaQuery>
 	</div>
 	{#each data.genres as genre}
 		<Tabs.Content value={genre} class={tabsContent}>

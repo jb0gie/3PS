@@ -3,10 +3,15 @@
 	import Autoplay from 'embla-carousel-autoplay';
 
 	const nftMusicHallEvents = [
-		'https://media.discordapp.net/attachments/1094571932088807547/1163434567642910760/image.png',
-		'https://media.discordapp.net/attachments/1094571932088807547/1163434568074928158/image.png',
-		'https://media.discordapp.net/attachments/1094571932088807547/1163434568511139940/image.png',
-		'https://media.discordapp.net/attachments/1094571932088807547/1163434569043808296/image.png'
+		
+
+
+
+		'https://i.imgur.com/QVXwE0B.png',
+		'https://i.imgur.com/jyI7bWE.png',
+		'https://i.imgur.com/sx5b2tB.png',
+		'https://i.imgur.com/abYq7RC.png'
+	
 	];
 	const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
 </script>

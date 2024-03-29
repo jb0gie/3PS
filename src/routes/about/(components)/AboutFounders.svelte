@@ -1,13 +1,9 @@
 <script>
 	import * as Card from '$lib/components/ui/card';
 	import * as Carousel from '$lib/components/ui/carousel';
-	import { AspectRatio } from '$lib/components/ui/aspect-ratio';
 	import AboutBinx from './AboutBinx.svelte';
 	import AboutKuri from './AboutKuri.svelte';
 	import AboutAckapella from './AboutAckapella.svelte';
-	const cHead = 'h2 hover:text-indigo-500 font-extrabold transition duration-500 ease-in-out';
-	const founder = `<p>Third Planet Studio was founded by Binx, Ackapella and Kuri.</p>`;
-
 	const headStyle =
 		'supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 shadow-sm backdrop-blur';
 </script>
@@ -51,7 +47,7 @@
 			<Carousel.Previous />
 			<Carousel.Next />
 		</Carousel.Root>
-		<div class="grid grid-cols-3 col-gap-10">
+		<!-- <div class="grid grid-cols-3 col-gap-10">
 			<div class="text-center">
 				<div class="p-4">
 					<img
@@ -79,6 +75,6 @@
 					/>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
