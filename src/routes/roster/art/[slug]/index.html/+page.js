@@ -1,5 +1,4 @@
 import db from '$lib/db.js';
-export const prerender = true;
 
 export async function load(ctx) {
 	const artistSub = await db.getArtists();
