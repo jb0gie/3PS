@@ -10,8 +10,8 @@
 
 <div class="container mx-auto p-4 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
 	{#if artist}
-		<ArtistHero {artist} />
 		<OrbGlow />
+		<ArtistHero {artist} />
 		<ArtistSocial {artist}/>
 		<ArtistBio {artist} />
 		<!-- <ArtistGallery {artist} /> -->
