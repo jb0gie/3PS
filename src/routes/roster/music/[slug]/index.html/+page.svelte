@@ -12,8 +12,8 @@
 	{#if musician}
 		<OrbGlow />
 		<MusicianHero {musician} />
-		<MusicianSocial {musician} />
-		<MusicianBio {musician} />
-		<!-- <MusicianGallery {musician}/> -->
+		<!-- <MusicianSocial {musician} />
+		<MusicianBio {musician} /> -->
+		<!-- <MusicianGallery {musician} /> -->
 	{/if}
 </div>
