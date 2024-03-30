@@ -53,5 +53,5 @@
 			</Card.Content>
 		</Card.Root>
 	</HoverCard.Trigger>
-	<HoverCard.Content>Follow 3rdPlanet Studio on X</HoverCard.Content>
+	<HoverCard.Content>Follow ThirdPlanet Studio on X</HoverCard.Content>
 </HoverCard.Root>

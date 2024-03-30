@@ -12,7 +12,7 @@ export function load(ctx) {
 	};
 
 	const tp = {
-		name: `3rdPlanetStudio`,
+		name: `ThirdPlanetStudio`,
 		site: 'https://thirdplanet.studio/',
 		pic: 'https://i.imgur.com/TQKSRsd.png'
 	};

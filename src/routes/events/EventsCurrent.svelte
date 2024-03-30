@@ -22,7 +22,7 @@
 	<span class={grad2}>Current <span class={grad1}>Events</span></span>
 </h2>
 <p class="text-2xl mx-auto">
-	🚀 Join us on April 2nd for ASTRO FEST 2024, as 3rd Planet Studio kicks off the week of
+	🚀 Join us on April 2nd for ASTRO FEST 2024, as Third Planet Studio kicks off the week of
 	<Button class="text-xl" variant="link" href={events.nftnyc}>NFT.NYC</Button>, with partners
 	<Button class="text-xl" variant="link" href={events.nftsmart}>@nftsmart</Button>
 	<Button class="text-xl" variant="link" href={events.wavy}>@thewavyawards</Button> and <Button
@@ -36,7 +36,7 @@
 <div class="max-w-screen-xl mx-auto p-3 sm:p-10 md:p-16">
 	<div class="flex flex-col md:flex-row items-center">
 		<iframe
-			title="3rdPlanetEvents"
+			title="ThirdPlanetEvents"
 			class="bg-black overflow-hidden rounded-xl md:w-[890px] md:h-[660px] sm:w-[550px] h-[460px]"
 			src={events.luma}
 			style="border-width:0"
@@ -45,7 +45,7 @@
 		<div class="w-6 md:h-4 h-10" />
 		<iframe
 			class="bg-black overflow-hidden rounded-xl md:w-[890px] md:h-[660px] sm:w-[550px] h-[460px]"
-			title="3rdPlanetEvents"
+			title="ThirdPlanetEvents"
 			src={events.eventbrite}
 			style="border-width:0"
 			frameborder="0"

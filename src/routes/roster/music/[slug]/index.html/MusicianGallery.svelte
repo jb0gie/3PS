@@ -14,11 +14,11 @@
 	class="w-full"
 	on:mousenter={plugin.stop}
 	on:mouseleave={plugin.play}
-	>
+>
 	<Carousel.Content>
 		{#each musician?.pic as pics}
 			<Carousel.Item>
-				<div class=" w-full object-cover object-top lg:w-full lg:h-full">
+				<div class="w-full object-cover object-top lg:w-full lg:h-full">
 					<article
 						class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl pb-60 pt-60 max-w-sm mx-auto mt-6"
 					>

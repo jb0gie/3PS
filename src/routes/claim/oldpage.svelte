@@ -101,7 +101,7 @@
 												<Button>@mikeloco on Instagram</Button>
 											</a>
 											<a href="https://thirdplanet.studio/">
-												<Button>3rdPlanetStudio</Button>
+												<Button>ThirdPlanetStudio</Button>
 											</a>
 										</div>
 

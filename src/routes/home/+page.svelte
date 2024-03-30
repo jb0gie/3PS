@@ -64,7 +64,7 @@
 	<div class="h-5 md:h-8" />
 
 	<p class="max-w-7xl text-3xl md:text-3xl">
-		This is <span class={grad1}>3rd</span><span class={grad2}>Planet</span> Studio
+		This is <span class={grad1}>Third</span><span class={grad2}>Planet</span> Studio
 	</p>
 
 	<div class="h-6 md:h-2" />
@@ -72,14 +72,17 @@
 	<div class="mx-auto max-w-7xl sm:pt-3 grid gap-8 md:grid-cols-2">
 		<div class="flex flex-col justify-center">
 			<h2 class="self-start inline text-6xl font-bold">
-				What <span style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif0});">
-					We Are</span>
+				What <span
+					style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif0});"
+				>
+					We Are</span
+				>
 			</h2>
 			<div class="h-6" />
 			<div class="max-w-md xl:max-w-xl sm:max-w-lg lg:max-w-sm md:max-w-md">
 				<p class="text-2xl md:pr-30 lg:pr-20">
-					<span class={grad1}>3rd</span><span class={grad2}>Planet</span> Studio is your portal to a
-					new dimension of creativity.
+					<span class={grad1}>Third</span><span class={grad2}>Planet</span> Studio is your portal to
+					a new dimension of creativity.
 				</p>
 				<br />
 				<p class="text-2xl md:pr-30 lg:pr-20">
@@ -116,7 +119,7 @@
 			<span
 				class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600"
 			>
-				3rdPlanet Studio
+				ThirdPlanet Studio
 			</span> stands as the epicenter where art and music find their harmonious union.
 		</span>
 	</p>
@@ -140,7 +143,7 @@
 			</h2>
 			<div class="h-6" />
 			<p class="text-xl md:pr-10">
-				At <span class={grad1}>3rd</span><span class={grad2}>Planet</span>, we're all about
+				At <span class={grad1}>Third</span><span class={grad2}>Planet</span>, we're all about
 				rewriting the rules. We specialize in crafting onchain tailored to your unique vision. No
 				more worrying about the industry's "<span
 					style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif6});"

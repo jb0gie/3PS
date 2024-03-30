@@ -24,7 +24,7 @@
 	<div class="sm:w-1/2 p-5">
 		<div class="text">
 			<h2 class="my-4 font-bold text-3xl sm:text-4xl">
-				What is <span class={grad2}>3rd<span class={grad1}>Planet</span></span>?
+				What is <span class={grad2}>Third<span class={grad1}>Planet</span></span>?
 			</h2>
 			<p class="mx-auto text-2xl">
 				{@html text.p1}
@@ -37,13 +37,13 @@
 		<h2 class="my-4 font-bold text-4xl sm:text-5xl">
 			<span class={grad2}>Our <span class={grad1}>Mission</span></span>
 		</h2>
-		<p class="mx-auto text-3xl">
+		<p class="mx-auto text-2xl">
 			{@html text.p2}
 		</p>
 		<h2 class="my-4 font-bold text-4xl text-right sm:text-5xl">
 			<span class={grad2}>Our <span class={grad1}>Beliefs</span></span>
 		</h2>
-		<p class="mx-auto text-3xl text-right">
+		<p class="mx-auto text-2xl text-right">
 			{@html text.p3}
 		</p>
 	</div>

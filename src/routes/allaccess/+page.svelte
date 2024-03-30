@@ -1,6 +1,6 @@
 <script>
 	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
-	import AaHero from './(components)/AAHero.svelte';
+	import AllAccessHero from './(components)/AllAccessHero.svelte';
 </script>
 
 <div>
@@ -8,6 +8,6 @@
 		<PageTitle>
 			<svelte:fragment slot="pageName">All Access Pass</svelte:fragment>
 		</PageTitle>
-		<AaHero />
+		<AllAccessHero />
 	</div>
 </div>

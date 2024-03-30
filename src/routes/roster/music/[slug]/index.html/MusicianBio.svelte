@@ -8,7 +8,9 @@
 		'supports-[backdrop-filter]:bg-background/60 sticky top-0 z-40 w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl opacity-75 mx-6 lg:mx-0 border-b bg-background/95 shadow-sm backdrop-blur';
 </script>
 
-<div class="max-w-4xl flex items-center lg:h-[500px] flex-wrap mx-auto my-32 lg:my-2">
+<div
+	class="flex flex-wrap justify-center items-center xl:max-w-4xl lg:max-w-3xl lg:h-[500px] mx-auto"
+>
 	<!--Main Col-->
 	<div class={headStyle}>
 		<div class="md:p-4 text-center lg:text-left">
@@ -18,14 +20,14 @@
 				style="background-image: url({musician?.pic[0]})"
 			/>
 			<h1 class="text-3xl font-bold pt-8 lg:pt-0">About {musician.name}</h1>
-			<p class="pt-4 items-center">
+			<p class="mx-auto items-center p-4">
 				{@html musician?.exp}
 			</p>
-			<div class="pt-6 pb-4">
+			<div class="pt-2 pb-4">
 				<!-- BIO -->
 				<Dialog.Root>
 					<Dialog.Trigger class={buttonVariants({ variant: 'link' })}>
-						<h1 class="text-2xl pt-8 lg:pt-0">
+						<h1 class="text-lg sm:text-2xl lg:pt-0">
 							Read more about {musician?.name}
 						</h1>
 					</Dialog.Trigger>
@@ -63,8 +65,8 @@
 			</div>
 		</div>
 	</div>
-	<!--Img Col-->
-	<div class="lg:relative w-full lg:w-2/5">
-		<MusicianGallery {musician} />
-	</div>
 </div>
+<!--Img Col-->
+<!-- <div class="relative w-auto xl:w-full lg:w-2/5">
+	<MusicianGallery {musician} />
+</div> -->

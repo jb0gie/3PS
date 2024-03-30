@@ -1,10 +1,10 @@
 <script>
 	const text = {
 		p1: `<p>Your presence at Astro Fest 2024 has contributed to the growth of the talented artists and
-			performers at 3rd Planet Studio Events.</p><br><p>Through your support and enthusiastic applause, you've become the guiding lights that empower our creative cosmos to shine brighter than ever before.</p><br><p>Congratulations! You're one step closer to experiencing the cosmic wonder of 3rd Planet
+			performers at Third Planet Studio Events.</p><br><p>Through your support and enthusiastic applause, you've become the guiding lights that empower our creative cosmos to shine brighter than ever before.</p><br><p>Congratulations! You're one step closer to experiencing the cosmic wonder of Third Planet
 			Studio's first ever live event, ASTRO FEST 2024.</p>`,
 		p2: `<p>But that's not all – you'll also get the chance to meet select performers up close and personal.</p><br><p>Whether you're snapping a selfie or getting an autograph, these meet and greets are sure to be memorable experiences.</p>`,
-		p3: `<p>Don't miss out on the ultimate entertainment experience.</p><br><p>Get your 3rd Planet Studio All-Access Pass today and unlock a world of excitement!</p>`
+		p3: `<p>Don't miss out on the ultimate entertainment experience.</p><br><p>Get your Third Planet Studio All-Access Pass today and unlock a world of excitement!</p>`
 	};
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
@@ -16,7 +16,7 @@
 <div class="sm:flex items-center max-w-screen-xl">
 	<div class="sm:w-1/2 p-5">
 		<iframe
-			class="w-[420px] h-[550px] xl:w-[600px] xl:h-[600px] md:w-[420px] md:h-[420px] sm:w-[300px] rounded-xl"
+			class="w-[320px] h-[650px] xl:w-[600px] xl:h-[600px] md:w-[420px] md:h-[420px] sm:w-[300px] rounded-xl"
 			title="allaccess"
 			src={mint}
 			frameborder="0"

@@ -5,7 +5,7 @@
 	import FootBar from '../lib/components/FootBar/FootBar.svelte';
 	// SEO
 	const metaDefaults = {
-		title: '3rdPlanetStudio',
+		title: 'ThirdPlanetStudio',
 		description: 'Creative Concierge',
 		image: '/favicon.png'
 	};
