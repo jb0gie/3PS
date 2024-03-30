@@ -72,10 +72,8 @@
 	<div class="mx-auto max-w-7xl sm:pt-3 grid gap-8 md:grid-cols-2">
 		<div class="flex flex-col justify-center">
 			<h2 class="self-start inline text-6xl font-bold">
-				What <span
-					style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif0});"
-					>We Are</span
-				>
+				What <span style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif0});">
+					We Are</span>
 			</h2>
 			<div class="h-6" />
 			<div class="max-w-md xl:max-w-xl sm:max-w-lg lg:max-w-sm md:max-w-md">

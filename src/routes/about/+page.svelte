@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from '../../lib/components/PageTitle/PageTitle.svelte';
+	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
 	import AboutHero from './(components)/AboutHero.svelte';
 	import AboutFounders from './(components)/AboutFounders.svelte';
 	import AboutFooter from './(components)/AboutFooter.svelte';
