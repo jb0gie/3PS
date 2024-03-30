@@ -3,6 +3,7 @@
 	import AboutHero from './(components)/AboutHero.svelte';
 	import AboutFounders from './(components)/AboutFounders.svelte';
 	import AboutFooter from './(components)/AboutFooter.svelte';
+	
 </script>
 
 <div>
