@@ -79,6 +79,9 @@
 				<Button variant="ghost" href="/claim" class={navItem + ' ' + 'hover:text-green-400'}
 					>Claim</Button
 				>
+				<Button variant="ghost" href="/allaccess" class={navItem + ' ' + 'hover:text-blue-400'}
+					>All Access</Button
+				>
 			</nav>
 		</div>
 
