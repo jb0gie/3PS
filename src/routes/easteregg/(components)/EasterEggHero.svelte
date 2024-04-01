@@ -26,6 +26,7 @@
 		</h2>
 		<p class="mx-auto text-xl">
 			{@html text.p1}
+			<br>	
 			{@html text.p2}
 		</p>
 	</div>
