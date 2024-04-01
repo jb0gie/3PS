@@ -26,11 +26,6 @@
 		</h2>
 		<p class="mx-auto text-xl">
 			{@html text.p1}
-		</p>
-		<h2 class="my-4 font-bold text-4xl text-right sm:text-5xl">
-			<span class={grad2}>Unlockable <span class={grad1}>Content</span></span>
-		</h2>
-		<p class="mx-auto text-xl">
 			{@html text.p2}
 		</p>
 	</div>
