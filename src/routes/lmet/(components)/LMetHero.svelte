@@ -8,7 +8,7 @@
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
 	const grad2 =
 		'bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone';
-	const mint = `https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x9cF2Ca0119D7898D9CC3Db25332bA0b361FBE33c&chain=%7B"name"%3A"Polygon+Mainnet"%2C"chain"%3A"Polygon"%2C"rpc"%3A%5B"https%3A%2F%2F137.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D"%5D%2C"nativeCurrency"%3A%7B"name"%3A"MATIC"%2C"symbol"%3A"MATIC"%2C"decimals"%3A18%7D%2C"shortName"%3A"matic"%2C"chainId"%3A137%2C"testnet"%3Afalse%2C"slug"%3A"polygon"%2C"icon"%3A%7B"url"%3A"ipfs%3A%2F%2FQmcxZHpyJa8T4i63xqjPYrZ6tKrt55tZJpbXcjSDKuKaf9%2Fpolygon%2F512.png"%2C"width"%3A512%2C"height"%3A512%2C"format"%3A"png"%7D%7D&clientId=f0befac3890d5157677c9e54c7713da5&tokenId=4&theme=light&primaryColor=purple`;
+	const mint = `https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x482D6ACf81444F699c08c011f3E5Af15D69B86F9&chain=%7B"name"%3A"Polygon+Mainnet"%2C"chain"%3A"Polygon"%2C"rpc"%3A%5B"https%3A%2F%2F137.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D"%5D%2C"nativeCurrency"%3A%7B"name"%3A"MATIC"%2C"symbol"%3A"MATIC"%2C"decimals"%3A18%7D%2C"shortName"%3A"matic"%2C"chainId"%3A137%2C"testnet"%3Afalse%2C"slug"%3A"polygon"%2C"icon"%3A%7B"url"%3A"ipfs%3A%2F%2FQmcxZHpyJa8T4i63xqjPYrZ6tKrt55tZJpbXcjSDKuKaf9%2Fpolygon%2F512.png"%2C"width"%3A512%2C"height"%3A512%2C"format"%3A"png"%7D%7D&clientId=f0befac3890d5157677c9e54c7713da5&tokenId=1&theme=light&primaryColor=purple`;
 </script>
 
 <div class="sm:flex items-center max-w-screen-xl">
@@ -20,14 +20,14 @@
 			frameborder="0"
 		/>
 	</div>
-	<div class="sm:w-auto p-4">
+	<!-- <div class="sm:w-auto p-4">
 		<h2 class="my-4 font-bold text-4xl sm:text-5xl">
-			<span class={grad2}>Hidden <span class={grad1}>Treasure</span></span>
+			<span class={grad2}> <span class={grad1}></span></span>
 		</h2>
 		<p class="mx-auto text-xl">
 			{@html text.p1}
 			<br />
 			{@html text.p2}
 		</p>
-	</div>
+	</div> -->
 </div>
