@@ -5,6 +5,7 @@
 	import * as Dialog from '$lib/components/ui/dialog';
 	import MusicianSocial from './MusicianSocial.svelte';
 	import MusicianVideos from './MusicianVideos.svelte';
+	import MusicianGallery from './MusicianGallery.svelte';
 	export let musician;
 	let randomIndex = Math.floor(Math.random() * musician?.pic.length);
 </script>
@@ -21,14 +22,18 @@
 	<p class="w-auto text-md text-pretty">
 		{@html musician?.bio}
 	</p>
-	<div class="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1 p-4 mt-16">
-		<h2 class="flex gap-3 items-center m-auto text-lg font-bold md:flex-col md:gap-2">
-			Previous works
-		</h2>
-		<p class="w-auto text-pretty">
-			{@html musician?.works}
-		</p>
-	</div>
+	{#if musician?.works !== ''}
+		<div class="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1 p-4 mt-16">
+			<h2 class="flex gap-3 items-center m-auto text-lg font-bold md:flex-col md:gap-2">
+				Previous works
+			</h2>
+			<p class="w-auto text-pretty">
+				{@html musician?.works}
+			</p>
+		</div>
+	{/if}
 	<!-- 🔗s -->
 	<MusicianSocial {musician} />
-	</div>
+	<Separator orientation="vertical" />
+	<MusicianGallery {musician} />
+</div>
