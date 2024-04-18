@@ -20,14 +20,4 @@
 			frameborder="0"
 		/>
 	</div>
-	<!-- <div class="sm:w-auto p-4">
-		<h2 class="my-4 font-bold text-4xl sm:text-5xl">
-			<span class={grad2}> <span class={grad1}></span></span>
-		</h2>
-		<p class="mx-auto text-xl">
-			{@html text.p1}
-			<br />
-			{@html text.p2}
-		</p>
-	</div> -->
 </div>

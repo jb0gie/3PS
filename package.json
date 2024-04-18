@@ -45,6 +45,7 @@
 		"pocketbase": "^0.19.0",
 		"postprocessing": "^6.33.3",
 		"radix-icons-svelte": "^1.2.1",
+		"svelte-legos": "^0.2.2",
 		"svelte-radix": "^1.1.0",
 		"sveltekit-superforms": "^1.8.0",
 		"tailwind-merge": "^1.14.0",
