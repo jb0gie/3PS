@@ -14,7 +14,7 @@
 	class="xl:w-[80%] lg:w-[90%] md:w-[94%] sm:w-[96%] xs:w-[92%] mx-auto flex flex-col gap-3 p-3 justify-center items-center relative"
 >
 	<!-- FullName -->
-	<h1 class="text-3xl font-bold pt-8 lg:pt-0">{musician.name}</h1>
+	<h1 class="text-5xl font-bold pt-8 lg:pt-0">{musician.name}</h1>
 	<!-- About -->
 	<p class="w-auto text-md text-pretty">
 		{@html musician?.exp}
