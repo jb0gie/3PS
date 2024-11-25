@@ -79,7 +79,7 @@
 				<div class="lg:text-left">
 					<h2 class="text-base font-semibold tracking-wide uppercase">Why Choose</h2>
 					<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
-						Our Web3 Services
+						Our Services
 					</p>
 					<p class="mt-4 text-xl">
 						We're not just adapting to the future; we're shaping it. Our team of visionaries is
