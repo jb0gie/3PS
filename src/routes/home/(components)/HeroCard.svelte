@@ -46,10 +46,10 @@
 			</Card.Header>
 			<Card.Content>
 				<p class="whitespace-nowrap text-lg">Web3 Concierge/DAO</p>
-				<div class="flex just gap-2">
+				<!-- <div class="flex just gap-2">
 					<h3><strong>1.6K</strong><span class="opacity-50">Following</span></h3>
 					<h3><strong>1.6K</strong><span class="opacity-50">Followers</span></h3>
-				</div>
+				</div> -->
 			</Card.Content>
 		</Card.Root>
 	</HoverCard.Trigger>
