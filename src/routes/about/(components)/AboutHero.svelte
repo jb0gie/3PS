@@ -5,7 +5,7 @@
 	const text = {
 		p1: `<p>As a family-based operation, we offer the trust that is critical when entering into ​new territory.</p><br><p>We share your passion and understand that there is no one way to express yourself and everyone should have the freedom to create and write their own future and legacy.</p>`,
 		p2: `<p>To celebrate, cultivate, and nourish creativity in all its forms.</p><br><p>We are on a mission to redefine the narrative surrounding artists and musicians, rejecting the outdated notion of the "starving artist."</p><br><p>Instead, they champion a new paradigm where creatives are valued, respected, and provided with the resources they need to thrive.</p>`,
-		p3: `<p>Supporting artists and musicians goes beyond altruism; it's an investment in the cultural, social, and economic vitality of society.</p><br><p>By championing their contributions, we enriche our communities, foster innovation, for a more inclusive socioeconomic society.</p>`
+		p3: `<p>Supporting artists and musicians goes beyond altruism; it's an investment in the cultural, social, and economic vitality of society.</p><br><p>By championing their contributions, we our communities, foster innovation, for a more inclusive socioeconomic society.</p>`
 	};
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
