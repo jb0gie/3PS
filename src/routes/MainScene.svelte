@@ -11,12 +11,10 @@
 		Suspense,
 		Stars,
 		FakeGlowMaterial,
-
 		RoundedBoxGeometry
-
-	} from '@threlte/extras'
+	} from '@threlte/extras';
 	import { spring } from 'svelte/motion';
-	import PlanetLogo from '../lib/components/planetlogo.svelte';
+	import PlanetLogo from '../lib/components/new3PSlogo.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { goto } from '$app/navigation';
 	import { IcosahedronGeometry } from 'three';
@@ -51,8 +49,8 @@
 	// 	positions[i * 3 + 2] = (Math.random() - 0.5) * 2000; // z
 	// }
 
-	const planetScale = spring(4);
-	const textScale = spring(0)
+	const planetScale = spring(2);
+	const textScale = spring(0);
 	const textPos = spring(0);
 	const fontSize = spring(-1);
 	function navigationToPage(route) {
@@ -83,9 +81,7 @@
 <T.DirectionalLight intensity={10} position={[1, 0, 0]} />
 
 <Suspense final>
-	<svelte:fragment slot="fallback">
-		Loading...
-	</svelte:fragment>
+	<svelte:fragment slot="fallback">Loading...</svelte:fragment>
 </Suspense>
 
 <Stars />
@@ -96,13 +92,13 @@
 		scale={$planetScale}
 		on:pointerenter={() => {
 			planetScale.set(4.2);
-			textScale.set(1)
+			textScale.set(1);
 			textPos.set(-6);
 			fontSize.set(1);
 		}}
 		on:pointerleave={() => {
-			planetScale.set(4);
-			textScale.set(0)
+			planetScale.set(2);
+			textScale.set(0);
 			textPos.set(0);
 			fontSize.set(-1);
 		}}
@@ -117,7 +113,7 @@
 		/>
 		<T.Mesh>
 			<FakeGlowMaterial glowColor="grey" />
-			<T.IcosahedronGeometry args={[7, 1, 1]}/>
+			<T.IcosahedronGeometry args={[7, 1, 1]} />
 		</T.Mesh>
 	</T.Group>
 </T.Group>
