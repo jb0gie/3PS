@@ -3,7 +3,6 @@
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import LightSwitch from '$lib/components/light-switch.svelte';
 	import SearchForm from '$lib/components/search-form.svelte';
-	
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 	const data = {
@@ -13,7 +12,7 @@
 				items: [
 					{
 						title: 'Home',
-						url: '/'
+						url: '/home'
 					},
 					{
 						title: 'About',
@@ -89,7 +88,7 @@
 					<Sidebar.Menu>
 						{#each group.items as item (item.title)}
 							<Sidebar.MenuItem>
-								<Sidebar.MenuButton>
+								<Sidebar.MenuButton class="text-lg">
 									{#snippet child({ props })}
 										<a href={item.url} {...props}>{item.title}</a>
 									{/snippet}
