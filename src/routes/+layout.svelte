@@ -58,7 +58,7 @@
 
 <Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 20rem;">
 	<AppSidebar />
-	<main class="min-h-screen">
+	<main class="min-h-screen w-full">
 		<div class="md:hidden">
 			<Sidebar.Trigger />
 		</div>
