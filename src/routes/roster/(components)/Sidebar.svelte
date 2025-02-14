@@ -4,12 +4,12 @@
 </script>
 
 <div class="flex flex-row gap-4 object-center">
-	<Button variant="ghost" class="h-auto justify-start" on:click={() => onTabChange('music')}>
+	<Button variant="ghost" class="h-auto justify-start" onclick={() => onTabChange('music')}>
 		<div class="text-3xl font-bold tracking-tight sm:text-6xl">
 			<span class="sm:mr-2">🎸 Music</span>
 		</div>
 	</Button>
-	<Button variant="ghost" class="h-auto justify-start" on:click={() => onTabChange('art')}>
+	<Button variant="ghost" class="h-auto justify-start" onclick={() => onTabChange('art')}>
 		<div class="text-3xl font-bold tracking-tight sm:text-6xl">
 			<span class="sm:mr-2">🎨 Art</span>
 		</div>

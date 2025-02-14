@@ -8,11 +8,6 @@
 	import { Skeleton } from '$lib/components/ui/skeleton/index.js';
 </script>
 
-<div class="flex justify-between">
-	<OrbGlow />
-</div>
-
-<div class="h-5 md:h-16"></div>
 
 <PageTitle>
 	<svelte:fragment slot="pageName">Contact</svelte:fragment>

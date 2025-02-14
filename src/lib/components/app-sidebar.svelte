@@ -105,16 +105,17 @@
 		<Card.Root class="shadow-none">
 			<form>
 				<Card.Header class="p-4 pb-0">
-					<Card.Title class="text-sm">Subscribe to our newsletter</Card.Title>
-					<Card.Description>Opt-in to receive updates and news about the sidebar.</Card.Description>
+					<Card.Title class="text-sm">Visit 3PS</Card.Title>
+					<Card.Description>our hyperfy world</Card.Description>
 				</Card.Header>
 				<Card.Content class="grid gap-2.5 p-4">
-					<Sidebar.Input type="email" placeholder="Email" />
 					<Button
 						class="w-full bg-sidebar-primary text-sidebar-primary-foreground shadow-none"
-						size="sm"
+						size="lg"
+						variant="secondary"
+						onclick={() => window.open('https://hyperfy.io/3ps', '_blank')}
 					>
-						Subscribe
+						Visit World
 					</Button>
 				</Card.Content>
 			</form>

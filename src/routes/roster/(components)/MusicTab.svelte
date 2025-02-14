@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import * as Tabs from '$lib/components/ui/tabs';
 	import Musician from './Musician.svelte';
 	import { searchQuery } from '$lib/stores/search';
@@ -6,7 +6,7 @@
 	let { data, genresTab, onGenreChange } = $props();
 
 	let filteredMusicians = $derived(
-		data.musicians.filter((musician) => {
+		data.musicians.filter((musician: any) => {
 			if (!$searchQuery) return true;
 
 			return (
@@ -17,20 +17,30 @@
 		})
 	);
 
-	$effect(() => {
-		console.log('Filtered Musicians:', filteredMusicians); // Debug log
-	});
+	// $effect(() => {
+	// 	console.log('Filtered Musicians:', filteredMusicians); // Debug log
+	// });
 </script>
 
 <Tabs.Root value={genresTab} onValueChange={onGenreChange}>
-	<div class="mb-8">
-		<Tabs.List class="flex gap-2 overflow-x-auto p-2">
+	<Tabs.List class="hidden w-full justify-between lg:flex lg:gap-2 lg:p-2">
+		{#each data.genres as genre}
+			<Tabs.Trigger value={genre} class="flex-1 whitespace-nowrap px-6 py-2 text-sm font-medium">
+				{genre}
+			</Tabs.Trigger>
+		{/each}
+	</Tabs.List>
+
+	<div class="block lg:hidden">
+		<select
+			class="w-full rounded-lg border border-input bg-background px-3 py-3 text-sm ring-offset-background"
+			value={genresTab}
+			onchange={(e) => onGenreChange((e.target as HTMLSelectElement).value)}
+		>
 			{#each data.genres as genre}
-				<Tabs.Trigger value={genre} class="whitespace-nowrap px-4 py-2 text-sm font-medium">
-					{genre}
-				</Tabs.Trigger>
+				<option value={genre}>{genre}</option>
 			{/each}
-		</Tabs.List>
+		</select>
 	</div>
 
 	{#each data.genres as genre}
