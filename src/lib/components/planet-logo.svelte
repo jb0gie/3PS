@@ -45,6 +45,13 @@ Command: npx @threlte/gltf@3.0.0 planet.glb -k -u -s -t
   const gltf = suspend(useGltf<GLTFResult>('/models/planet.glb', { dracoLoader }))
 
   export const { actions, mixer } = useGltfAnimations<ActionName>(gltf, ref)
+  const action = $derived($actions?.SphereAction)
+  $effect(() => {
+    if (action) {
+      action.play()
+    }
+  })
+  
 </script>
 
 <T

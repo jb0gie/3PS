@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store';
 import { browser } from '$app/environment';
 import PocketBase from 'pocketbase';
+import type { RecordModel } from 'pocketbase';
 
 const pb = new PocketBase('https://pb.thirdplanetstudios.247420.xyz');
 
@@ -23,7 +24,7 @@ const getMusicians = () => {
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
-						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
 						console.warn('Item does not have a pic property:', item);
@@ -46,7 +47,7 @@ const getArtists = () => {
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
-						const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
 						console.warn('Item does not have a pic property:', item);
@@ -59,7 +60,7 @@ const getArtists = () => {
 	return artists;
 };
 
-let metaverse = writable([]);
+let metaverse = writable<RecordModel[]>([]);
 pb.collection('metaverse')
 	.getList()
 	.then(async (w) => {
@@ -72,13 +73,13 @@ pb.collection('metaverse')
 		metaverse.set(out);
 	});
 
-const partner = writable([]);
+const partner = writable<RecordModel[]>([]);
 pb.collection('partner')
 	.getList()
 	.then(async (p) => {
 		// console.log(p.items);
 		const out = p.items.map((item) => {
-			let picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
+			let picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
 			item.pic = picUrls;
 			// console.log(item.pic)
 			return item;

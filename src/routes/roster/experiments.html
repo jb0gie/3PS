@@ -1,0 +1,76 @@
+
+<Tabs.Root value="music" class="h-full space-y-6">
+	<div class="space-between flex items-center">
+		<Tabs.List class="h-auto overflow-x-scroll">
+			{#each genres as genre (genre)}
+				<Tabs.Trigger value={genre} class="relative text-">
+					{genre}
+				</Tabs.Trigger>
+			{/each}
+		</Tabs.List>
+	</div>
+	{#each genres as genre (genre)}
+		<Tabs.Content value={genre} class="border-none p-0 outline-none">
+			{#each musicians as musician (musician.id)}
+				{#if musician && musician.genre === genre}
+					
+				{/if}
+			{/each}
+		</Tabs.Content>
+	{/each}
+</Tabs.Root> 
+
+<Popover.Root bind:open let:ids>
+	<Popover.Trigger asChild let:builder>
+		<Button
+			builders={[builder]}
+			variant="outline"
+			role="combobox"
+			aria-expanded={open}
+			class="w-[200px] justify-between"
+		>
+			{selectedValue}
+			<CaretSort class="ml-2 h-4 w-4 shrink-0 opacity-50" />
+		</Button>
+	</Popover.Trigger>
+	<Popover.Content class="w-[200px] p-0">
+		<Command.Root>
+			<Command.Input placeholder="Search genre..." class="h-9" />
+			<Command.Empty>No genre found.</Command.Empty>
+			<Command.Group>
+				{#each genres as genre (genre)}
+					<Command.Item
+						value={genre}
+						onSelect={(currentValue) => {
+							value = currentValue;
+							closeAndFocusTrigger(ids.trigger);
+						}}
+					>
+						<Check class={cn('mr-2 h-4 w-4', value !== genre && 'text-transparent')} />
+						{genre}
+					</Command.Item>
+				{/each}
+			</Command.Group>
+		</Command.Root>
+	</Popover.Content>
+</Popover.Root>
+
+<div class="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+	<div class="md:flex">
+		<div class="md:shrink-0">
+			<Sidebar class="" />
+		</div>
+		<div class="p-8">
+			<div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+				Company retreats
+			</div>
+			<a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
+				>Incredible accommodation for your team</a
+			>
+			<p class="mt-2 text-slate-500">
+				Looking to take your team away on a retreat to enjoy awesome food and take in some
+				sunshine? We have a list of places to do just that.
+			</p>
+		</div>
+	</div>
+</div>

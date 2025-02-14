@@ -1,8 +1,8 @@
 <script>
 	import OrbGlow from './orb-glow.svelte';
 	const style =
-		'flex justify-between text-2xl font-bold max-w-3xl lg:text-5xl lg:pr-24 md:text-6xl';
-	const stlye2 = 'text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl';
+		'flex flex-col justify-between text-3xl font-bold p-2';
+	const stlye2 = 'text-lg';
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone';
 	const grad2 =
@@ -13,6 +13,8 @@
 
 <div class={style}>
 	<OrbGlow />
-	<span class={grad2}>3<span class={grad1}>P<spam class={grad3}>S</spam></span></span>
+	<span class={grad2}>Third<span class={grad1}>Planet<spam class={grad3}>Studio</spam></span></span>
+	<p class={stlye2}><slot name="pageName" /></p>
 </div>
-<p class={stlye2}><slot name="pageName" /></p>
+
+

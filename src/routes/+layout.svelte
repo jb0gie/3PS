@@ -56,13 +56,15 @@
 
 <ModeWatcher />
 
-<Sidebar.Provider>
+<Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 20rem;">
 	<AppSidebar />
-	<main>
+	<main class="min-h-screen">
 		<div class="md:hidden">
 			<Sidebar.Trigger />
 		</div>
-		{@render children()}
+		<div class="mx-auto overflow-hidden p-2">
+			{@render children()}
+		</div>
 		<FootBar />
 	</main>
 </Sidebar.Provider>

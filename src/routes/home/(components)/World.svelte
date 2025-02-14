@@ -1,11 +1,11 @@
 <script>
-	import { Rocket } from 'radix-icons-svelte';
+	import { Keyboard } from 'radix-icons-svelte';
 	import * as Alert from '$lib/components/ui/alert';
 </script>
 
-<div class="w-64 anim-float-avatar">
+<div class="w-64 anim-float-avatar p-8">
 	<Alert.Root class="supports-[backdrop-filter]:bg-background/60 border-b bg-background/95 shadow-sm backdrop-blur w-auto">
-		<Rocket class="h-6 w-4" />
+		<Keyboard class="h-6 w-4" />
 		<Alert.Title><slot name="title" /></Alert.Title>
 		<Alert.Description><slot name="description" /></Alert.Description>
 	</Alert.Root>

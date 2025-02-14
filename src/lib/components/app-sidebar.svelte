@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { ComponentProps } from 'svelte';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import * as Card from '$lib/components/ui/card/index.js';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 	import LightSwitch from '$lib/components/light-switch.svelte';
 	import SearchForm from '$lib/components/search-form.svelte';
 
 	let { ref = $bindable(null), ...restProps }: ComponentProps<typeof Sidebar.Root> = $props();
 	const data = {
-		versions: ['1.0.0'],
 		navMain: [
 			{
 				items: [
@@ -100,5 +101,24 @@
 			</Sidebar.Group>
 		{/each}
 	</Sidebar.Content>
+	<Sidebar.Footer>
+		<Card.Root class="shadow-none">
+			<form>
+				<Card.Header class="p-4 pb-0">
+					<Card.Title class="text-sm">Subscribe to our newsletter</Card.Title>
+					<Card.Description>Opt-in to receive updates and news about the sidebar.</Card.Description>
+				</Card.Header>
+				<Card.Content class="grid gap-2.5 p-4">
+					<Sidebar.Input type="email" placeholder="Email" />
+					<Button
+						class="w-full bg-sidebar-primary text-sidebar-primary-foreground shadow-none"
+						size="sm"
+					>
+						Subscribe
+					</Button>
+				</Card.Content>
+			</form>
+		</Card.Root>
+	</Sidebar.Footer>
 	<Sidebar.Rail />
 </Sidebar.Root>

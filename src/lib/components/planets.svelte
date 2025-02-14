@@ -77,7 +77,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
         geometry={gltf.nodes.Sphere.geometry}
         material={gltf.materials.solarsystem}
         position={[-0.04, 0.04, -0.1]}
-        scale={1}
+        scale={0.5}
       />
       <T.Mesh
         name="Sphere001"
@@ -86,7 +86,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
         geometry={gltf.nodes.Sphere001.geometry}
         material={gltf.materials.solarsystem}
         position={[-0.04, 0.04, -0.1]}
-        scale={1}
+        scale={0.5}
       />
       <T.Mesh
         name="Sphere003"
@@ -95,7 +95,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
         geometry={gltf.nodes.Sphere003.geometry}
         material={gltf.materials.solarsystem}
         position={[-0.04, 0.04, -0.1]}
-        scale={1}
+        scale={0.5}
       />
       <T.Mesh
         name="Sphere002"
@@ -104,7 +104,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
         geometry={gltf.nodes.Sphere002.geometry}
         material={gltf.materials.solarsystem}
         position={[-0.04, 0.04, -0.1]}
-        scale={1}
+        scale={0.5}
       />
     </T.Group>
   {:catch err}
