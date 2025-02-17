@@ -7,10 +7,10 @@
 	};
 </script>
 
-<h2 class="text-2xl mx-auto">Check out some of our previously hosted/booked events.</h2>
-<div class="max-w-screen-xl mx-auto p-3 sm:p-10 md:p-16">
+<h2 class="mx-auto text-2xl">Check out some of our previously hosted/booked events.</h2>
+<div class="mx-auto max-w-screen-xl p-3 sm:p-10 md:p-16">
 	<iframe
-		class="bg-black w-full overflow-hidden rounded"
+		class="w-full overflow-hidden rounded bg-black"
 		title="ThirdPlanetEvents"
 		src={events.calanderUrl}
 		style="border-width:0"
@@ -18,5 +18,5 @@
 		height="720"
 		frameborder="0"
 		scrolling="no"
-	/>
+	></iframe>
 </div>
