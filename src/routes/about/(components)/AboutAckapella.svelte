@@ -1,6 +1,6 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '$lib/images/Ack.jpg';
+	import pfp from '$lib/images/ack.jpg';
 	const ackapella = {
 		title: `<b>ACKAPELLA</b>`,
 		tag: `<b>"<i>CRYPT MASTER</i>"</b>`,
