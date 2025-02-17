@@ -1,6 +1,7 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '$lib/images/kuri.jpg';
+	import pfp from '$lib/images/Kuri.jpg';
+
 	const kuri = {
 		title: `<b>KURI</b>`,
 		tag: `<b>"<i>THE VTUBER</i>"</b>`,
