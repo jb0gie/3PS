@@ -1,6 +1,6 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '$lib/images/Kuri.jpg';
+	import pfp from '$lib/images/kuri.jpg';
 
 	const kuri = {
 		title: `<b>KURI</b>`,
