@@ -1,12 +1,6 @@
-<div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-	<video
-		class="min-w-full min-h-full absolute object-cover"
-		src="/migtrix.mp4"
-		type="video/mp4"
-		autoplay
-		muted
-		loop
-	/>
+<div class="video-docker absolute left-0 top-0 h-full w-full overflow-hidden">
+	<video class="absolute min-h-full min-w-full object-cover" src="/migtrix.mp4" autoplay muted loop
+	></video>
 </div>
 
 <style>

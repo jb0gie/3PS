@@ -8,7 +8,6 @@
 	import { Skeleton } from '$lib/components/ui/skeleton/index.js';
 </script>
 
-
 <PageTitle>
 	<svelte:fragment slot="pageName">Contact</svelte:fragment>
 </PageTitle>
@@ -34,21 +33,21 @@
 				<iframe
 					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
 					title="ThirdPlanetEvents"
-					src="https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true"
-					style="border-width:0 scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3); "
+					src="https://tally.so/embed/mBpQXd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
 					frameborder="0"
-					scrolling="yes"
-				/>
+					marginheight="0"
+					marginwidth="0"
+				></iframe>
 			</Tabs.Content>
 			<Tabs.Content value="art">
 				<iframe
 					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
 					title="ThirdPlanetEvents"
-					src="https://docs.google.com/forms/d/e/1FAIpQLSe4bJpmLCWR3sQSFDAn5Ky9Hy7TlObfJOM2hApNODFwS5HBZA/viewform?embedded=true"
-					style="border-width:0 scrollbar-color: hsl(215.4 16.3% 46.9% / 0.3); "
+					src="https://tally.so/embed/3yP5Vq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
 					frameborder="0"
-					scrolling="yes"
-				/>
+					marginheight="0"
+					marginwidth="0"
+				></iframe>
 			</Tabs.Content>
 		</Tabs.Root>
 	</div>

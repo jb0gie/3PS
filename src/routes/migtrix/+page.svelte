@@ -12,13 +12,13 @@
 </script>
 
 <section
-	class="relative min-h-screen flex flex-col sm:flex-col items-center justify-center text-center text-white p-8"
+	class="relative flex min-h-screen flex-col items-center justify-center p-8 text-center text-white sm:flex-col"
 >
 	<!-- WebBg.svelte -->
 	<WebBg />
 	<div class={glass}>
 		<div class="flex flex-wrap">
-			<div class="sm:w-full md:w-8/12 mb-10">
+			<div class="mb-10 sm:w-full md:w-8/12">
 				<div class="mx-auto sm:p-4">
 					<nav class="items-center">
 						<img src={data.migs.pic} alt="" class="w-64" />
@@ -27,16 +27,16 @@
 					<ClaimHero />
 				</div>
 			</div>
-			<img src={pic1} alt={name} class="p-8 w-96 sm:w-1/3 md:w-1/3 object-cover" />
+			<img src={pic1} alt={name} class="w-96 object-cover p-8 sm:w-1/3 md:w-1/3" />
 		</div>
 		<ClaimInfo />
-		<div class="h-4" />
-		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+		<div class="h-4"></div>
+		<header class="mt-10 h-full items-center px-4 lg:mt-0 lg:flex">
 			<div class="w-full">
-				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
+				<h1 class="text-lg font-bold sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl">
 					<span class="text-green-700">Mastered</span> Version
 				</h1>
-				<p class="text-sm sm:text-base md:text-lg mb-10">
+				<p class="mb-10 text-sm sm:text-base md:text-lg">
 					<code>
 						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
 						Don't miss your chance to be part of this groundbreaking experience.<br />
@@ -46,13 +46,13 @@
 				</p>
 			</div>
 		</header>
-		<div class="h-4" />
-		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+		<div class="h-4"></div>
+		<header class="mt-10 h-full items-center px-4 lg:mt-0 lg:flex">
 			<div class="w-full">
-				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
+				<h1 class="text-lg font-bold sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl">
 					Access <span class="text-green-700">Unlockable Content</span>
 				</h1>
-				<p class="text-sm sm:text-base md:text-lg mb-10">
+				<p class="mb-10 text-sm sm:text-base md:text-lg">
 					<code>
 						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
 						Don't miss your chance to be part of this groundbreaking experience.<br />
@@ -62,8 +62,8 @@
 				</p>
 			</div>
 		</header>
-		<div class="h-4" />
-		<ul class="flex justify-center mt-5 space-x-6 mx-auto items-center p-8">
+		<div class="h-4"></div>
+		<ul class="mx-auto mt-5 flex items-center justify-center space-x-6 p-8">
 			<Tooltip.Root>
 				<Tooltip.Trigger>
 					<li>

@@ -17,22 +17,26 @@ binx@thirdplanet.studio</p>`
 	const mint = `https://embed.ipfscdn.io/ipfs/bafybeigdie2yyiazou7grjowoevmuip6akk33nqb55vrpezqdwfssrxyfy/erc1155.html?contract=0x0642314b8e2868ab79636244a28B1FcbADb1a03C&chain=%7B"name"%3A"Polygon+Mainnet"%2C"chain"%3A"Polygon"%2C"rpc"%3A%5B"https%3A%2F%2F137.rpc.thirdweb.com%2F%24%7BTHIRDWEB_API_KEY%7D"%5D%2C"nativeCurrency"%3A%7B"name"%3A"POL"%2C"symbol"%3A"POL"%2C"decimals"%3A18%7D%2C"shortName"%3A"matic"%2C"chainId"%3A137%2C"testnet"%3Afalse%2C"slug"%3A"polygon"%2C"icon"%3A%7B"url"%3A"ipfs%3A%2F%2FQmRNqgazYuxUa5WdddFPftTWiP3KwzBMgV9Z19QWnLMETc"%2C"width"%3A2000%2C"height"%3A2000%2C"format"%3A"png"%7D%7D&clientId=f0befac3890d5157677c9e54c7713da5&tokenId=0&theme=light&primaryColor=purple`;
 </script>
 
-<div class="sm:flex items-center max-w-screen-xl">
-	<div class="sm:w-1/2 p-5">
+<div class="max-w-screen-xl items-center sm:flex">
+	<div class="p-5 sm:w-1/2">
 		<iframe
-			class="w-[320px] h-[650px] xl:w-[600px] xl:h-[600px] md:w-[420px] md:h-[420px] sm:w-[300px] rounded-xl"
+			class="h-[650px] w-[320px] rounded-xl sm:w-[300px] md:h-[420px] md:w-[420px] xl:h-[600px] xl:w-[600px]"
 			title="allaccess"
 			src={mint}
+			style="border-width:0"
+			width="680"
+			height="720"
 			frameborder="0"
-		/>
+			scrolling="no"
+		></iframe>
 	</div>
-	<div class="sm:w-auto p-4">
-		<h2 class="my-4 font-bold text-4xl sm:text-5xl">
+	<div class="p-4 sm:w-auto">
+		<h2 class="my-4 text-4xl font-bold sm:text-5xl">
 			<span class={grad2}>3PS Rizzle Fest <span class={grad1}>2024 Egg Hunt</span></span>
 		</h2>
 		<p class="mx-auto text-xl">
 			{@html text.p1}
-			<br>	
+			<br />
 			{@html text.p2}
 		</p>
 	</div>
