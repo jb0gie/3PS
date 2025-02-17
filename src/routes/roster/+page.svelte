@@ -1,91 +1,49 @@
-<script>
-	import { onMount } from 'svelte';
-	import { activeTab, activeGenresTab } from './store.js';
-	import * as Resizable from '$lib/components/ui/resizable';
+<script lang="ts">
 	import { Button } from '$lib/components/ui/button';
-	import Sidebar from './(components)/Sidebar.svelte';
-
-	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
+	import PageTitle from '$lib/components/page-title.svelte';
 	import MusicTab from './(components)/MusicTab.svelte';
 	import ArtTab from './(components)/ArtTab.svelte';
+
 	export let data;
+	let tab = 'music';
+	let genresTab = data.genres[0];
 
-	// console.log({data});
+	function updateTab(newTab: 'music' | 'art') {
+		tab = newTab;
+	}
 
-	onMount(async () => {
-		activeGenresTab.set(data.genres[0]);
-	});
-	function switchTab(tab) {
-		activeTab.set(tab);
-		console.log($activeTab);
+	function updateGenresTab(newGenre: string) {
+		genresTab = newGenre;
 	}
 </script>
 
-<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
-	<PageTitle>
-		<svelte:fragment slot="pageName">Roster</svelte:fragment>
-	</PageTitle>
+<div class="container mx-auto p-4">
+	<div class="flex items-center space-x-4 p-4">
+		<Button
+			variant={tab === 'music' ? 'default' : 'ghost'}
+			class="text-xl"
+			onclick={() => updateTab('music')}
+		>
+			🎸 Music
+		</Button>
+		<Button
+			variant={tab === 'art' ? 'default' : 'ghost'}
+			class="text-xl"
+			onclick={() => updateTab('art')}
+		>
+			🎨 Art
+		</Button>
+	</div>
 
-	<div class="h-5 md:h-16" />
-	<div
-		class="supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur rounded-xl"
-	>
-		<div class="text-center p-4">
-			<div class="space-y-10 text-center flex flex-col items-center">
-				<Sidebar />
+	<div class="mt-8">
+		{#if tab === 'music'}
+			<div class="w-full">
+				<MusicTab {data} {genresTab} onGenreChange={updateGenresTab} />
 			</div>
-		</div>
-
-		{#if $activeTab === 'music'}
-			<div class="p-10 w-auto">
-				<MusicTab {data} />
-			</div>
-		{:else if $activeTab === 'art'}
-			<div class="p-10 w-auto">
+		{:else if tab === 'art'}
+			<div class="w-full">
 				<ArtTab {data} />
 			</div>
 		{/if}
 	</div>
-
-	<!-- <Resizable.PaneGroup
-		direction="vertical"
-		class="min-h-[800px] w-auto supports-[backdrop-filter]:bg-background/60 bg-background/95 shadow-sm backdrop-blur max-w-auto rounded-lg"
-	>
-		<Resizable.Pane defaultSize={30}>
-			<div class="flex h-full text-center justify-center">
-				<div class="text-center p-10">
-					<div class="flex flex-auto">
-						<Button class="justify-start" on:click={() => switchTab('music')}>
-							<div class="text-2xl font-bold tracking-tight">
-								<span class="mr-2">🎸 Music</span>
-							</div>
-						</Button>
-						<div class="w-4" />
-						<Button class="justify-start" on:click={() => switchTab('art')}>
-							<div class="text-2xl font-bold tracking-tight">
-								<span class="mr-2">🎨 Art</span>
-							</div>
-						</Button>
-					</div>
-				</div>
-			</div>
-		</Resizable.Pane>
-		<Resizable.Handle withHandle />
-		<Resizable.Pane defaultSize={90}>
-			<div class="flex flex-nowrap h-full items-center justify-center">
-				<span class="font-semibold">
-					{#if $activeTab === 'music'}
-						<div class="overflow-auto w-[980px]">
-							<MusicTab {data} />
-						</div>
-					{:else if $activeTab === 'art'}
-						<code class="text-xs font-bold">hold SHIFT and mouse scroll</code>
-						<div class="overflow-auto w-[980px]">
-							<ArtTab {data} />
-						</div>
-					{/if}
-				</span>
-			</div>
-		</Resizable.Pane>
-	</Resizable.PaneGroup> -->
 </div>

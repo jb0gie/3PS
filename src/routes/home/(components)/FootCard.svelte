@@ -1,7 +1,7 @@
 <script>
 	import { AspectRatio } from '$lib/components/ui/aspect-ratio';
-	import OrbGlow from '../../../lib/components/OrbGlow.svelte';
-	import passAnim from '../../../lib/videos/pass.webm';
+	import OrbGlow from '$lib/components/orb-glow.svelte';
+	import passAnim from '$lib/components/videos/pass.webm';
 </script>
 
 <div class="relative">
@@ -21,7 +21,7 @@
 		<OrbGlow />
 			<div
 				class="w-[240px] aspect-square border-2 border-black/5 dark:border-white/5 rounded-full flex justify-center items-center"
-			/>
+			></div>
 		</div>
 	</div>
 </div>

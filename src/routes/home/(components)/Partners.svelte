@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import db from '$lib/db';
 	import * as Avatar from '$lib/components/ui/avatar';
 	import * as Tooltip from '$lib/components/ui/tooltip';
-	let partner;
+	let partner: any;
 	db.partner.subscribe((p) => (partner = p));
 	const box = 'max-w-7xl mx-auto flex flex-wrap justify-around gap-8 py-12 px-4';
 	const title = 'w-full mb-4 -mt-4 text-center text-2xl font-semibold uppercase tracking-wider';

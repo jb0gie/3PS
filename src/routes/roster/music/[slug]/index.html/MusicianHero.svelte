@@ -12,7 +12,7 @@
 	const pic = 'rounded-t-xl lg:rounded-full md:rounded-full object-cover xl:w-[16rem] xl:h-[16rem] lg:w-[13rem] lg:h-[13rem] md:w-[12rem] md:h-[12rem] relative'
 </script>
 
-<div class="h-0 sm:h-0 md:h-24 xl:h-32" />
+<div class="h-0 sm:h-0 md:h-24 xl:h-32" ></div>
 <!-- User Profile Image -->
 <div class="w-full sm:w-auto mx-auto flex justify-center">
 	<img

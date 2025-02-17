@@ -1,8 +1,11 @@
-<script>
-	import '../app.postcss';
+<script lang="ts">
+	import '../app.css';
 	import { ModeWatcher } from 'mode-watcher';
-	import NavBar from '../lib/components/NavBar/NavBar.svelte';
-	import FootBar from '../lib/components/FootBar/FootBar.svelte';
+	import * as Sidebar from '$lib/components/ui/sidebar';
+	import AppSidebar from '$lib/components/app-sidebar.svelte';
+	import FootBar from '$lib/components/FootBar/FootBar.svelte';
+	let { children } = $props();
+
 	// SEO
 	const metaDefaults = {
 		title: 'ThirdPlanetStudio',
@@ -50,11 +53,18 @@
 	<meta name="twitter:description" content={meta.twitter.description} />
 	<meta name="twitter:image" content={meta.twitter.image} />
 </svelte:head>
-<!-- DarkMode -->
+
 <ModeWatcher />
 
-<NavBar />
-
-<slot />
-
-<FootBar />
+<Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 20rem;">
+	<AppSidebar />
+	<main class="min-h-screen w-full overflow-x-hidden">
+		<div class="md:hidden">
+			<Sidebar.Trigger />
+		</div>
+		<div class="mx-auto overflow-hidden p-2">
+			{@render children()}
+		</div>
+		<FootBar />
+	</main>
+</Sidebar.Provider>

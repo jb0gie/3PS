@@ -1,5 +1,5 @@
 <script>
-	import OrbGlow from '$lib/components/OrbGlow.svelte';
+	import OrbGlow from '$lib/components/orb-glow.svelte';
 	import ArtistHero from './ArtistHero.svelte';
 	import ArtistBio from './ArtistBio.svelte';
 	import ArtistSocial from './ArtistSocial.svelte';

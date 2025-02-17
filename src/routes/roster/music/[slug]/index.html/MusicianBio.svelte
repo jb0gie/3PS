@@ -33,7 +33,6 @@
 		</div>
 	{/if}
 	<!-- 🔗s -->
-	<MusicianSocial {musician} />
 	<Separator orientation="vertical" />
 	<MusicianGallery {musician} />
 </div>

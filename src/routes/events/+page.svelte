@@ -1,5 +1,5 @@
-<script>
-	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
+<script lang="ts">
+	import PageTitle from '$lib/components/page-title.svelte';
 	import EventsCurrent from './EventsCurrent.svelte';
 	import EventsHero from './EventsHero.svelte';
 	import EventsMid from './EventsMid.svelte';
@@ -8,12 +8,12 @@
 		'flex-shrink-0 m-6 relative variant-glass-secondary rounded-xl overflow-hidden max-w-sm shadow-lg gradient-end';
 </script>
 
-<div class="container mx-auto p-8 overflow-hidden md:rounded-lg md:p-10 lg:p-12">
+<div class="container mx-auto overflow-hidden p-8 md:rounded-lg md:p-10 lg:p-12">
 	<PageTitle>
 		<svelte:fragment slot="pageName">Events</svelte:fragment>
 	</PageTitle>
-	<div class="h-5 md:h-10" />
-	<EventsCurrent/>
+	<div class="h-5 md:h-10" ></div>
+	<!-- <EventsCurrent/> -->
 	<EventsHero />
 	<EventsMid />
 	<EventsFooter />

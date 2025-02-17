@@ -2,7 +2,7 @@
 	import { TwitterLogo, GithubLogo, DiscordLogo } from 'radix-icons-svelte';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import { Button } from '$lib/components/ui/button';
-	import LightSwitch from './LightSwitch.svelte';
+	import LightSwitch from '../light-switch.svelte';
 	import third_planet from '$lib/images/logo-s.png';
 	import NavBarSheet from './NavBarSheet.svelte';
 	const headStyle =

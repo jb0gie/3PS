@@ -2,7 +2,7 @@
 	import * as Sheet from '$lib/components/ui/sheet';
 	import { Button } from '$lib/components/ui/button';
 	import NavLogo from './NavLogo.svelte';
-	import OrbGlow from '../OrbGlow.svelte';
+	import OrbGlow from '../orb-glow.svelte';
 	const style = 'flex justify-center text-2xl font-bold max-w-3xl lg:text-5xl lg:pr-24 md:text-6xl';
 	const stlye2 = 'text-4xl font-bold max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl';
 	const grad1 =

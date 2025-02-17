@@ -1,40 +1,57 @@
-<script>
+<script lang="ts">
 	import * as Tabs from '$lib/components/ui/tabs';
 	import Musician from './Musician.svelte';
+	import { searchQuery } from '$lib/stores/search';
 
-	let selectedGenre;
-	$: selectedGenre = data.genres[0];
+	let { data, genresTab, onGenreChange } = $props();
 
-	export let data;
-	const container =
-		'flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center text-center items-center';
-	const section =
-		'w-fit mx-auto flex lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5';
-	const tabsContent = 'border-none p-0 outline-non overflow-auto hover:overflow-auto';
+	let filteredMusicians = $derived(
+		data.musicians.filter((musician: any) => {
+			if (!$searchQuery) return true;
+
+			return (
+				musician.name.toLowerCase().includes($searchQuery) ||
+				musician.genre.toLowerCase().includes($searchQuery) ||
+				musician.subgenre.toLowerCase().includes($searchQuery)
+			);
+		})
+	);
+
+	// $effect(() => {
+	// 	console.log('Filtered Musicians:', filteredMusicians); // Debug log
+	// });
 </script>
 
-<Tabs.Root {selectedGenre}>
-	<div class={container}>
-		<code class="text-xs w-32">Select a genre</code>
-		<div class="overflow-x-auto w-full">
-			<Tabs.List class="flex flex-col h-auto xl:h-10 md:flex-wrap md:h-10 sm:flex-nowrap ">
-				{#each data.genres as genre}
-					<Tabs.Trigger value={genre} class="text-sm w-full md:text-md md:w-auto ">
-						{genre}
-					</Tabs.Trigger>
-				{/each}
-			</Tabs.List>
-		</div>
+<Tabs.Root value={genresTab} onValueChange={onGenreChange}>
+	<Tabs.List class="hidden w-full justify-between lg:flex lg:gap-2 lg:p-2">
+		{#each data.genres as genre}
+			<Tabs.Trigger value={genre} class="flex-1 whitespace-nowrap px-6 py-2 text-sm font-medium">
+				{genre}
+			</Tabs.Trigger>
+		{/each}
+	</Tabs.List>
+
+	<div class="block lg:hidden">
+		<select
+			class="w-full rounded-lg border border-input bg-background px-3 py-3 text-sm ring-offset-background"
+			value={genresTab}
+			onchange={(e) => onGenreChange((e.target as HTMLSelectElement).value)}
+		>
+			{#each data.genres as genre}
+				<option value={genre}>{genre}</option>
+			{/each}
+		</select>
 	</div>
+
 	{#each data.genres as genre}
-		<Tabs.Content value={genre} class={tabsContent}>
-			<section class={section}>
-				{#each data.musicians as musician (musician.id)}
+		<Tabs.Content value={genre} class="outline-none">
+			<div class="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+				{#each filteredMusicians as musician (musician.id)}
 					{#if musician && musician.genre === genre}
 						<Musician {musician} />
 					{/if}
 				{/each}
-			</section>
+			</div>
 		</Tabs.Content>
 	{/each}
 </Tabs.Root>

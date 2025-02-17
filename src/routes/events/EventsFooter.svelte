@@ -1,6 +1,5 @@
 <script>
 	import * as Carousel from '$lib/components/ui/carousel';
-	import Autoplay from 'embla-carousel-autoplay';
 
 	const thirdPlanetEvents = [
 		'https://i.imgur.com/7xS2erx.png',
@@ -19,21 +18,17 @@
 		'https://i.imgur.com/1xtLvsn.png',
 		'https://i.imgur.com/blcvH80.png'
 	];
-	const plugin = Autoplay({ delay: 2000, stopOnInteraction: true });
 </script>
 
 <h2 class="text-2xl mx-auto">Flyers and Promos from previous ThirdPlanet hosted events</h2>
 <div class="max-w-screen-xl mx-auto p-3 sm:p-10 md:p-16">
 	<Carousel.Root
 		orientation="vertical"
-		plugins={[plugin]}
 		opts={{
 			align: 'start',
 			loop: true
 		}}
 		class="w-full"
-		on:mousenter={plugin.stop}
-		on:mouseleave={plugin.play}
 	>
 		<Carousel.Content class="-mt-1 h-[720px]">
 			{#each thirdPlanetEvents as pics}
