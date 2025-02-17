@@ -19,8 +19,12 @@
 			class="w-[320px] h-[650px] xl:w-[600px] xl:h-[600px] md:w-[420px] md:h-[420px] sm:w-[300px] rounded-xl"
 			title="allaccess"
 			src={mint}
+			style="border-width:0"
+			width="680"
+			height="720"
 			frameborder="0"
-		/>
+			scrolling="no"
+		></iframe>
 	</div>
 	<div class="sm:w-auto p-4">
 		<h2 class="my-4 font-bold text-4xl sm:text-5xl">

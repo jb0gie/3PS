@@ -3,12 +3,12 @@
 	export let artist;
 </script>
 
-<ul class="flex justify-center mt-5 space-x-5 mx-auto items-center">
+<ul class="mx-auto mt-5 flex items-center justify-center space-x-5">
 	{#if artist?.site !== ''}
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={artist?.site}>
+					<a href={artist?.site} aria-label={`Visit ${artist?.name}'s website`}>
 						<svg
 							class="h-10"
 							viewBox="1677.3297 160.0005 39.4834 39.4834"

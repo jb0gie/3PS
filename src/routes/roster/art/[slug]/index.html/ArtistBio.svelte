@@ -16,7 +16,7 @@
 			<div
 				class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
 				style="background-image: url({artist?.pic[0]})"
-			/>
+			></div>
 			<h1 class="text-3xl font-bold pt-8 lg:pt-0">About {artist?.title}</h1>
 			<p class="pt-4 text-base items-center">
 				{@html artist?.exp}
