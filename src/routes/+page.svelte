@@ -10,7 +10,7 @@
 <div class="h-screen w-auto">
 	<!-- <Studio enabled={false} /> -->
 	<Canvas>
-		<Sky
+		<!-- <Sky
 			setEnvironment={false}
 			turbidity={10}
 			rayleigh={0.02}
@@ -18,7 +18,7 @@
 			elevation={1}
 			mieCoefficient={0.004}
 			mieDirectionalG={0.99}
-		/>
-		<!-- <Scene /> -->
+		/> -->
+		<Scene />
 	</Canvas>
 </div>

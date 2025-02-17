@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import PageTitle from '$lib/components/page-title.svelte';
 	import EventsCurrent from './EventsCurrent.svelte';
 	import EventsHero from './EventsHero.svelte';
@@ -13,7 +13,7 @@
 		<svelte:fragment slot="pageName">Events</svelte:fragment>
 	</PageTitle>
 	<div class="h-5 md:h-10" ></div>
-	<EventsCurrent/>
+	<!-- <EventsCurrent/> -->
 	<EventsHero />
 	<EventsMid />
 	<EventsFooter />

@@ -3,12 +3,12 @@
 	export let musician;
 </script>
 
-<ul class="flex justify-center mt-5 space-x-5 mx-auto items-center">
-	{#if musician?.site !== ''}
+<ul class="flex flex-col md:flex-row justify-center mt-5 md:space-x-5 space-y-5 md:space-y-0 mx-auto items-center">
+	{#if musician?.site}
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.site}>
+					<a href={musician.site} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' website'}>
 						<svg
 							class="h-10"
 							viewBox="1677.3297 160.0005 39.4834 39.4834"
@@ -47,15 +47,15 @@
 				</li>
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name}'s website</p>
+				<p>{musician.name}'s website</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-	{#if musician?.x !== ''}
+	{#if musician?.x}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.x}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.x} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' X'}>
 						<svg
 							class="h-10"
 							viewBox="1349.437 143.293 62.585 62.637"
@@ -74,15 +74,15 @@
 				</li>
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name} on X</p>
+				<p>{musician.name} on X</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-	{#if musician?.gram !== ''}
+	{#if musician?.gram}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.gram}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.gram} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Instagram'}>
 						<svg
 							class="h-14"
 							xmlns="http://www.w3.org/2000/svg"
@@ -135,18 +135,18 @@
 							/>
 						</svg>
 					</a>
-				</li></Tooltip.Trigger
-			>
+				</li>
+			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name} on Instagram</p>
+				<p>{musician.name} on Instagram</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-	{#if musician?.tube !== ''}
+	{#if musician?.tube}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.tube}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.tube} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Youtube'}>
 						<svg
 							class="h-10"
 							viewBox="1806.266 199.215 44 32"
@@ -189,18 +189,18 @@
 							/>
 						</svg>
 					</a>
-				</li></Tooltip.Trigger
-			>
+				</li>
+			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name} on Youtube</p>
+				<p>{musician.name} on Youtube</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-	{#if musician?.fb !== ''}
+	{#if musician?.fb}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.fb}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.fb} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Facebook'}>
 						<svg
 							class="h-10"
 							viewBox="1451.847 143.914 60.833 60.833"
@@ -234,19 +234,18 @@
 							/>
 						</svg>
 					</a>
-				</li></Tooltip.Trigger
-			>
+				</li>
+			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name} on Facebook</p>
+				<p>{musician.name} on Facebook</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-
-	{#if musician?.soundcloud !== ''}
+	{#if musician?.soundcloud}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.soundcloud}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.soundcloud} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Soundcloud'}>
 						<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
 							><defs
 								><linearGradient
@@ -269,18 +268,18 @@
 							/></svg
 						>
 					</a>
-				</li></Tooltip.Trigger
-			>
+				</li>
+			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{musician?.name} on Spotify</p>
+				<p>{musician.name} on Soundcloud</p>
 			</Tooltip.Content>
 		</Tooltip.Root>
 	{/if}
-	{#if musician?.spotify !== ''}
+	{#if musician?.spotify}
 		<Tooltip.Root>
-			<Tooltip.Trigger
-				><li>
-					<a href={musician?.spotify}>
+			<Tooltip.Trigger>
+				<li>
+					<a href={musician.spotify} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Spotify'}>
 						<svg
 							class="h-10"
 							width="64"
@@ -305,7 +304,7 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.hey}>
+					<a href={musician?.hey} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Hey'}>
 						<svg
 							viewBox="1543.9097 137.86 107.3679 68"
 							width="64"
@@ -332,7 +331,7 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.opensea}>
+					<a href={musician?.opensea} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Opensea'}>
 						<svg
 							class="h-12"
 							viewBox="1228.0861 140.248 68.6039 68.604"
@@ -371,7 +370,7 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.twitch}>
+					<a href={musician?.twitch} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Twitch'}>
 						<svg class="h-12" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"
 							><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
 								id="SVGRepo_tracerCarrier"
