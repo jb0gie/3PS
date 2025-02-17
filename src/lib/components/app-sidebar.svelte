@@ -44,11 +44,11 @@
 					{
 						title: 'Blog',
 						url: '/blog'
-					},
-					{
-						title: 'Claim',
-						url: '#'
 					}
+					// {
+					// 	title: 'Claim',
+					// 	url: '/claim'
+					// }
 				]
 			},
 			{

@@ -96,10 +96,8 @@
 	</div>
 	<div>
 		<div class="relative">
-			<div class="anim-float-avatar relative z-[1]">
-				<a class="p-2" href="https://twitter.com/3PlanetStudio" target="_blank" rel="noreferrer">
+			<div class="anim-float-avatar relative z-[1]">				
 					<HeroCard />
-				</a>
 			</div>
 			<div class="absolute left-[50%] top-[50%] z-0 -translate-x-[50%] -translate-y-[50%]">
 				<div
@@ -207,7 +205,6 @@
 					variant="secondary"
 					size="lg"
 					class="bg-white/10 backdrop-blur hover:bg-white/20"
-					asChild
 				>
 					<a href="/events">View Upcoming Events</a>
 				</Button>
@@ -215,7 +212,6 @@
 					variant="outline"
 					size="lg"
 					class="border-white/10 bg-white/5 text-white hover:bg-white/10"
-					asChild
 				>
 					<a href="/contact">Host an Event</a>
 				</Button>

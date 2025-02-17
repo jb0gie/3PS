@@ -1,5 +1,5 @@
 <script>
-	import PageTitle from '$lib/components/PageTitle/PageTitle.svelte';
+	import PageTitle from '$lib/components/page-title.svelte';
 	import VipHero from './(components)/VipHero.svelte';
 </script>
 

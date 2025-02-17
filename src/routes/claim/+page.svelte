@@ -1,149 +1,70 @@
 <script>
-	import * as Tooltip from '$lib/components/ui/tooltip';
-	import WebBg from './(components)/WebBg.svelte';
-	import ClaimHero from './(components)/ClaimHero.svelte';
-	import ClaimInfo from './(components)/ClaimInfo.svelte';
-	const name = 'Migtrix';
-	const pic1 = 'https://i.imgur.com/F90cAmF.jpeg';
-	const glass =
-		'container supports-[backdrop-filter]:bg-background/60 space-y-2 z-10 rounded-lg shadow-2xl opacity-75 mx-6 lg:mx-0 border-b bg-background/95 shadow-sm backdrop-blur';
-	const cImg = 'w-24';
-	export let data;
+	import PageTitle from '$lib/components/page-title.svelte';
 </script>
 
-<section
-	class="relative min-h-screen flex flex-col sm:flex-col items-center justify-center text-center text-white p-8"
->
-	<!-- WebBg.svelte -->
-	<WebBg />
-	<div class={glass}>
-		<div class="flex flex-wrap">
-			<div class="sm:w-full md:w-8/12 mb-10">
-				<div class="mx-auto sm:p-4">
-					<nav class="items-center">
-						<img src={data.migs.pic} alt="" class="w-64" />
-						<br />
-					</nav>
-					<ClaimHero />
+<div>
+	<div class="container mx-auto overflow-hidden p-4 md:rounded-lg md:p-10 lg:p-12">
+		<PageTitle>
+			<svelte:fragment slot="pageName">Claims</svelte:fragment>
+		</PageTitle>
+		<div class="max-w-3xl mx-auto mb-12">
+			<p class="text-4xl font-bold">
+				<span class="">Welcome to our Claims portal - your gateway to exclusive digital experiences and unique content.</span>
+				<span class="">Here, you'll find a curated collection of NFTs that unlock special access, pre-release music, and premium features.</span>
+			</p>
+			<div class="h-12 md:h-10"></div>
+			<p class="text-2xl font-semibold md:pr-20 lg:pr-10">
+				Whether you're interested in our All-Access Pass for exclusive events, early music releases from our artists, or exploring secure content delivery through Darkblock, each token opens doors to extraordinary experiences in the Third Planet Studio ecosystem.
+			</p>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<a href="/allaccess" class="group">
+				<div class="relative overflow-hidden rounded-lg border bg-background p-2 hover:border-primary transition-colors">
+					<div class="flex flex-col items-center gap-4 p-6">
+						<img 
+							src="https://i.imgur.com/TQKSRsd.png" 
+							alt="Third Planet Studio"
+							class="h-40 w-40 object-contain transition-transform group-hover:scale-105"
+						/>
+						<div class="text-center">
+							<h3 class="font-semibold">All Access Pass</h3>
+							<p class="text-sm text-muted-foreground">Exclusive access to events, merchandise & more</p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<img src={pic1} alt={name} class="p-8 w-96 sm:w-1/3 md:w-1/3 object-cover" />
+			</a>
+
+			<!-- <a href="/migtrix" class="group">
+				<div class="relative overflow-hidden rounded-lg border bg-background p-2 hover:border-primary transition-colors">
+					<div class="flex flex-col items-center gap-4 p-6">
+						<img 
+							src="https://images.squarespace-cdn.com/content/v1/6468515f1bef743846cb10e5/e50447b6-5c47-4b78-86ed-ff5db24bb5d2/Migs718+Green+and+Black.png"
+							alt="Migs718"
+							class="h-40 w-40 object-contain transition-transform group-hover:scale-105"
+						/>
+						<div class="text-center">
+							<h3 class="font-semibold">Migtrix</h3>
+							<p class="text-sm text-muted-foreground">Pre-release exclusive "What Do I Know" by Migs718</p>
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="/claim/darkblock" class="group">
+				<div class="relative overflow-hidden rounded-lg border bg-background p-2 hover:border-primary transition-colors">
+					<div class="flex flex-col items-center gap-4 p-6">
+						<img 
+							src="https://i.imgur.com/sx3OKdz.png"
+							alt="Darkblock"
+							class="h-40 w-40 object-contain transition-transform group-hover:scale-105"
+						/>
+						<div class="text-center">
+							<h3 class="font-semibold">Darkblock Integration</h3>
+							<p class="text-sm text-muted-foreground">Secure content delivery platform</p>
+						</div>
+					</div>
+				</div>
+			</a> -->
 		</div>
-		<ClaimInfo />
-		<div class="h-4" />
-		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-			<div class="w-full">
-				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
-					<span class="text-green-700">Mastered</span> Version
-				</h1>
-				<p class="text-sm sm:text-base md:text-lg mb-10">
-					<code>
-						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
-						Don't miss your chance to be part of this groundbreaking experience.<br />
-						Secure your NFT now and join us in the Migtrix, where digital exclusivity meets live concert
-						vibes.
-					</code>
-				</p>
-			</div>
-		</header>
-		<div class="h-4" />
-		<header class="px-4 lg:flex mt-10 items-center h-full lg:mt-0">
-			<div class="w-full">
-				<h1 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl font-bold">
-					Access <span class="text-green-700">Unlockable Content</span>
-				</h1>
-				<p class="text-sm sm:text-base md:text-lg mb-10">
-					<code>
-						Launch Set for 2025, with an airdrop to all NFT holders upon release.<br />
-						Don't miss your chance to be part of this groundbreaking experience.<br />
-						Secure your NFT now and join us in the Migtrix, where digital exclusivity meets live concert
-						vibes.
-					</code>
-				</p>
-			</div>
-		</header>
-		<div class="h-4" />
-		<ul class="flex justify-center mt-5 space-x-6 mx-auto items-center p-8">
-			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<li>
-						<a href={data.migs.site}>
-							<img class={cImg} src={data.migs.pic} alt={data.migs.name} />
-						</a>
-					</li>
-				</Tooltip.Trigger>
-				<Tooltip.Content>
-					<p>{data.migs.name}'s website</p>
-				</Tooltip.Content>
-			</Tooltip.Root>
-
-			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<li>
-						<a href={data.loco.site}>
-							<img class={cImg} src={data.loco.pic} alt={data.loco.name} />
-						</a>
-					</li>
-				</Tooltip.Trigger>
-				<Tooltip.Content>
-					<p>{data.loco.name} on Instagram</p>
-				</Tooltip.Content>
-			</Tooltip.Root>
-
-			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<li>
-						<a href={data.tp.site}>
-							<img class={cImg} src={data.tp.pic} alt={data.tp.name} />
-						</a>
-					</li>
-				</Tooltip.Trigger>
-				<Tooltip.Content>
-					<p>{data.tp.name}</p>
-				</Tooltip.Content>
-			</Tooltip.Root>
-
-			<Tooltip.Root>
-				<Tooltip.Trigger>
-					<li>
-						<a href={data.darkblck.site}>
-							<img class={cImg} src={data.darkblck.pic} alt={data.darkblck.name} />
-						</a>
-					</li>
-				</Tooltip.Trigger>
-				<Tooltip.Content>
-					<p>{data.darkblck.name}</p>
-				</Tooltip.Content>
-			</Tooltip.Root>
-		</ul>
 	</div>
-</section>
-
-<!-- <div class="relative flex h-screen items-center">
-	<img
-		src={pic1}
-		alt={name}
-		class="w-auto h-[512px] object-contain object-center rounded-2xl"
-	/>
-	<div class={headStyle + '  ' + 'max-w-full md:left-20'}>
-		<code class="text-white text-center text-5xl p-8">{@html name}</code>
-		<div
-			class="mix-blend-screen px-10 py-5 rounded-xl sm:text-xl sm:rounded-l-xl xl:text-2xl xl:rounded-l-2xl"
-		>
-			<code
-				>Dive deep into the exclusive pre-release of "What Do I Know" by Migs718.<br /><br />
-				Available only through this unique NFT or at select live performances.<br /><br
-				/>Experience this special edition of the song in a way that's reserved for the true fans
-				before anyone else.</code
-			>
-		</div>
-		<br />
-		<Button variant="link" class="text-4xl" href="">MINT ME</Button> 
-		<ClaimLink />
-	</div>
-	<img
-		src={pic1}
-		alt={name}
-		class="w-auto h-[512px] object-contain object-center rounded-2xl"
-	/>
-</div> -->
+</div>

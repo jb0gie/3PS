@@ -23,7 +23,7 @@ binx@thirdplanet.studio</p>`
 			title="allaccess"
 			src={mint}
 			frameborder="0"
-		/>
+		></iframe>
 	</div>
 	<div class="sm:w-auto p-4">
 		<h2 class="my-4 font-bold text-4xl sm:text-5xl">
