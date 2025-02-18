@@ -2,7 +2,7 @@
 	import { Canvas } from '@threlte/core';
 	import PageTitle from '$lib/components/page-title.svelte';
 	import LogoPlanet from './(components)/LogoPlanet.svelte';
-	import third_planet from '$lib/images/logo-s.png';
+	import third_planet from '/images/logo-s.png';
 	import * as Tabs from '$lib/components/ui/tabs';
 	import OrbGlow from '$lib/components/orb-glow.svelte';
 	import { Skeleton } from '$lib/components/ui/skeleton/index.js';

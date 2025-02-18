@@ -3,7 +3,9 @@
 	import { Skeleton } from '$lib/components/ui/skeleton';
 	import { fade, scale } from 'svelte/transition';
 	import { onMount, onDestroy } from 'svelte';
-	import logoPlaceholder from '$lib/images/logo-s.png';
+	import { buttonVariants } from '$lib/components/ui/button';
+	import * as Dialog from '$lib/components/ui/dialog';
+	import logoPlaceholder from '/images/logo-s.png';
 
 	const { artist } = $props<{ artist: any }>();
 

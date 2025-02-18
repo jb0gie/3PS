@@ -1,5 +1,5 @@
 <script>
-	import third_planet from '$lib/images/logo-b.png';
+	import third_planet from '/images/logo-b.png';
 	const currentYear = new Date().getFullYear();
 </script>
 
