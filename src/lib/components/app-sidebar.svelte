@@ -115,9 +115,9 @@
 						class="w-full bg-sidebar-primary text-sidebar-primary-foreground shadow-none"
 						size="lg"
 						variant="secondary"
-						onclick={() => window.open('https://hyperfy.io/3ps', '_blank')}
+						onclick={() => window.open('https://hyp.thirdplanet.studio', '_blank')}
 					>
-						Visit World
+						Visit hyperfy world
 					</Button>
 				</Card.Content>
 			</form>
