@@ -62,7 +62,7 @@
 		<div class="md:hidden">
 			<Sidebar.Trigger />
 		</div>
-		<div class="mx-auto overflow-hidden p-12">
+		<div class="mx-auto overflow-hidden p-4 sm:p-8 md:p-12">
 			{@render children()}
 		</div>
 		<FootBar />
