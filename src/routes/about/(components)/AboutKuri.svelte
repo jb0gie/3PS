@@ -1,7 +1,7 @@
-<!-- Temporarily commented out until image issue is resolved
+
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '$lib/images/kuri.jpg';
+	// import pfp from '$lib/images/kuri.jpg';
 
 	const kuri = {
 		title: `<b>KURI</b>`,
@@ -11,7 +11,7 @@
 	};
 	const gif0 = 'https://i.giphy.com/media/jtvB77L0afuXGlO5Uh/giphy-downsized-large.gif';
 </script>
-
+<!-- Temporarily commented out until image issue is resolved
 <div class="relative overflow-hidden rounded-xl">
 	<div class="mx-auto max-w-7xl">
 		<div class="relative z-10 pb-4">
@@ -78,4 +78,4 @@
 			</main>
 		</div>
 	</div>
-</div>
+</div> -->

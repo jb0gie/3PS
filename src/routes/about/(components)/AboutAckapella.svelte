@@ -1,4 +1,4 @@
-<!-- <script>
+<script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
 	import pfp from '$lib/images/ack.jpg';
 	const ackapella = {
@@ -42,4 +42,4 @@
 			</main>
 		</div>
 	</div>
-</div> -->
+</div>
