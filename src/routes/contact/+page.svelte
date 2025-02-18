@@ -2,10 +2,14 @@
 	import { Canvas } from '@threlte/core';
 	import PageTitle from '$lib/components/page-title.svelte';
 	import LogoPlanet from './(components)/LogoPlanet.svelte';
-	import third_planet from '/images/logo-s.png';
+	const third_planet = '/images/logo-s.png';
 	import * as Tabs from '$lib/components/ui/tabs';
 	import OrbGlow from '$lib/components/orb-glow.svelte';
 	import { Skeleton } from '$lib/components/ui/skeleton/index.js';
+
+	const artForm = 'https://docs.google.com/forms/d/e/1FAIpQLSe4bJpmLCWR3sQSFDAn5Ky9Hy7TlObfJOM2hApNODFwS5HBZA/viewform?embedded=true'
+
+	const inquiryForm = 'https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true'
 </script>
 
 <PageTitle>
@@ -33,7 +37,7 @@
 				<iframe
 					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
 					title="ThirdPlanetEvents"
-					src="https://tally.so/embed/mBpQXd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+					src={inquiryForm}
 					frameborder="0"
 					marginheight="0"
 					marginwidth="0"
@@ -43,7 +47,7 @@
 				<iframe
 					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
 					title="ThirdPlanetEvents"
-					src="https://tally.so/embed/3yP5Vq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+					src={artForm}
 					frameborder="0"
 					marginheight="0"
 					marginwidth="0"

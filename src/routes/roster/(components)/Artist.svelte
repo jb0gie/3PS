@@ -5,7 +5,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import * as Dialog from '$lib/components/ui/dialog';
-	import logoPlaceholder from '/images/logo-s.png';
+	const logoPlaceholder = '/images/logo-s.png';
 
 	const { artist } = $props<{ artist: any }>();
 

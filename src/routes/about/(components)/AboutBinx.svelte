@@ -1,6 +1,6 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '/images/binx.jpg';
+	const pfp = '/images/binx.jpg';
 	export const binx = {
 		title: `<b>BINX</b>`,
 		tag: `<b>"<i>THE BAND MOM</i>"</b>`,

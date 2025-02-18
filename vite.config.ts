@@ -9,9 +9,18 @@ export default defineConfig({
 	optimizeDeps: {
 		exclude: ['@threlte/core', '@threlte/extras']
 	},
+	assetsInclude: ['**/*.glb', '**/*.jpg', '**/*.png', '**/*.gif'],
 	server: {
 		fs: {
 			strict: false
 		}
-	}
+	},
+	build: {
+		rollupOptions: {
+			output: {
+				assetFileNames: 'assets/[name][extname]'
+			}
+		}
+	},
+	publicDir: 'static'
 });

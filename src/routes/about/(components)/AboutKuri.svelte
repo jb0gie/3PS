@@ -1,6 +1,6 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
-	import pfp from '/images/kuri.jpg';
+	const pfp = '/images/kuri.jpg';
 
 	const kuri = {
 		title: `<b>KURI</b>`,
@@ -10,7 +10,6 @@
 	};
 	const gif0 = 'https://i.giphy.com/media/jtvB77L0afuXGlO5Uh/giphy-downsized-large.gif';
 </script>
-
 
 <div class="relative overflow-hidden rounded-xl">
 	<div class="mx-auto max-w-7xl">
@@ -47,6 +46,3 @@
 		</div>
 	</div>
 </div>
-
-
-
