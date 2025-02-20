@@ -16,8 +16,14 @@ export default defineConfig({
 		}
 	},
 	build: {
+		target: 'esnext',
+		sourcemap: true,
 		rollupOptions: {
 			output: {
+				manualChunks: {
+					three: ['three'],
+					threlte: ['@threlte/core', '@threlte/extras']
+				},
 				assetFileNames: 'assets/[name][extname]'
 			}
 		}
