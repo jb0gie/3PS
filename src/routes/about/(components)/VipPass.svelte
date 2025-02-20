@@ -22,5 +22,5 @@
 <T.AmbientLight intensity={0.5} />
 
 <Suspense final>
-	<Pass position.y={-1} scale={2} />
+	<Pass position.y={-1} scale={3} />
 </Suspense>

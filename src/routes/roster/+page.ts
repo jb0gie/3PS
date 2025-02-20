@@ -1,30 +1,28 @@
-import db from '$lib/db.ts';
+import type { PageLoad } from './$types';
+import db from '$lib/db';
 
 export const prerender = true;
 export const trailingSlash = 'always';
 
-export async function load(ctx) {
-	let genres = [];
+export const load: PageLoad = async () => {
+	let genres: string[] = [];
 
 	const musicianSub = await db.getMusicians();
-	let musicians = await new Promise((res) => {
-		musicianSub.subscribe((a) => {
-			if (a) {
-				genres = [...new Set(a.map((musician) => musician.genre))];
-				console.log({ a });
-				res(a);
+	const musicians = await new Promise((res) => {
+		musicianSub.subscribe((value) => {
+			if (value) {
+				genres = [...new Set(value.map((musician) => musician.genre))];
+				res(value);
 			}
 		});
 	});
 
 	const artistSub = await db.getArtists();
-	let artists = await new Promise((res) => {
-		artistSub.subscribe((a) => {
-			if (a) res(a);
-			console.log({ a });
+	const artists = await new Promise((res) => {
+		artistSub.subscribe((value) => {
+			if (value) res(value);
 		});
 	});
-	const data = { genres, musicians, artists };
-	console.log({ data });
-	return data;
-}
+
+	return { genres, musicians, artists };
+};

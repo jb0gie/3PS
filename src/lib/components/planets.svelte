@@ -69,7 +69,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
   {#await gltf}
     {@render fallback?.()}
   {:then gltf}
-    <T.Group name="Scene">
+    <T.Group name="Scene" scale={0.4}>
       <T.Mesh
         name="Sphere"
         castShadow
@@ -77,7 +77,7 @@ Command: npx @threlte/gltf@3.0.0 planets.glb -k -u -s -t
         geometry={gltf.nodes.Sphere.geometry}
         material={gltf.materials.solarsystem}
         position={[-0.04, 0.04, -0.1]}
-        scale={0.5}
+        scale={1}
       />
       <T.Mesh
         name="Sphere001"

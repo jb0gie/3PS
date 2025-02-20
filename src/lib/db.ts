@@ -1,7 +1,31 @@
-import { writable } from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 import { browser } from '$app/environment';
 import PocketBase from 'pocketbase';
 import type { RecordModel } from 'pocketbase';
+
+interface TeamMember extends RecordModel {
+	name: string;
+	nickname: string;
+	bio: string;
+	role: string;
+	pic: string[];
+}
+
+interface Musician extends RecordModel {
+	name: string;
+	genre: string;
+	pic: string[];
+}
+
+interface Artist extends RecordModel {
+	name: string;
+	pic: string[];
+}
+
+interface Partner extends RecordModel {
+	name: string;
+	pic: string[];
+}
 
 const pb = new PocketBase('https://pb.thirdplanet.studio');
 
@@ -14,20 +38,62 @@ declare global {
 if (browser) {
 	window.pb = pb;
 }
-let musicians = writable();
+
+// Helper function for direct navigation data fetching
+async function fetchCollection<T extends RecordModel>(
+	collection: string,
+	customFetch?: typeof fetch
+): Promise<T[]> {
+	const response = await pb
+		.collection(collection)
+		.getList<T>(undefined, undefined, { fetch: customFetch });
+	return response.items.map((item) => {
+		if ('pic' in item && item.pic) {
+			const picUrls = Array.isArray(item.pic)
+				? item.pic.map((picId: string) => pb.files.getURL(item, picId))
+				: [];
+			return { ...item, pic: picUrls };
+		}
+		return { ...item, pic: [] };
+	});
+}
+
+let team: Writable<TeamMember[]> = writable([]);
+let teamDone = false;
+const getTeam = async (customFetch?: typeof fetch) => {
+	if (!teamDone) {
+		teamDone = true;
+		const response = await pb
+			.collection('team')
+			.getList<TeamMember>(undefined, undefined, { fetch: customFetch });
+		const out = response.items.map((item) => {
+			if (item.pic) {
+				const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+				item.pic = picUrls;
+			} else {
+				item.pic = [];
+			}
+			return item;
+		});
+		team.set(out);
+	}
+	return team;
+};
+
+let musicians: Writable<Musician[]> = writable([]);
 let musiciansDone = false;
 const getMusicians = () => {
 	if (!musiciansDone) {
 		musiciansDone = true;
 		pb.collection('musician')
-			.getList()
+			.getList<Musician>()
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
 						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
-						console.warn('Item does not have a pic property:', item);
+						item.pic = [];
 					}
 					return item;
 				});
@@ -37,20 +103,20 @@ const getMusicians = () => {
 	return musicians;
 };
 
-let artists = writable();
+let artists: Writable<Artist[]> = writable([]);
 let artistsDone = false;
 const getArtists = () => {
 	if (!artistsDone) {
 		artistsDone = true;
 		pb.collection('artist')
-			.getList()
+			.getList<Artist>()
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
 						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
-						console.warn('Item does not have a pic property:', item);
+						item.pic = [];
 					}
 					return item;
 				});
@@ -60,31 +126,45 @@ const getArtists = () => {
 	return artists;
 };
 
-let metaverse = writable<RecordModel[]>([]);
-pb.collection('metaverse')
-	.getList()
-	.then(async (w) => {
-		const out = w.items.map((item) => {
-			// const picUrls = item.pic.map((picId) => pb.files.getUrl(item, picId));
-			// item.pic = picUrls;
-			// console.log(item.pic);
-			return item;
-		});
-		metaverse.set(out);
-	});
+let partner: Writable<Partner[]> = writable([]);
+let partnerDone = false;
+const getPartner = () => {
+	if (!partnerDone) {
+		partnerDone = true;
+		pb.collection('partner')
+			.getList<Partner>()
+			.then((a) => {
+				const out = a.items.map((item) => {
+					if (item.pic) {
+						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+						item.pic = picUrls;
+					} else {
+						item.pic = [];
+					}
+					return item;
+				});
+				partner.set(out);
+			});
+	}
+	return partner;
+};
 
-const partner = writable<RecordModel[]>([]);
-pb.collection('partner')
-	.getList()
-	.then(async (p) => {
-		// console.log(p.items);
-		const out = p.items.map((item) => {
-			let picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
-			item.pic = picUrls;
-			// console.log(item.pic)
-			return item;
-		});
-		partner.set(out);
-	});
+let metaverse: Writable<RecordModel[]> = writable([]);
+let metaverseDone = false;
+const getMetaverse = () => {
+	if (!metaverseDone) {
+		metaverseDone = true;
+		pb.collection('metaverse')
+			.getList()
+			.then((a) => {
+				metaverse.set(a.items);
+			});
+	}
+	return metaverse;
+};
 
-export default { getArtists, getMusicians, partner, metaverse };
+// Initialize data
+getPartner();
+getMetaverse();
+
+export default { getTeam, getArtists, getMusicians, partner, metaverse };
