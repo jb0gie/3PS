@@ -47,7 +47,7 @@
 					}
 					// {
 					// 	title: 'Claim',
-					// 	url: '/claim'
+					// 	url: ''
 					// }
 				]
 			},
@@ -104,6 +104,25 @@
 		{/each}
 	</Sidebar.Content>
 	<Sidebar.Footer>
+		<Card.Root class="shadow-none">
+			<form>
+				<Card.Header class="p-4 pb-0">
+					<Card.Title class="text-sm">Claim All access</Card.Title>
+					<Card.Description>Mint a pass to access all of our services</Card.Description>
+				</Card.Header>
+				<Card.Content class="grid gap-2.5 p-4">
+					<Button
+						class="w-full bg-sidebar-primary text-sidebar-primary-foreground shadow-none"
+						size="lg"
+						variant="secondary"
+						onclick={() => window.open('https://thirdweb.com/polygon/0x30d3A5FBbd459825ab4C56F8db6d5C90f8c3C411/nfts/0', '_blank')}
+					>
+						Visit thirdweb
+					</Button>
+				</Card.Content>
+			</form>
+		</Card.Root>
+		<br />
 		<Card.Root class="shadow-none">
 			<form>
 				<Card.Header class="p-4 pb-0">
