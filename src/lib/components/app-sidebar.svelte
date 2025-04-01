@@ -126,17 +126,17 @@
 		<Card.Root class="shadow-none">
 			<form>
 				<Card.Header class="p-4 pb-0">
-					<Card.Title class="text-sm">Visit 3PS</Card.Title>
-					<Card.Description>our hyperfy world</Card.Description>
+					<Card.Title class="text-sm">Contact us</Card.Title>
+					<Card.Description>For more information</Card.Description>
 				</Card.Header>
 				<Card.Content class="grid gap-2.5 p-4">
 					<Button
 						class="w-full bg-sidebar-primary text-sidebar-primary-foreground shadow-none"
 						size="lg"
 						variant="secondary"
-						onclick={() => window.open('https://hyp.thirdplanet.studio', '_blank')}
+						onclick={() => window.open('https://forms.gle/oBdmRcnZKCKCZ7PJ8', '_blank')}
 					>
-						Visit hyperfy world
+						Contact form
 					</Button>
 				</Card.Content>
 			</form>
