@@ -1,0 +1,334 @@
+[
+  {
+    "file": "1640988000_init.go",
+    "applied": 1697994074461125
+  },
+  {
+    "file": "1673167670_multi_match_migrate.go",
+    "applied": 1697994074462915
+  },
+  {
+    "file": "1677152688_rename_authentik_to_oidc.go",
+    "applied": 1697994074463264
+  },
+  {
+    "file": "1679943780_normalize_single_multiple_values.go",
+    "applied": 1697994074463545
+  },
+  {
+    "file": "1679943781_add_indexes_column.go",
+    "applied": 1697994074464580
+  },
+  {
+    "file": "1685164450_check_fk.go",
+    "applied": 1697994074464884
+  },
+  {
+    "file": "1689579878_renormalize_single_multiple_values.go",
+    "applied": 1697994074465196
+  },
+  {
+    "file": "1690319366_reset_null_values.go",
+    "applied": 1697994074465434
+  },
+  {
+    "file": "1690454337_transform_relations_to_views.go",
+    "applied": 1697994074465570
+  },
+  {
+    "file": "1691747913_resave_views.go",
+    "applied": 1697994074465675
+  },
+  {
+    "file": "1692609521_copy_display_fields.go",
+    "applied": 1697994074465854
+  },
+  {
+    "file": "1698162812_deleted_users.js",
+    "applied": 1698162812888494
+  },
+  {
+    "file": "1698167301_created_artist.js",
+    "applied": 1698167301609946
+  },
+  {
+    "file": "1698167601_created_musician.js",
+    "applied": 1698167601495306
+  },
+  {
+    "file": "1698168185_updated_musician.js",
+    "applied": 1698168185485627
+  },
+  {
+    "file": "1698168842_updated_artist.js",
+    "applied": 1698168842881036
+  },
+  {
+    "file": "1698226170_updated_artist.js",
+    "applied": 1698226170936016
+  },
+  {
+    "file": "1698227222_updated_artist.js",
+    "applied": 1698227222892589
+  },
+  {
+    "file": "1698240295_updated_artist.js",
+    "applied": 1698240295096521
+  },
+  {
+    "file": "1698258872_updated_musician.js",
+    "applied": 1698258872491983
+  },
+  {
+    "file": "1698754558_updated_artist.js",
+    "applied": 1698754558744175
+  },
+  {
+    "file": "1698758865_updated_artist.js",
+    "applied": 1698758865672164
+  },
+  {
+    "file": "1698758897_updated_musician.js",
+    "applied": 1698758897414886
+  },
+  {
+    "file": "1698776766_updated_musician.js",
+    "applied": 1698776766206984
+  },
+  {
+    "file": "1698776867_updated_musician.js",
+    "applied": 1698776867372783
+  },
+  {
+    "file": "1698839692_updated_musician.js",
+    "applied": 1698839692002243
+  },
+  {
+    "file": "1698839733_updated_musician.js",
+    "applied": 1698839733387300
+  },
+  {
+    "file": "1698841330_created_partners.js",
+    "applied": 1698841330885048
+  },
+  {
+    "file": "1698842886_updated_partners.js",
+    "applied": 1698842886381456
+  },
+  {
+    "file": "1699368169_updated_partner.js",
+    "applied": 1699368169795860
+  },
+  {
+    "file": "1699368305_updated_partner.js",
+    "applied": 1699368305552213
+  },
+  {
+    "file": "1699371973_updated_partner.js",
+    "applied": 1699371973133035
+  },
+  {
+    "file": "1699635699_created_Metaverse.js",
+    "applied": 1699635699666586
+  },
+  {
+    "file": "1699641686_updated_musician.js",
+    "applied": 1699641686760599
+  },
+  {
+    "file": "1699643590_updated_musician.js",
+    "applied": 1699643590741900
+  },
+  {
+    "file": "1699645400_updated_musician.js",
+    "applied": 1699645400915623
+  },
+  {
+    "file": "1699647782_updated_musician.js",
+    "applied": 1699647782539080
+  },
+  {
+    "file": "1699648273_updated_musician.js",
+    "applied": 1699648273296798
+  },
+  {
+    "file": "1699648346_updated_musician.js",
+    "applied": 1699648346349203
+  },
+  {
+    "file": "1699649981_updated_musician.js",
+    "applied": 1699649981989958
+  },
+  {
+    "file": "1699650274_updated_musician.js",
+    "applied": 1699650274376816
+  },
+  {
+    "file": "1699651264_updated_musician.js",
+    "applied": 1699651264054837
+  },
+  {
+    "file": "1699651538_updated_musician.js",
+    "applied": 1699651538209707
+  },
+  {
+    "file": "1699651592_updated_musician.js",
+    "applied": 1699651592251182
+  },
+  {
+    "file": "1699651648_updated_musician.js",
+    "applied": 1699651648805632
+  },
+  {
+    "file": "1699662602_created_minted_memories.js",
+    "applied": 1699662602146792
+  },
+  {
+    "file": "1699663014_updated_minted_memories.js",
+    "applied": 1699663014941056
+  },
+  {
+    "file": "1699663255_updated_minted_memories.js",
+    "applied": 1699663255572848
+  },
+  {
+    "file": "1699708557_updated_minted_memories.js",
+    "applied": 1699708557265132
+  },
+  {
+    "file": "1699708611_updated_memories.js",
+    "applied": 1699708611941147
+  },
+  {
+    "file": "1701270292_created_services.js",
+    "applied": 1701270292486210
+  },
+  {
+    "file": "1701270773_updated_services.js",
+    "applied": 1701270773837519
+  },
+  {
+    "file": "1701286711_deleted_service.js",
+    "applied": 1701286711839321
+  },
+  {
+    "file": "1701363281_updated_Metaverse.js",
+    "applied": 1701363281217822
+  },
+  {
+    "file": "1701382481_updated_metaverse.js",
+    "applied": 1701382481154814
+  },
+  {
+    "file": "1701530758_updated_memories.js",
+    "applied": 1701530758778156
+  },
+  {
+    "file": "1701530766_updated_metaverse.js",
+    "applied": 1701530766058212
+  },
+  {
+    "file": "1705864949_updated_artist.js",
+    "applied": 1705864949552312
+  },
+  {
+    "file": "1705869608_updated_artist.js",
+    "applied": 1705869608816919
+  },
+  {
+    "file": "1705946957_updated_musician.js",
+    "applied": 1705946957264117
+  },
+  {
+    "file": "1705949263_updated_musician.js",
+    "applied": 1705949263380555
+  },
+  {
+    "file": "1707492434_created_Blog_Posts.js",
+    "applied": 1707492434718808
+  },
+  {
+    "file": "1707492537_updated_Blog_Posts.js",
+    "applied": 1707492537693098
+  },
+  {
+    "file": "1707494067_updated_publications.js",
+    "applied": 1707494067700545
+  },
+  {
+    "file": "1707502361_updated_publications.js",
+    "applied": 1707502361479606
+  },
+  {
+    "file": "1707736112_updated_musician.js",
+    "applied": 1707736112309853
+  },
+  {
+    "file": "1707859557_updated_musician.js",
+    "applied": 1707859557465869
+  },
+  {
+    "file": "1707877865_updated_musician.js",
+    "applied": 1707877865374274
+  },
+  {
+    "file": "1707878321_updated_musician.js",
+    "applied": 1707878321576527
+  },
+  {
+    "file": "1708027947_updated_musician.js",
+    "applied": 1708027947950617
+  },
+  {
+    "file": "1708114329_updated_musician.js",
+    "applied": 1708114329717666
+  },
+  {
+    "file": "1708252975_updated_artist.js",
+    "applied": 1708252975941109
+  },
+  {
+    "file": "1713352437_updated_musician.js",
+    "applied": 1713352437311141
+  },
+  {
+    "file": "1640988000_aux_init.go",
+    "applied": 1739812417688911
+  },
+  {
+    "file": "1717233556_v0.23_migrate.go",
+    "applied": 1739812417742028
+  },
+  {
+    "file": "1717233557_v0.23_migrate2.go",
+    "applied": 1739812417742607
+  },
+  {
+    "file": "1717233558_v0.23_migrate3.go",
+    "applied": 1739812417749832
+  },
+  {
+    "file": "1717233559_v0.23_migrate4.go",
+    "applied": 1739812417750098
+  },
+  {
+    "file": "1739975948_created_team.js",
+    "applied": 1739975948760192
+  },
+  {
+    "file": "1740037325_updated_team.js",
+    "applied": 1740037325856367
+  },
+  {
+    "file": "1740043194_updated_team.js",
+    "applied": 1740043194809121
+  },
+  {
+    "file": "1740045902_updated_team.js",
+    "applied": 1740045902814742
+  },
+  {
+    "file": "1740046992_updated_team.js",
+    "applied": 1740046992687685
+  }
+]

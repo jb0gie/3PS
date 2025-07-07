@@ -1,0 +1,38 @@
+{
+  "extractedAt": "2025-07-02T19:18:35.213Z",
+  "collections": [
+    "_migrations",
+    "_collections",
+    "artist",
+    "musician",
+    "partner",
+    "Metaverse",
+    "memories",
+    "publications",
+    "_superusers",
+    "_params",
+    "_externalAuths",
+    "_mfas",
+    "_otps",
+    "_authOrigins",
+    "team"
+  ],
+  "totalRecords": 156,
+  "collectionCounts": {
+    "_migrations": 83,
+    "_collections": 12,
+    "artist": 6,
+    "musician": 31,
+    "partner": 8,
+    "Metaverse": 6,
+    "memories": 2,
+    "publications": 2,
+    "_superusers": 1,
+    "_params": 1,
+    "_externalAuths": 0,
+    "_mfas": 0,
+    "_otps": 0,
+    "_authOrigins": 1,
+    "team": 3
+  }
+}
