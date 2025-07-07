@@ -1,5 +1,5 @@
 node_modules
-
+GITHUB_STORAGE_MIGRATION.md
 # Output
 .output
 .vercel
@@ -21,3 +21,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# PocketBase database files (temporary - only needed for migration)
+*.db
+*.db-shm
+*.db-wal
+extracted-data/
