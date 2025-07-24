@@ -80,9 +80,9 @@
 				url: '#',
 				items: [
 					{
-						title: 'Visit thirdweb',
-						url: 'https://thirdweb.com/polygon/0x30d3A5FBbd459825ab4C56F8db6d5C90f8c3C411/nfts/0',
-						external: true
+						title: 'Mint Pass',
+						url: '/allaccess',
+						external: false
 					},
 					{
 						title: 'Contact form',
@@ -99,9 +99,8 @@
 	<Sidebar.Header>
 		<a href="/">
 			<div class="flex items-center justify-between px-1 md:px-4">
-				<h1 class="text-2xl font-bold md:text-3xl">
-					Third Planet
-					<span class="text-xl text-gray-500 md:text-xl">Studio</span>
+				<h1 class="text-2xl font-bold md:text-2xl">
+					Third Planet <span class="text-xl text-gray-500 md:text-xl">Studio</span>
 				</h1>
 				<LightSwitch />
 			</div>
@@ -119,7 +118,7 @@
 					<Sidebar.Menu>
 						{#each group.items as item (item.title)}
 							<Sidebar.MenuItem>
-								<Sidebar.MenuButton class="text-2xl font-medium md:text-3xl">
+								<Sidebar.MenuButton class="text-xl font-medium md:text-2xl">
 									{#snippet child({ props })}
 										{#if item.external ?? false}
 											<a href={item.url} target="_blank" rel="noopener noreferrer" {...props}

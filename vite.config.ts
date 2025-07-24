@@ -7,7 +7,16 @@ export default defineConfig({
 		noExternal: ['three', '@threlte/core', '@threlte/extras', 'radix-icons-svelte']
 	},
 	optimizeDeps: {
-		exclude: ['@threlte/core', '@threlte/extras']
+		exclude: [
+			'pocketbase',
+			'svelte-tweakpane-ui',
+			'camera-controls',
+			'three-viewport-gizmo',
+			'three-mesh-bvh',
+			'troika-three-text',
+			'@threejs-kit/instanced-sprite-mesh',
+			'mitt'
+		]
 	},
 	assetsInclude: ['**/*.glb', '**/*.jpg', '**/*.png', '**/*.gif'],
 	server: {
@@ -28,6 +37,5 @@ export default defineConfig({
 				assetFileNames: 'assets/[name]-[hash][extname]'
 			}
 		}
-	},
-	// publicDir: 'static'
+	}
 });

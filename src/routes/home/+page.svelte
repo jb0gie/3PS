@@ -9,8 +9,8 @@
 	// import Mints from './(components)/Mints.svelte';
 	// import Stats from './(components)/Stats.svelte';
 
-	let { data } = $props();
-	let partners = $derived(data.partners);
+	// let { data = {} } = $props();
+	// let partners = $derived(data.partners || []);
 
 	const grad1 =
 		'bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone font-bold';
@@ -216,7 +216,7 @@
 </div>
 
 <div class="h-5 md:h-20"></div>
-<Partners {data} />
+<Partners />
 
 <style lang="postcss">
 	.section-container {

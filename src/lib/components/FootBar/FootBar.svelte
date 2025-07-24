@@ -5,7 +5,7 @@
 
 <footer>
 	<div class="container flex flex-col items-center">
-		<img src={third_planet} class="h-24 sm:h-32" alt="" />
+		<img src={third_planet} class="h-32 sm:h-32" alt="" />
 		<br />
 		<span class="block text-center text-sm text-gray-500 dark:text-gray-400">
 			All Rights Reserved. © {currentYear} ThirdPlanetStudio™ 

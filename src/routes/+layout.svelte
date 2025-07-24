@@ -6,6 +6,7 @@
 	import FootBar from '$lib/components/FootBar/FootBar.svelte';
 	import { useSidebar } from '$lib/components/ui/sidebar/context.svelte.js';
 	import { page } from '$app/stores';
+	import '$lib/appkit'; // Initialize AppKit
 	let { children } = $props();
 
 	// SEO
