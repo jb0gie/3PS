@@ -3,7 +3,7 @@ import { browser } from '$app/environment';
 import PocketBase from 'pocketbase';
 import type { RecordModel } from 'pocketbase';
 
-const pb = new PocketBase('https://pb.thirdplanetstudios.247420.xyz');
+const pb = new PocketBase('https://pb.thirdplanet.studio');
 
 declare global {
 	interface Window {

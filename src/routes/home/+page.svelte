@@ -183,6 +183,49 @@
 	</div>
 </div>
 <div class="h-5 md:h-20"></div>
+
+<!-- Add this new Events CTA section -->
+<div class="h-5"></div>
+<div class="mx-auto max-w-7xl">
+	<div
+		class="relative overflow-hidden rounded-3xl p-8 md:p-12"
+	>
+		<OrbGlow />
+		<div class="relative z-10">
+			<h2 class="text-4xl font-bold tracking-tight text-white md:text-5xl">
+				Join Our Next <span
+					style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url({gif2});"
+					>Event</span
+				>
+			</h2>
+			<p class="mt-4 max-w-2xl text-lg text-white/80">
+				Experience music and art in a whole new dimension. Our events bring together creators and
+				fans in immersive virtual spaces.
+			</p>
+			<div class="mt-8 flex flex-wrap gap-4">
+				<Button
+					variant="secondary"
+					size="lg"
+					class="bg-white/10 backdrop-blur hover:bg-white/20"
+					asChild
+				>
+					<a href="/events">View Upcoming Events</a>
+				</Button>
+				<Button
+					variant="outline"
+					size="lg"
+					class="border-white/10 bg-white/5 text-white hover:bg-white/10"
+					asChild
+				>
+					<a href="/contact">Host an Event</a>
+				</Button>
+			</div>
+		</div>
+		<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+	</div>
+</div>
+
+<div class="h-5 md:h-20"></div>
 <Partners {data} />
 
 <style lang="postcss">

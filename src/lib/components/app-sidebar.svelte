@@ -71,13 +71,15 @@
 
 <Sidebar.Root {...restProps} bind:ref variant="floating">
 	<Sidebar.Header>
-		<div class="flex items-center justify-between px-4">
-			<h1 class="text-2xl font-bold">
-				Third Planet
-				<span class="text-lg text-gray-500">Studio</span>
-			</h1>
-			<LightSwitch />
-		</div>
+		<a href="/">
+			<div class="flex items-center justify-between px-4">
+				<h1 class="text-2xl font-bold">
+					Third Planet
+					<span class="text-lg text-gray-500">Studio</span>
+				</h1>
+				<LightSwitch />
+			</div>
+		</a>
 		<!-- <SearchForm /> -->
 	</Sidebar.Header>
 	<Sidebar.Content>
@@ -89,7 +91,7 @@
 					<Sidebar.Menu>
 						{#each group.items as item (item.title)}
 							<Sidebar.MenuItem>
-								<Sidebar.MenuButton class="text-lg">
+								<Sidebar.MenuButton class="text-2xl">
 									{#snippet child({ props })}
 										<a href={item.url} {...props}>{item.title}</a>
 									{/snippet}

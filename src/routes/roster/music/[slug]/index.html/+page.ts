@@ -7,7 +7,7 @@ export async function load(ctx) {
 		musicianSub.subscribe((a) => {
 			if (a) {
 				res(
-					a.filter((item) => {
+					a.filter((item:any) => {
 						const slug = ctx.params.slug;
 						return item.route === "/roster/music/" + slug;
 					})[0]
