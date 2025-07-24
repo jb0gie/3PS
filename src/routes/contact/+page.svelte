@@ -14,8 +14,8 @@
 	const inquiryForm =
 		'https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true';
 
-	let mounted = $state(false);
-	let iframeLoaded = $state({ inquiry: false, art: false });
+	let mounted = false;
+	let iframeLoaded = { inquiry: false, art: false };
 
 	onMount(() => {
 		mounted = true;
@@ -46,34 +46,44 @@
 				<Tabs.Trigger value="art">Art Submission</Tabs.Trigger>
 			</Tabs.List>
 			<Tabs.Content value="inquiry">
-				{#if !iframeLoaded.inquiry}
-					<div class="h-[520px] w-full min-w-[420px]">
-						<Skeleton class="h-full w-full rounded-lg" />
-					</div>
+				{#if mounted}
+					{#if !iframeLoaded.inquiry}
+						<div class="h-[520px] w-full min-w-[420px]">
+							<Skeleton class="h-full w-full rounded-lg" />
+						</div>
+					{/if}
+					<iframe
+						class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
+						class:hidden={!iframeLoaded.inquiry}
+						title="Contact Form"
+						src={inquiryForm}
+						on:load={() => {
+							iframeLoaded.inquiry = true;
+							iframeLoaded = { ...iframeLoaded };
+						}}
+						loading="lazy"
+					></iframe>
 				{/if}
-				<iframe
-					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
-					class:hidden={!iframeLoaded.inquiry}
-					title="Contact Form"
-					src={inquiryForm}
-					on:load={() => (iframeLoaded.inquiry = true)}
-					loading="lazy"
-				></iframe>
 			</Tabs.Content>
 			<Tabs.Content value="art">
-				{#if !iframeLoaded.art}
-					<div class="h-[520px] w-full min-w-[420px]">
-						<Skeleton class="h-full w-full rounded-lg" />
-					</div>
+				{#if mounted}
+					{#if !iframeLoaded.art}
+						<div class="h-[520px] w-full min-w-[420px]">
+							<Skeleton class="h-full w-full rounded-lg" />
+						</div>
+					{/if}
+					<iframe
+						class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
+						class:hidden={!iframeLoaded.art}
+						title="Art Submission Form"
+						src={artForm}
+						on:load={() => {
+							iframeLoaded.art = true;
+							iframeLoaded = { ...iframeLoaded };
+						}}
+						loading="lazy"
+					></iframe>
 				{/if}
-				<iframe
-					class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
-					class:hidden={!iframeLoaded.art}
-					title="Art Submission Form"
-					src={artForm}
-					on:load={() => (iframeLoaded.art = true)}
-					loading="lazy"
-				></iframe>
 			</Tabs.Content>
 		</Tabs.Root>
 	</div>

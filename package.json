@@ -51,7 +51,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@dimforge/rapier3d-compat": "^0.14.0",
+		"@dimforge/rapier3d-compat": "^0.16.0",
 		"@theatre/core": "^0.7.2",
 		"@theatre/studio": "^0.7.2",
 		"@threlte/core": "^8.0.1",

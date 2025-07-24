@@ -1,28 +1,37 @@
 import type { PageLoad } from './$types';
-import db from '$lib/db';
+import PocketBase from 'pocketbase';
 
-export const prerender = true;
 export const trailingSlash = 'always';
 
-export const load: PageLoad = async () => {
-	let genres: string[] = [];
+export const load: PageLoad = async ({ fetch }) => {
+	const pb = new PocketBase('https://pb.thirdplanet.studio');
 
-	const musicianSub = await db.getMusicians();
-	const musicians = await new Promise((res) => {
-		musicianSub.subscribe((value) => {
-			if (value) {
-				genres = [...new Set(value.map((musician) => musician.genre))];
-				res(value);
-			}
-		});
+	// Fetch musicians
+	const musiciansResponse = await pb.collection('musician').getList(undefined, undefined, { fetch });
+	const musicians = musiciansResponse.items.map((item) => {
+		if (item.pic) {
+			const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+			item.pic = picUrls;
+		} else {
+			item.pic = [];
+		}
+		return item;
 	});
 
-	const artistSub = await db.getArtists();
-	const artists = await new Promise((res) => {
-		artistSub.subscribe((value) => {
-			if (value) res(value);
-		});
+	// Fetch artists
+	const artistsResponse = await pb.collection('artist').getList(undefined, undefined, { fetch });
+	const artists = artistsResponse.items.map((item) => {
+		if (item.pic) {
+			const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+			item.pic = picUrls;
+		} else {
+			item.pic = [];
+		}
+		return item;
 	});
+
+	// Extract genres from musicians
+	const genres = [...new Set(musicians.map((musician) => musician.genre))];
 
 	return { genres, musicians, artists };
 };

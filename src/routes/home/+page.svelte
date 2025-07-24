@@ -96,12 +96,8 @@
 	</div>
 	<div>
 		<div class="relative">
-			<div class="anim-float-avatar relative z-[1]">				
-				
-				<a class="p-2" href="https://twitter.com/3PlanetStudio" target="_blank" rel="noreferrer">
+			<div class="anim-float-avatar relative z-[1]">
 					<HeroCard />
-				</a>
-
 			</div>
 			<div class="absolute left-[50%] top-[50%] z-0 -translate-x-[50%] -translate-y-[50%]">
 				<div
@@ -189,9 +185,7 @@
 <!-- Add this new Events CTA section -->
 <div class="h-5"></div>
 <div class="mx-auto max-w-7xl">
-	<div
-		class="relative overflow-hidden rounded-3xl p-8 md:p-12"
-	>
+	<div class="relative overflow-hidden rounded-3xl p-8 md:p-12">
 		<OrbGlow />
 		<div class="relative z-10">
 			<h2 class="text-4xl font-bold tracking-tight text-white md:text-5xl">
@@ -205,11 +199,7 @@
 				fans in immersive virtual spaces.
 			</p>
 			<div class="mt-8 flex flex-wrap gap-4">
-				<Button
-					variant="secondary"
-					size="lg"
-					class="bg-white/10 backdrop-blur hover:bg-white/20"
-				>
+				<Button variant="secondary" size="lg" class="bg-white/10 backdrop-blur hover:bg-white/20">
 					<a href="/events">View Upcoming Events</a>
 				</Button>
 				<Button
