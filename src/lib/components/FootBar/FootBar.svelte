@@ -8,7 +8,7 @@
 		<img src={third_planet} class="h-24 sm:h-32" alt="" />
 		<br />
 		<span class="block text-center text-sm text-gray-500 dark:text-gray-400">
-			All Rights Reserved. © {currentYear} ThirdPlanetStudio™. 
+			All Rights Reserved. © {currentYear} ThirdPlanetStudio™ 
 			<!-- <a
 				href="https://irb0gie.vercel.app"
 				style="color: transparent; background-clip: text; -webkit-background-clip: text; background-image: url('https://i.giphy.com/media/jtvB77L0afuXGlO5Uh/giphy-downsized-large.gif');"

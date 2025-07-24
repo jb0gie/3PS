@@ -1,6 +1,7 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
 	import * as Alert from '$lib/components/ui/alert';
+	import { Button } from '$lib/components/ui/button';
 	import MusicianHero from './MusicianHero.svelte';
 	import MusicianBio from './MusicianBio.svelte';
 	import MusicianSocial from './MusicianSocial.svelte';
@@ -13,6 +14,14 @@
 <div class="container mx-auto overflow-hidden p-4 md:rounded-lg md:p-10 lg:p-12">
 	{#if musician}
 		<OrbGlow />
+
+		<!-- Back to Roster Button -->
+		<div class="mb-6">
+			<Button variant="outline" href="/roster" class="flex items-center gap-2">
+				← Back to Roster
+			</Button>
+		</div>
+
 		<MusicianHero {musician} />
 		<MusicianSocial {musician} />
 		<MusicianBio {musician} />

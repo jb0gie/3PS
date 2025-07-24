@@ -71,38 +71,36 @@
 </PageTitle>
 
 <div class={glassMorphism}>
-	<div class="mx-auto px-4 sm:px-6 lg:px-8">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="lg:text-left">
-			<h2 class="text-base font-semibold tracking-wide uppercase">Why Choose</h2>
-			<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
-				Our Services
-			</p>
-			<p class="mt-4 text-xl">
+			<h2 class="text-base font-semibold uppercase tracking-wide">Why Choose</h2>
+			<p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight sm:text-4xl">Our Services</p>
+			<p class="mt-4 max-w-5xl text-xl">
 				We're not just adapting to the future; we're shaping it. Our team of visionaries is
 				dedicated to pushing the boundaries of what's possible in the Web3 space.
 			</p>
-			<p class="mt-4 text-xl">
+			<p class="mt-4 max-w-5xl text-xl">
 				Join us on the forefront of the revolution, where music, art, and entertainment converge
 				with blockchain to create an unparalleled digital experience.
 			</p>
-			<p class="mt-4 text-xl">
+			<p class="mt-4 max-w-5xl text-xl">
 				Third Planet Studio is a collective of founders, creators, technical co-founders,
 				developers, designers, strategists, and project managers who thrive on creating
 				transformative digital experiences.
 			</p>
-			<p class="mt-4 text-xl">
+			<p class="mt-4 max-w-5xl text-xl">
 				More importantly, we prioritize crafting the perfect digital solutions for our trusted
-				partners. Whether it's apps, websites, or other digital products, we adapt to your
-				strategic requirements.
+				partners. Whether it's apps, websites, or other digital products, we adapt to your strategic
+				requirements.
 			</p>
 		</div>
 
 		<div class="mt-10">
-			<dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+			<dl class="space-y-10 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10 md:space-y-0">
 				<div class="relative">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-pink-500 text-white"
+							class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-pink-500 text-white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +108,7 @@
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-6 h-6"
+								class="h-6 w-6"
 							>
 								<path
 									stroke-linecap="round"
@@ -119,13 +117,13 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium">{@html vProd.title}</p>
+						<p class="ml-16 text-lg font-medium leading-6">{@html vProd.title}</p>
 					</dt>
-					<dd class="mt-2 ml-16 text-base">
+					<dd class="ml-16 mt-2 text-base">
 						{@html vProd.desc}
 					</dd>
-					<dd class="mt-4 ml-16 text-base">
-						<p class="text-lg leading-6 font-medium">{@html vProd.subTitle}</p>
+					<dd class="ml-16 mt-4 text-base">
+						<p class="text-lg font-medium leading-6">{@html vProd.subTitle}</p>
 						<br />
 						<div class="flex flex-col gap-2">
 							<li href="#">{vProd.serviceOne}</li>
@@ -139,7 +137,7 @@
 				<div class="relative">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white"
+							class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-green-500 text-white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +145,7 @@
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-6 h-6"
+								class="h-6 w-6"
 							>
 								<path
 									stroke-linecap="round"
@@ -156,13 +154,13 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium">{@html iProd.title}</p>
+						<p class="ml-16 text-lg font-medium leading-6">{@html iProd.title}</p>
 					</dt>
-					<dd class="mt-2 ml-16 text-base">
+					<dd class="ml-16 mt-2 text-base">
 						{@html iProd.desc}
 					</dd>
-					<dd class="mt-4 ml-16 text-base">
-						<p class="text-lg leading-6 font-medium">{@html iProd.subTitle}</p>
+					<dd class="ml-16 mt-4 text-base">
+						<p class="text-lg font-medium leading-6">{@html iProd.subTitle}</p>
 						<br />
 						<div class="flex flex-col gap-2">
 							<li href="#">{iProd.serviceOne}</li>
@@ -176,7 +174,7 @@
 				<div class="relative">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+							class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-yellow-500 text-white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +182,7 @@
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-6 h-6"
+								class="h-6 w-6"
 							>
 								<path
 									stroke-linecap="round"
@@ -193,16 +191,16 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium">{@html folio.title}</p>
+						<p class="ml-16 text-lg font-medium leading-6">{@html folio.title}</p>
 					</dt>
-					<dd class="mt-2 ml-16 text-base">
+					<dd class="ml-16 mt-2 text-base">
 						{@html folio.desc}
 					</dd>
 				</div>
 				<div class="relative">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+							class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +208,7 @@
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-6 h-6"
+								class="h-6 w-6"
 							>
 								<path
 									stroke-linecap="round"
@@ -219,16 +217,16 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium">{@html onBoard.title}</p>
+						<p class="ml-16 text-lg font-medium leading-6">{@html onBoard.title}</p>
 					</dt>
-					<dd class="mt-2 ml-16 text-base">
+					<dd class="ml-16 mt-2 text-base">
 						{@html onBoard.desc}
 					</dd>
 				</div>
 				<div class="relative">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-500 text-white"
+							class="absolute flex h-12 w-12 items-center justify-center rounded-md bg-red-500 text-white"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -236,7 +234,7 @@
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="w-6 h-6"
+								class="h-6 w-6"
 							>
 								<path
 									stroke-linecap="round"
@@ -245,9 +243,9 @@
 								/>
 							</svg>
 						</div>
-						<p class="ml-16 text-lg leading-6 font-medium">{@html media.title}</p>
+						<p class="ml-16 text-lg font-medium leading-6">{@html media.title}</p>
 					</dt>
-					<dd class="mt-2 ml-16 text-base">
+					<dd class="ml-16 mt-2 text-base">
 						{@html media.desc}
 					</dd>
 				</div>
@@ -258,7 +256,7 @@
 
 <style lang="postcss">
 	.section-container {
-		@apply w-full max-w-7xl mx-auto p-4 py-16;
+		@apply mx-auto w-full max-w-7xl p-4 py-16;
 		md: py-24;
 	}
 	.anim-float-avatar {

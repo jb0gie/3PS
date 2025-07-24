@@ -15,7 +15,8 @@
 		'https://docs.google.com/forms/d/e/1FAIpQLSeaSCKel9E5UR3Caf4cuiehgmyCPelFPNK9pB_L0f23y-G63A/viewform?embedded=true';
 
 	let mounted = false;
-	let iframeLoaded = { inquiry: false, art: false };
+	let inquiryLoaded = false;
+	let artLoaded = false;
 
 	onMount(() => {
 		mounted = true;
@@ -28,9 +29,14 @@
 
 <div class="h-5 md:h-8"></div>
 
+<!-- Debug: Always-visible iframe for testing -->
+<div style="margin: 2rem 0;">
+	<!-- Debug iframe removed -->
+</div>
+
 <div class="mx-auto grid gap-8 sm:pt-3 md:grid-cols-2">
 	<div class="flex flex-col justify-center">
-		<div class="h-[520px] w-full">
+		<div class="h-40 w-full md:h-[520px]">
 			{#if mounted}
 				<Canvas>
 					<LogoPlanet />
@@ -40,50 +46,46 @@
 	</div>
 
 	<div class="flex flex-col items-center justify-center space-y-10 text-center">
-		<Tabs.Root value="inquiry" class="w-auto">
+		<Tabs.Root value="inquiry" class="w-full">
 			<Tabs.List>
 				<Tabs.Trigger value="inquiry">Contact</Tabs.Trigger>
 				<Tabs.Trigger value="art">Art Submission</Tabs.Trigger>
 			</Tabs.List>
 			<Tabs.Content value="inquiry">
-				{#if mounted}
-					{#if !iframeLoaded.inquiry}
-						<div class="h-[520px] w-full min-w-[420px]">
-							<Skeleton class="h-full w-full rounded-lg" />
-						</div>
-					{/if}
+				<div class="relative h-[520px] w-full min-w-0 md:min-w-[420px]">
 					<iframe
-						class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
-						class:hidden={!iframeLoaded.inquiry}
+						class="hide-scrollbar h-full w-full overflow-hidden rounded-lg"
 						title="Contact Form"
 						src={inquiryForm}
-						on:load={() => {
-							iframeLoaded.inquiry = true;
-							iframeLoaded = { ...iframeLoaded };
-						}}
 						loading="lazy"
+						on:load={() => {
+							inquiryLoaded = true;
+						}}
 					></iframe>
-				{/if}
-			</Tabs.Content>
-			<Tabs.Content value="art">
-				{#if mounted}
-					{#if !iframeLoaded.art}
-						<div class="h-[520px] w-full min-w-[420px]">
+					{#if !inquiryLoaded}
+						<div class="absolute inset-0 z-10">
 							<Skeleton class="h-full w-full rounded-lg" />
 						</div>
 					{/if}
+				</div>
+			</Tabs.Content>
+			<Tabs.Content value="art">
+				<div class="relative h-[520px] w-full min-w-0 md:min-w-[420px]">
 					<iframe
-						class="hide-scrollbar h-[520px] w-full min-w-[420px] overflow-hidden rounded-lg"
-						class:hidden={!iframeLoaded.art}
+						class="hide-scrollbar h-full w-full overflow-hidden rounded-lg"
 						title="Art Submission Form"
 						src={artForm}
-						on:load={() => {
-							iframeLoaded.art = true;
-							iframeLoaded = { ...iframeLoaded };
-						}}
 						loading="lazy"
+						on:load={() => {
+							artLoaded = true;
+						}}
 					></iframe>
-				{/if}
+					{#if !artLoaded}
+						<div class="absolute inset-0 z-10">
+							<Skeleton class="h-full w-full rounded-lg" />
+						</div>
+					{/if}
+				</div>
 			</Tabs.Content>
 		</Tabs.Root>
 	</div>

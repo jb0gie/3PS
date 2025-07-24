@@ -1,20 +1,28 @@
-import db from '$lib/db.js';
+import type { PageLoad } from './$types';
+import PocketBase from 'pocketbase';
 
 export const prerender = false;
 
-export async function load(ctx) {
-	const musicianSub = await db.getMusicians();
-	const musician = await new Promise((res) => {
-		musicianSub.subscribe((m) => {
-			if (m) {
-				res(
-					m.filter((item: any) => {
-						const slug = ctx.params.slug;
-						return item.route === '/roster/music/' + slug;
-					})[0]
-				);
-			}
-		});
+export const load: PageLoad = async ({ params, fetch }) => {
+	const pb = new PocketBase('https://pb.thirdplanet.studio');
+
+	// Fetch musicians using SvelteKit's fetch
+	const musiciansResponse = await pb.collection('musician').getList(undefined, undefined, { fetch });
+	const musicians = musiciansResponse.items.map((item) => {
+		if (item.pic) {
+			const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+			item.pic = picUrls;
+		} else {
+			item.pic = [];
+		}
+		return item;
 	});
+
+	// Find the specific musician
+	const musician = musicians.filter((item: any) => {
+		const slug = params.slug;
+		return item.route === '/roster/music/' + slug;
+	})[0];
+
 	return { musician };
-}
+};

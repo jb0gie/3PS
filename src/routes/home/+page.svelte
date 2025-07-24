@@ -59,7 +59,7 @@
 
 <div class="h-5 md:h-16"></div>
 
-<p class="max-w-5xl text-4xl font-bold md:text-6xl lg:pr-24 lg:text-7xl">
+<p class="max-w-7xl text-4xl font-bold md:text-6xl lg:text-7xl">
 	Where <span class={grad1}>Art</span> &amp; <span class={grad2}>Music</span>
 	Unite in the Boundless Realm of creativity
 </p>
@@ -82,13 +82,13 @@
 			>
 		</h2>
 		<div class="h-6"></div>
-		<div class="max-w-md sm:max-w-lg md:max-w-md lg:max-w-sm xl:max-w-xl">
-			<p class="text-2xl md:pr-20 lg:pr-10">
+		<div class="max-w-3xl sm:max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl">
+			<p class="text-2xl">
 				<span class={grad1}>Third</span><span class={grad2}>Planet</span> Studio is your portal to a
 				new dimension of creativity.
 			</p>
 			<br />
-			<p class="text-2xl md:pr-20 lg:pr-10">
+			<p class="text-2xl">
 				We're not your typical virtual music and art group. We believe in empowering artists with
 				100% ownership of their work and absolute creative freedom.
 			</p>
@@ -97,7 +97,7 @@
 	<div>
 		<div class="relative">
 			<div class="anim-float-avatar relative z-[1]">
-					<HeroCard />
+				<HeroCard />
 			</div>
 			<div class="absolute left-[50%] top-[50%] z-0 -translate-x-[50%] -translate-y-[50%]">
 				<div
@@ -111,7 +111,7 @@
 </div>
 <div class="h-12 md:h-24"></div>
 <br />
-<p class="text-4xl">
+<p class="max-w-7xl text-4xl">
 	<span class=""> In the boundless realm, where technology and creativity converge, </span>
 	<span class="">
 		<span
@@ -141,7 +141,7 @@
 				>
 			</h2>
 			<div class="h-6"></div>
-			<p class="text-xl md:pr-10">
+			<p class="max-w-3xl text-xl">
 				At <span class={grad1}>Third</span><span class={grad2}>Planet</span>, we're all about
 				rewriting the rules. We specialize in crafting onchain tailored to your unique vision. No
 				more worrying about the industry's "<span

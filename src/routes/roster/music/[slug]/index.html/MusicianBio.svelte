@@ -6,25 +6,32 @@
 	import MusicianSocial from './MusicianSocial.svelte';
 	import MusicianVideos from './MusicianVideos.svelte';
 	import MusicianGallery from './MusicianGallery.svelte';
+	import { onMount } from 'svelte';
 	export let musician;
-	let randomIndex = Math.floor(Math.random() * musician?.pic.length);
+
+	let randomIndex = 0;
+
+	onMount(() => {
+		// Set random index only on client side to avoid hydration mismatch
+		randomIndex = Math.floor(Math.random() * (musician?.pic?.length || 1));
+	});
 </script>
 
 <div
-	class="xl:w-[80%] lg:w-[90%] md:w-[94%] sm:w-[96%] xs:w-[92%] mx-auto flex flex-col gap-3 p-3 justify-center items-center relative"
+	class="xs:w-[92%] relative mx-auto flex flex-col items-center justify-center gap-3 p-3 sm:w-[96%] md:w-[94%] lg:w-[90%] xl:w-[80%]"
 >
 	<!-- FullName -->
-	<h1 class="text-5xl font-bold pt-8 lg:pt-0">{musician.name}</h1>
+	<h1 class="pt-8 text-5xl font-bold lg:pt-0">{musician.name}</h1>
 	<!-- About -->
-	<p class="w-auto text-md text-pretty">
+	<p class="text-md w-auto text-pretty">
 		{@html musician?.exp}
 	</p>
-	<p class="w-auto text-md text-pretty">
+	<p class="text-md w-auto text-pretty">
 		{@html musician?.bio}
 	</p>
 	{#if musician?.works !== ''}
-		<div class="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1 p-4 mt-16">
-			<h2 class="flex gap-3 items-center m-auto text-lg font-bold md:flex-col md:gap-2">
+		<div class="mb-8 mt-16 flex flex-1 flex-col gap-3.5 p-4 md:mb-auto">
+			<h2 class="m-auto flex items-center gap-3 text-lg font-bold md:flex-col md:gap-2">
 				Portfolio
 			</h2>
 			<p class="w-auto text-pretty">

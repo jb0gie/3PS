@@ -4,6 +4,8 @@
 	import * as Sidebar from '$lib/components/ui/sidebar';
 	import AppSidebar from '$lib/components/app-sidebar.svelte';
 	import FootBar from '$lib/components/FootBar/FootBar.svelte';
+	import { useSidebar } from '$lib/components/ui/sidebar/context.svelte.js';
+	import { page } from '$app/stores';
 	let { children } = $props();
 
 	// SEO
@@ -56,7 +58,7 @@
 
 <ModeWatcher />
 
-<Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 20rem;">
+<Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 12rem;">
 	<AppSidebar />
 	<main class="min-h-screen w-full overflow-x-hidden">
 		<div class="md:hidden">
