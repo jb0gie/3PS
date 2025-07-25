@@ -3,14 +3,19 @@
 	export let musician;
 </script>
 
-<ul class="flex flex-col md:flex-row justify-center mt-5 md:space-x-5 space-y-5 md:space-y-0 mx-auto items-center">
+<ul class="mx-auto mt-8 flex flex-row items-center justify-center space-x-4">
 	{#if musician?.site}
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.site} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' website'}>
+					<a
+						href={musician.site}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' website'}
+					>
 						<svg
-							class="h-10"
+							class="h-12 w-12"
 							viewBox="1677.3297 160.0005 39.4834 39.4834"
 							width="64"
 							height="64"
@@ -55,9 +60,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.x} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' X'}>
+					<a
+						href={musician.x}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' X'}
+					>
 						<svg
-							class="h-10"
+							class="h-12 w-12"
 							viewBox="1349.437 143.293 62.585 62.637"
 							width="64"
 							height="64"
@@ -82,9 +92,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.gram} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Instagram'}>
+					<a
+						href={musician.gram}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Instagram'}
+					>
 						<svg
-							class="h-14"
+							class="h-12 w-12"
 							xmlns="http://www.w3.org/2000/svg"
 							x="0px"
 							y="0px"
@@ -146,9 +161,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.tube} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Youtube'}>
+					<a
+						href={musician.tube}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Youtube'}
+					>
 						<svg
-							class="h-10"
+							class="h-12 w-12"
 							viewBox="1806.266 199.215 44 32"
 							width="64"
 							height="64"
@@ -200,9 +220,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.fb} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Facebook'}>
+					<a
+						href={musician.fb}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Facebook'}
+					>
 						<svg
-							class="h-10"
+							class="h-12 w-12"
 							viewBox="1451.847 143.914 60.833 60.833"
 							width="64"
 							height="64"
@@ -245,8 +270,13 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.soundcloud} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Soundcloud'}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"
+					<a
+						href={musician.soundcloud}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Soundcloud'}
+					>
+						<svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" width="64" height="64"
 							><defs
 								><linearGradient
 									x1="2041.438"
@@ -279,9 +309,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician.spotify} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Spotify'}>
+					<a
+						href={musician.spotify}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Spotify'}
+					>
 						<svg
-							class="h-10"
+							class="h-12 w-12"
 							width="64"
 							height="64"
 							viewBox="514.705 86.304 167.487 167.483"
@@ -304,8 +339,14 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.hey} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Hey'}>
+					<a
+						href={musician?.hey}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Hey'}
+					>
 						<svg
+							class="h-12 w-12"
 							viewBox="1543.9097 137.86 107.3679 68"
 							width="64"
 							height="64"
@@ -331,7 +372,12 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.opensea} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Opensea'}>
+					<a
+						href={musician?.opensea}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Opensea'}
+					>
 						<svg
 							class="h-12"
 							viewBox="1228.0861 140.248 68.6039 68.604"
@@ -370,7 +416,12 @@
 		<Tooltip.Root>
 			<Tooltip.Trigger>
 				<li>
-					<a href={musician?.twitch} target="_blank" rel="noopener noreferrer" aria-label={musician.name + ' Twitch'}>
+					<a
+						href={musician?.twitch}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={musician.name + ' Twitch'}
+					>
 						<svg class="h-12" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"
 							><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
 								id="SVGRepo_tracerCarrier"
