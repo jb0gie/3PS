@@ -7,6 +7,7 @@
 	import { useSidebar } from '$lib/components/ui/sidebar/context.svelte.js';
 	import { page } from '$app/stores';
 	import '$lib/appkit'; // Initialize AppKit
+	import GooeyCursor from '$lib/components/GooeyCursor.svelte';
 	let { children } = $props();
 
 	// SEO
@@ -58,6 +59,7 @@
 </svelte:head>
 
 <ModeWatcher />
+<GooeyCursor />
 
 <Sidebar.Provider style="--sidebar-width: 20rem; --sidebar-width-mobile: 12rem;">
 	<AppSidebar />

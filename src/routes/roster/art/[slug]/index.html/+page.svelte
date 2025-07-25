@@ -24,7 +24,6 @@
 		<ArtistHero {artist} />
 		<ArtistSocial {artist} />
 		<ArtistBio {artist} />
-		<ArtistGallery {artist} />
 
 		{#if artist?.vids && artist.vids.length > 0}
 			<div class="mt-12">
