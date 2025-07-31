@@ -1,7 +1,9 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
+	import ProfileOrbGlow from '$lib/components/profile-orb-glow.svelte';
 	import * as Alert from '$lib/components/ui/alert';
 	import { Button } from '$lib/components/ui/button';
+	import BackToTop from '$lib/components/back-to-top.svelte';
 	import MusicianHero from './MusicianHero.svelte';
 	import MusicianBio from './MusicianBio.svelte';
 	import MusicianSocial from './MusicianSocial.svelte';
@@ -13,7 +15,7 @@
 
 <div class="container mx-auto overflow-hidden p-4 md:rounded-lg md:p-10 lg:p-12">
 	{#if musician}
-		<OrbGlow />
+		<ProfileOrbGlow />
 
 		<!-- Back to Roster Button -->
 		<div class="mb-6">
@@ -40,5 +42,27 @@
 				<MusicianVideos {musician} />
 			</div>
 		{/if}
+	{:else}
+		<!-- Fallback when no musician is found -->
+		<div class="flex min-h-[60vh] flex-col items-center justify-center text-center">
+			<OrbGlow />
+
+			<!-- Back to Roster Button -->
+			<div class="mb-6">
+				<Button variant="outline" href="/roster" class="flex items-center gap-2">
+					← Back to Roster
+				</Button>
+			</div>
+
+			<div class="space-y-4">
+				<h1 class="text-4xl font-bold tracking-tight">Musician Not Found</h1>
+				<p class="text-lg text-muted-foreground">
+					The musician you're looking for could not be found.
+				</p>
+				<p class="text-sm text-muted-foreground">Please check the URL or return to the roster.</p>
+			</div>
+		</div>
 	{/if}
 </div>
+
+<BackToTop />

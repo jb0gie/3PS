@@ -1,8 +1,12 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
+	import { Input } from '$lib/components/ui/input';
+	import { Label } from '$lib/components/ui/label';
 	import PageTitle from '$lib/components/page-title.svelte';
 	import MusicTab from './(components)/MusicTab.svelte';
 	import ArtTab from './(components)/ArtTab.svelte';
+	import { searchQuery } from '$lib/stores/search';
+	import Search from 'lucide-svelte/icons/search';
 
 	export let data;
 	let tab = 'music';
@@ -15,6 +19,11 @@
 	function updateGenresTab(newGenre: string) {
 		genresTab = newGenre;
 	}
+
+	function handleSearch(event: Event) {
+		const target = event.target as HTMLInputElement;
+		searchQuery.set(target.value.toLowerCase());
+	}
 </script>
 
 <div class="mx-auto max-w-7xl p-4">
@@ -24,6 +33,22 @@
 		<p class="mx-auto max-w-2xl text-lg text-muted-foreground">
 			Discover the talented musicians and artists of Third Planet Studio
 		</p>
+	</div>
+
+	<!-- Search Bar -->
+	<div class="mb-8 flex justify-center">
+		<div class="relative w-full max-w-md">
+			<Label for="roster-search" class="sr-only">Search roster</Label>
+			<Input
+				id="roster-search"
+				type="text"
+				placeholder="Search musicians & artists..."
+				class="pl-10 pr-4"
+				on:input={handleSearch}
+				bind:value={$searchQuery}
+			/>
+			<Search class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+		</div>
 	</div>
 
 	<!-- Modern Tab Navigation -->

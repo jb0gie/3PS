@@ -1,5 +1,6 @@
 <script>
 	import OrbGlow from './orb-glow.svelte';
+	const third_planet = '/images/logo-s.png';
 	const style =
 		'flex flex-col justify-between text-3xl font-bold p-2';
 	const stlye2 = 'text-lg';
@@ -11,9 +12,10 @@
 		'bg-gradient-to-br from-violet-500 to-blue-500 bg-clip-text text-transparent box-decoration-clone';
 </script>
 
+<img src={third_planet} class="h-32 sm:h-32" alt="" />
 <div class={style}>
 	<OrbGlow />
-	<span class={grad2}>Third<span class={grad1}>Planet<spam class={grad3}>Studio</spam></span></span>
+	<!-- <span class={grad2}>Third<span class={grad1}>Planet<spam class={grad3}>Studio</spam></span></span> -->
 	<p class={stlye2}><slot name="pageName" /></p>
 </div>
 

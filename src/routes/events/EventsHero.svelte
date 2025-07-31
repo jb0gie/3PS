@@ -7,16 +7,21 @@
 	};
 </script>
 
-<h2 class="mx-auto text-2xl">Check out some of our previously hosted/booked events.</h2>
-<div class="mx-auto max-w-screen-xl p-3 sm:p-10 md:p-16">
-	<iframe
-		class="w-full overflow-hidden rounded bg-black"
-		title="ThirdPlanetEvents"
-		src={events.calanderUrl}
-		style="border-width:0"
-		width="680"
-		height="720"
-		frameborder="0"
-		scrolling="no"
-	></iframe>
+<div class="space-y-8">
+	<h2 class="text-3xl font-light text-neutral-100 md:text-4xl">
+		Check out some of our previously hosted/booked events
+	</h2>
+
+	<div class="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900/50">
+		<iframe
+			class="w-full"
+			title="ThirdPlanetEvents"
+			src={events.calanderUrl}
+			style="border-width:0"
+			width="680"
+			height="720"
+			frameborder="0"
+			scrolling="no"
+		></iframe>
+	</div>
 </div>

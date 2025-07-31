@@ -27,6 +27,12 @@ interface Partner extends RecordModel {
 	pic: string[];
 }
 
+interface Event extends RecordModel {
+	event: string;
+	pic: string[];
+	type?: string;
+}
+
 const pb = new PocketBase('https://pb.thirdplanet.studio');
 
 declare global {
@@ -90,7 +96,9 @@ const getMusicians = () => {
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
-						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+						// Handle both array and single string cases
+						const picArray = Array.isArray(item.pic) ? item.pic : [item.pic];
+						const picUrls = picArray.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
 						item.pic = [];
@@ -113,7 +121,9 @@ const getArtists = () => {
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
-						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+						// Handle both array and single string cases
+						const picArray = Array.isArray(item.pic) ? item.pic : [item.pic];
+						const picUrls = picArray.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
 						item.pic = [];
@@ -136,7 +146,9 @@ const getPartner = () => {
 			.then((a) => {
 				const out = a.items.map((item) => {
 					if (item.pic) {
-						const picUrls = item.pic.map((picId: string) => pb.files.getURL(item, picId));
+						// Handle both array and single string cases
+						const picArray = Array.isArray(item.pic) ? item.pic : [item.pic];
+						const picUrls = picArray.map((picId: string) => pb.files.getURL(item, picId));
 						item.pic = picUrls;
 					} else {
 						item.pic = [];
@@ -163,8 +175,34 @@ const getMetaverse = () => {
 	return metaverse;
 };
 
+let events: Writable<Event[]> = writable([]);
+let eventsDone = false;
+const getEvents = (customFetch?: typeof fetch) => {
+	if (!eventsDone) {
+		eventsDone = true;
+		pb.collection('events')
+			.getList<Event>(undefined, undefined, { fetch: customFetch })
+			.then((a) => {
+				const out = a.items.map((item) => {
+					if (item.pic) {
+						// Handle both array and single string cases
+						const picArray = Array.isArray(item.pic) ? item.pic : [item.pic];
+						const picUrls = picArray.map((picId: string) => pb.files.getURL(item, picId));
+						item.pic = picUrls;
+					} else {
+						item.pic = [];
+					}
+					return item;
+				});
+				events.set(out);
+			});
+	}
+	return events;
+};
+
 // Initialize data
 getPartner();
 getMetaverse();
+getEvents();
 
-export default { getTeam, getArtists, getMusicians, partner, metaverse };
+export default { getTeam, getArtists, getMusicians, partner, metaverse, getEvents, events };

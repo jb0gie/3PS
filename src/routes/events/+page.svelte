@@ -3,18 +3,26 @@
 	import EventsHero from './EventsHero.svelte';
 	import EventsMid from './EventsMid.svelte';
 	import EventsFooter from './EventsFooter.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
-<div class="container mx-auto overflow-hidden p-8 md:rounded-lg md:p-10 lg:p-12">
-	<PageTitle>
-		<svelte:fragment slot="pageName">Events</svelte:fragment>
-	</PageTitle>
-	<div class="h-5 md:h-10"></div>
-	<EventsHero />
-	<EventsMid />
-	<EventsFooter />
-</div>
+<div class="min-h-screen bg-neutral-950">
+	<div class="container mx-auto px-6 py-12 md:px-8 lg:px-12">
+		<PageTitle>
+			<svelte:fragment slot="pageName">Events</svelte:fragment>
+		</PageTitle>
 
-<style lang="postcss">
-	/* Remove unused styles */
-</style>
+		<div class="mt-16 space-y-24">
+			<!-- Hero Section -->
+			<EventsHero />
+
+			<!-- NFT Music Hall Events -->
+			<EventsMid />
+
+			<!-- ThirdPlanet Events -->
+			<EventsFooter {data} />
+		</div>
+	</div>
+</div>

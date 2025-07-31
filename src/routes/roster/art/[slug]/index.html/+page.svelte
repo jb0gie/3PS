@@ -1,7 +1,9 @@
 <script>
 	import OrbGlow from '$lib/components/orb-glow.svelte';
+	import ProfileOrbGlow from '$lib/components/profile-orb-glow.svelte';
 	import * as Alert from '$lib/components/ui/alert';
 	import { Button } from '$lib/components/ui/button';
+	import BackToTop from '$lib/components/back-to-top.svelte';
 	import ArtistHero from './ArtistHero.svelte';
 	import ArtistBio from './ArtistBio.svelte';
 	import ArtistSocial from './ArtistSocial.svelte';
@@ -12,7 +14,7 @@
 
 <div class="container mx-auto overflow-hidden p-4 md:rounded-lg md:p-10 lg:p-12">
 	{#if artist}
-		<OrbGlow />
+		<ProfileOrbGlow />
 
 		<!-- Back to Roster Button -->
 		<div class="mb-6">
@@ -41,3 +43,5 @@
 		{/if}
 	{/if}
 </div>
+
+<BackToTop />

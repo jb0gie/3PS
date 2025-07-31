@@ -1,46 +1,36 @@
-<script>
+<script lang="ts">
 	import * as Carousel from '$lib/components/ui/carousel';
+	import type { PageData } from './$types';
+	import Autoplay from 'embla-carousel-autoplay';
 
-	const thirdPlanetEvents = [
-		'https://i.imgur.com/7xS2erx.png',
-		'https://i.imgur.com/ZRg3CLS.png',
-		'https://i.imgur.com/GngRXNJ.jpeg',
-		'https://i.imgur.com/9It08Dj.png',
-		'https://i.imgur.com/jYdDaZT.jpeg',
-		'https://i.imgur.com/GXMMyCM.png',
-		'https://i.imgur.com/ENsm4eQ.png',
-		'https://i.imgur.com/V2Msgse.png',
-		'https://i.imgur.com/JmPuBRC.png',
-		'https://i.imgur.com/77gFGhN.png',
-		'https://i.imgur.com/9aOppls.png',
-		'https://i.imgur.com/enT1hqZ.png',
-		'https://i.imgur.com/zIgdVbE.png',
-		'https://i.imgur.com/1xtLvsn.png',
-		'https://i.imgur.com/blcvH80.png'
-	];
+	export let data: PageData;
+
+	const plugin = Autoplay({ delay: 4000, stopOnInteraction: true });
+
+	$: events = data.events.map((event) => event.pic[0]).filter(Boolean);
 </script>
 
-<h2 class="text-2xl mx-auto">Flyers and Promos from previous ThirdPlanet hosted events</h2>
-<div class="max-w-screen-xl mx-auto p-3 sm:p-10 md:p-16">
+<h2 class="mx-auto text-2xl">Flyers and Promos from previous ThirdPlanet hosted events</h2>
+<div class="mx-auto max-w-screen-xl p-3 sm:p-10 md:p-16">
 	<Carousel.Root
-		orientation="vertical"
 		opts={{
 			align: 'start',
 			loop: true
 		}}
+		plugins={[plugin]}
 		class="w-full"
 	>
-		<Carousel.Content class="-mt-1 h-[720px]">
-			{#each thirdPlanetEvents as pics}
-				<Carousel.Item>
-					<div class="h-90 w-full object-cover object-top lg:w-full lg:h-full">
+		<Carousel.Content class="gap-6">
+			{#each events as pics}
+				<Carousel.Item class="pl-4">
+					<div class="h-90 w-full object-cover object-top lg:h-full lg:w-full">
 						<article
-							class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl max-w-sm mx-auto mt-6"
+							class="relative isolate mx-auto mt-6 flex max-w-sm flex-col justify-end overflow-hidden rounded-2xl"
 						>
 							<img
 								class="w-full object-cover object-center"
 								src={pics}
-								alt="Previous NFT Music Hall Events"
+								alt="Previous ThirdPlanet Events"
 							/>
 						</article>
 					</div>
